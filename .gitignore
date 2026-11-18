@@ -1,0 +1,21 @@
+# Model data and caches never go into the repo
+*.safetensors
+*.npy
+*.npz
+rows-*.npy
+spikes/**/cache/
+
+# Python
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.venv/
+*.pyc
+
+# Node
+node_modules/
+web/dist/
+
+# OS
+.DS_Store
+Thumbs.db
