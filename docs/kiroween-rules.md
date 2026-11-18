@@ -50,11 +50,11 @@ October 13 and 30 are in PDT (UTC-7). The December and later dates are in PST (U
 - Judging may use expert panels, peer review, **automated AI-driven analysis**, or a mix. The README, write-up and repo should therefore be easy to read cold, without the video.
 - Ties are re-scored from scratch at 20 points per criterion.
 
-## Prizes MaltOE can enter (Rules §8)
+## Prizes Engramscope can enter (Rules §8)
 
 A project can win **one Overall Prize or one Category Prize, plus any number of Bonus Prizes.**
 
-| Prize | Amount | How it is awarded | MaltOE |
+| Prize | Amount | How it is awarded | Engramscope |
 | --- | --- | --- | --- |
 | 1st / 2nd / 3rd | $30,000 / $20,000 / $10,000 | highest overall scores | yes |
 | Best Resurrection | $5,000 | highest score in the category | yes |
@@ -66,18 +66,15 @@ A project can win **one Overall Prize or one Category Prize, plus any number of 
 
 Prizes need identity verification, a winner affidavit and tax forms (a W-8BEN for non-US residents) returned within 10 business days. Fees and taxes are the winner's.
 
-## Differences from the handoff and Requirement 15
+## How the rules map to the spec
 
-Dates: **none.**
-
-Rules that Requirement 15 does not cover yet (proposed additions, not yet applied to the spec):
-
-1. **Platform statement and functionality:** state the intended platform, and make sure a judge can install and run the test build there.
-2. **Testing access until Jan 29, 2027:** keep the repo public and the test build downloadable until then. Tag the submitted state (for example `kiroween-2026-submission`) so later commits don't change what judges see.
-3. **Disclosure of pre-existing code and work:** llama.cpp, the model, datasets, libraries and the handoff document, with licenses.
-4. **Video:** public on YouTube, filmed on the RTX 4060 laptop, no copyrighted music, and no third-party trademarks without permission.
-5. **Kiro write-up**, covering the listed features.
-6. **Bonus entries:** Best Student Project: Resurrection details in the form.
+All submission rules are covered by Requirement 12 and tracked in `docs/submission/deliverables.md`:
+- platform statement: a static web app on current desktop browsers and phone width (Req 7.2);
+- testing access until Jan 29, 2027: GitHub Pages plus a pinned model revision (Req 11.5);
+- disclosure of pre-existing work (Req 12.4);
+- video rules (Req 12.3);
+- the Kiro write-up (Req 12.6);
+- the student prize details (D13).
 
 ## Open question: trademarks in the video
 
