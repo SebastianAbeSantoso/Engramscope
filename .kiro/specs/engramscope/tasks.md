@@ -18,8 +18,8 @@ Schedule (proposed): Task 1 by Nov 21, core app (Tasks 2–6) by Nov 28, polish 
   - [x] 1.2 G2 tokenizer parity: transformers.js `AutoTokenizer` against Python `tokenizers` on 1,000 strings (CJK, Indonesian, emoji, leading spaces). Fall back to a WebAssembly build of `tokenizers` if any id differs. _Requirements: 1.1_ **Done:** 0 mismatches of 1,000 for `@huggingface/tokenizers` 0.2.0 and transformers.js 4.3.2; use the former (`docs/findings/g2-tokenizer.md`).
   - [ ] 1.3 G3 browser fetch **[HW]**: a one-page prototype that resolves the CDN URLs and fetches 96 ranges; the builder opens it on their connection and reports the time. _Requirements: 2.4, 2.5_
   - [x] 1.4 G4 benchmark set: write and commit at least 100 phrases with related-word sets before any readout (categories: places, people, events, science, culture, Indonesian topics, everyday things). _Requirements: 6.1, 6.2_ **Done:** 123 phrases committed in ec0e429 before any readout (`bench/README.md`).
-  - [ ] 1.5 G5 history sources: find and read primary or close-to-primary sources for Semon (1904) and Lashley (1950); write `docs/theory-sources.md` with what each says and where. _Requirements: 8.1_
-  - [ ] 1.6 G6 prior-art re-check for direct Engram readouts and n-gram table interpretability. _Requirements: claims boundary_
+  - [x] 1.5 G5 history sources: find and read primary or close-to-primary sources for Semon (1904) and Lashley (1950); write `docs/theory-sources.md` with what each says and where. _Requirements: 8.1_ **Done:** Semon 1904 (German first edition) and 1921 (English) and Lashley 1950 read, with page numbers, in `docs/theory-sources.md`. Lashley pp. 476–477 are missing from the scan used.
+  - [x] 1.6 G6 prior-art re-check for direct Engram readouts and n-gram table interpretability. _Requirements: claims boundary_ **Done:** no prior tool or study decodes row contents (`docs/findings/g6-prior-art.md`); a newer checkpoint `-1017` exists.
   - [ ] 1.7 **Checkpoint:** the builder reviews gates G1–G6, confirms the decode index size budget and the latency target, and approves the build.
 
 - [ ] 2. Scaffolding

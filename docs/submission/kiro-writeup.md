@@ -2,7 +2,7 @@
 
 Running draft of the Kiro write-up (Req 12.6, deliverable D11). Kiro adds to it at every checkpoint; the builder edits it into the final version (Task 9.2). Only things that happened go here. Plans are marked **planned**, unverified items **check**.
 
-Last updated: 2026-11-19.
+Last updated: 2026-11-11.
 
 ## How the project got here (the spec gate that killed the first idea)
 
@@ -23,11 +23,18 @@ That became Engramscope. *(Builder: add how this compared with vibe coding.)*
 
 - **Kiro Web, Vibe mode** for the whole process so far: research, kill test, spec, scaffolding.
 - Kiro IDE, CLI and Crew: not used so far.
+- Sessions in Kiro Web keep running when the browser tab is closed (per kiro.dev docs, cloud sessions).
 
 ## Spec-driven development
 
 - `.kiro/specs/engramscope/`: requirements (with a claims boundary and open questions for the builder), design (pinned model facts, components, correctness properties), tasks (feasibility gates first, then build).
-- **planned:** Task 1 gates (decode index fidelity, tokenizer parity, browser latency, pre-registered benchmark set, history sources, prior-art re-check) before the build.
+- Task 1 gates, run in the sandbox before any app code:
+  - **G4:** 123 benchmark phrases with related-word sets, committed (ec0e429) before any readout of them. The authoring rules and what the author had already seen are written down in `bench/README.md`.
+  - **G1:** the planned 33 MB decode index failed its measurement (20% top-10 overlap with the exact readout). Kiro then fitted the projection to the readout instead of the embeddings and tested 4-bit storage. The best option per megabyte reached 60% at about 92 MB. The result went back to the builder as a choice, instead of the plan being changed quietly.
+  - **G2:** both browser tokenizers matched Python on 1,000 strings with 0 mismatches.
+  - **G5:** the research-integrity rule required primary sources. Kiro read Semon's 1904 first edition (German), the 1921 English translation and Lashley's 1950 paper, and recorded page numbers. The scan of Lashley's famous sentence is missing the page where it starts, so the docs only allow quoting the verified half.
+  - **G6:** prior-art re-check; it also found a newer checkpoint of the model.
+- **planned:** G3 (browser latency) on the builder's machine, then the Task 1.7 checkpoint.
 
 ## Steering
 
