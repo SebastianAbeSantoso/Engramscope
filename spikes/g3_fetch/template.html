@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Engramscope G3: browser fetch test</title>
+<style>
+  body { font: 15px/1.5 system-ui, sans-serif; max-width: 860px; margin: 2rem auto; padding: 0 1rem; background: #111; color: #ddd; }
+  h1 { font-size: 1.3rem; } button { font: inherit; padding: .5rem 1rem; margin-right: .5rem; cursor: pointer; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; } td, th { border: 1px solid #444; padding: .3rem .5rem; text-align: right; }
+  th:first-child, td:first-child { text-align: left; } .ok { color: #7c7; } .bad { color: #e77; }
+  textarea { width: 100%; height: 14rem; background: #000; color: #9c9; font: 12px monospace; }
+  #log { white-space: pre-wrap; font: 12px monospace; color: #aaa; }
+</style>
+</head>
+<body>
+<h1>Engramscope gate G3: can your browser fetch Engram rows fast enough?</h1>
+<p>This page fetches 96 small byte ranges (12,672 bytes) per phrase straight from the model files on Hugging Face, the way the app will. It does not run a model. It tries three phrases at three concurrency levels, with the browser cache off, and checks every byte against a SHA-256 computed in Python.</p>
+<p>Press <b>Run</b>, wait about a minute, then press <b>Copy results</b> and paste the text into the chat.</p>
+<button id="run">Run</button><button id="copy" disabled>Copy results</button>
+<table id="tbl"><thead><tr><th>Run</th><th>Concurrency</th><th>Total ms</th><th>Median request ms</th><th>p95 request ms</th><th>Retries</th><th>Bytes OK</th></tr></thead><tbody></tbody></table>
+<div id="log"></div>
+<textarea id="out" readonly></textarea>
+<script>
+const V = /*VECTORS*/null;
+const HUB = `https://huggingface.co/${V.repo}/resolve/${V.revision}/`;
+const CONC = [8, 16, 32];
+const log = (s) => { document.getElementById("log").textContent += s + "\n"; };
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const hex = (buf) => [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+
+async function getRange(url, start, length, stats) {
+  for (let attempt = 0; attempt < 6; attempt++) {
+    const t0 = performance.now();
+    const r = await fetch(url, { headers: { Range: `bytes=${start}-${start + length - 1}` }, cache: "no-store" });
+    if (r.status === 429 || r.status >= 500) { stats.retries++; await sleep(500 * 2 ** attempt); continue; }
+    if (r.status !== 206) throw new Error(`HTTP ${r.status} for ${start}`);
+    const b = await r.arrayBuffer();
+    stats.times.push(performance.now() - t0);
+    if (b.byteLength !== length) throw new Error(`got ${b.byteLength} bytes, wanted ${length}`);
+    return new Uint8Array(b);
+  }
+  throw new Error("gave up after retries");
+}
+
+async function pool(items, n, fn) {
+  const out = new Array(items.length); let i = 0;
+  await Promise.all(Array.from({ length: n }, async () => { while (i < items.length) { const k = i++; out[k] = await fn(items[k]); } }));
+  return out;
+}
+
+const pct = (a, p) => { const s = [...a].sort((x, y) => x - y); return s[Math.min(s.length - 1, Math.floor(p * s.length))]; };
+
+async function run() {
+  document.getElementById("run").disabled = true;
+  const result = { gate: "G3", page_version: 1, when: new Date().toISOString(), userAgent: navigator.userAgent,
+    connection: navigator.connection ? { effectiveType: navigator.connection.effectiveType, downlinkMbps: navigator.connection.downlink, rttMs: navigator.connection.rtt } : null,
+    resolve: [], runs: [], errors: [] };
+  try {
+    const cdn = {};
+    for (const shard of [...new Set(V.phrases.flatMap((p) => p.ranges.map((g) => g.shard)))]) {
+      const t0 = performance.now();
+      const r = await fetch(HUB + shard, { headers: { Range: "bytes=0-0" }, cache: "no-store" });
+      await r.arrayBuffer();
+      cdn[shard] = r.url;
+      const host = new URL(r.url).host;
+      result.resolve.push({ shard, ms: Math.round(performance.now() - t0), status: r.status, cdn_host: host });
+      log(`resolved ${shard} -> ${host} in ${Math.round(performance.now() - t0)} ms`);
+    }
+    const tbody = document.querySelector("#tbl tbody");
+    for (const n of CONC) {
+      for (const p of V.phrases) {
+        const stats = { times: [], retries: 0 };
+        const t0 = performance.now();
+        const parts = await pool(p.ranges, n, (g) => getRange(cdn[g.shard], g.start, g.length, stats));
+        const total = performance.now() - t0;
+        const all = new Uint8Array(parts.reduce((s, x) => s + x.length, 0)); let o = 0;
+        for (const x of parts) { all.set(x, o); o += x.length; }
+        const ok = hex(await crypto.subtle.digest("SHA-256", all)) === p.sha256;
+        const row = { phrase: p.phrase, concurrency: n, total_ms: Math.round(total), median_ms: Math.round(pct(stats.times, 0.5)), p95_ms: Math.round(pct(stats.times, 0.95)), retries: stats.retries, requests: p.ranges.length, bytes: all.length, sha256_ok: ok };
+        result.runs.push(row);
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td>${p.phrase}</td><td>${n}</td><td>${row.total_ms}</td><td>${row.median_ms}</td><td>${row.p95_ms}</td><td>${row.retries}</td><td class="${ok ? "ok" : "bad"}">${ok ? "yes" : "NO"}</td>`;
+        tbody.appendChild(tr);
+      }
+    }
+  } catch (e) { result.errors.push(String(e)); log("ERROR: " + e); }
+  document.getElementById("out").value = JSON.stringify(result, null, 1);
+  document.getElementById("copy").disabled = false;
+  document.getElementById("run").disabled = false;
+}
+document.getElementById("run").onclick = run;
+document.getElementById("copy").onclick = async () => {
+  const t = document.getElementById("out"); t.select();
+  try { await navigator.clipboard.writeText(t.value); } catch { document.execCommand("copy"); }
+};
+</script>
+</body>
+</html>
