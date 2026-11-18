@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Lint and test after each spec task",
+      "description": "After a spec task finishes, run ruff and pytest (Python) and eslint and vitest (web). Each part skips cleanly until Task 2 creates pyproject.toml or web/package.json.",
+      "trigger": "PostTaskExec",
+      "action": {
+        "type": "command",
+        "command": "sh -c 'root=$(git rev-parse --show-toplevel 2>/dev/null || pwd); if [ ! -d \"$root/.kiro/specs/engramscope\" ]; then for d in \"$root\"/*/; do if [ -d \"${d}.kiro/specs/engramscope\" ]; then root=\"${d%/}\"; break; fi; done; fi; cd \"$root\" || exit 1; ran=0; if [ -f pyproject.toml ]; then ran=1; uv run ruff check . && uv run ruff format --check . && uv run pytest -q || exit 1; fi; if [ -f web/package.json ]; then ran=1; (cd web && npm run lint && npx vitest --run) || exit 1; fi; [ $ran -eq 1 ] && echo \"engramscope checks: all passed\" || echo \"engramscope checks: nothing to check yet (before Task 2), skipping\"'",
+        "timeout": 300
+      }
+    }
+  ]
+}
