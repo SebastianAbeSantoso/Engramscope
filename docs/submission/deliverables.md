@@ -19,7 +19,7 @@ Status: `done`, `in progress`, `not started`, `blocked`, `optional`. Owner: **B*
 | D6 | App stays available until Jan 29, 2027, 1:00 PM PT | Rules §4, Testing | B | not started | Pages + pinned model revision |
 | D7 | Disclosure of pre-existing work, with licenses | Rules §4 | K drafts, B checks | not started | model + reference code (MIT), tokenizer, libraries, MaltOE kill test, cited papers |
 | D8 | Text description | Rules §4 | K drafts, B approves | not started | |
-| D9 | Demo video < 3 min, on the device it was built for, no copyrighted music or logos | Rules §4 | B records, K scripts | not started | trademark question open (D17) |
+| D9 | Demo video < 3 min, on the device it was built for, no copyrighted music or logos | Rules §4 | B records, K scripts | not started | model named generically in the video (D17) |
 | D10 | Video public on YouTube, link in the form | Rules §4 | B | not started | |
 | D11 | Kiro write-up | Rules §4 | K drafts, B edits | in progress | running draft: [`kiro-writeup.md`](kiro-writeup.md) |
 | D12 | Category and bonus prizes selected | Rules §4 | B | not started | Resurrection + Best Student Project: Resurrection |
@@ -27,7 +27,7 @@ Status: `done`, `in progress`, `not started`, `blocked`, `optional`. Owner: **B*
 | D14 | Everything in English | Rules §4 | K | in progress | |
 | D15 | Submit before the deadline | Rules §1 | B | not started | aim for Dec 3 |
 | D16 | Tag the submitted commit | Req 11.5 | K | not started | |
-| D17 | Trademark clarification for naming the model in the video | Rules §4, §11 | K drafts, B sends | not started | P3 |
+| D17 | Trademark approach for the video | Rules §4 | B decided | done | no email; generic name in the video, `?generic` flag (Decision 6) |
 
 ## Optional
 

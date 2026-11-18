@@ -142,5 +142,5 @@ For property-based tests (`hypothesis` in Python; shared test vectors for the we
 | Latency too high on home connections (G3) | Sluggish demo | Concurrency tuning, session cache, prefetch while typing |
 | Benchmark result weaker than the pilot (G4) | Weaker claim | Report it honestly (Req 6.5); the mechanism view still stands |
 | Hub rate limits | Errors for heavy users | Resolve once per shard; back-off |
-| Trademark rule in the video | Disqualification risk | Ask Devpost; no logos; plain-text name only |
+| Trademark rule in the video | Disqualification risk | Video names the model generically (`?generic` flag); no logos |
 | Prior art appears | Novelty claim narrows | Re-check before submission (Task 1.6, Task 9) |

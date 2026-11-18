@@ -9,7 +9,7 @@ Schedule (proposed): Task 1 by Nov 21, core app (Tasks 2–6) by Nov 28, polish 
 - [x] P0. Kill test of the idea (done 2026-11-19 in the MaltOE repo; copied to `spikes/engram_readout/` and `docs/findings/engram-killtest.md`). _Requirements: 6_
 - [x] P1. Builder: answer the open questions at the end of `requirements.md` (accepted the proposed answers, 2026-11-11).
 - [ ] P2. Builder: set the repository's About description in the GitHub UI, and confirm GitHub shows the MIT license. _Requirements: 12.1_
-- [ ] P3. Draft and send the trademark clarification email to Devpost (Kiro drafts, builder sends). _Requirements: 12.3_
+- [x] P3. Trademark approach decided without emailing Devpost: plain-text name in README, app and written submission; generic wording in the video (Decision 6). _Requirements: 12.3_
 
 ## Tasks
 
@@ -48,9 +48,10 @@ Schedule (proposed): Task 1 by Nov 21, core app (Tasks 2–6) by Nov 28, polish 
 - [ ] 6. Interface
   - [ ] 6.1 Landing and result views; bytes and timing shown.
   - [ ] 6.2 Inside view: pipeline and 24 row cards; position picker.
-  - [ ] 6.3 About page: history, attribution, benchmark, limitations, sources.
-  - [ ] 6.4 Visual design pass (Req 7.3), accessibility pass (Req 7.5), phone layout.
-  - [ ] 6.5 **Checkpoint [HW]:** the builder uses the app in their browser and reviews.
+  - [ ] 6.3 `?generic` URL flag that replaces the model name with "an open-weight frontier model" (Req 12.3).
+  - [ ] 6.4 About page: history, attribution, benchmark, limitations, sources.
+  - [ ] 6.5 Visual design pass (Req 7.3), accessibility pass (Req 7.5), phone layout.
+  - [ ] 6.6 **Checkpoint [HW]:** the builder uses the app in their browser and reviews.
   - _Requirements: 2, 3, 4, 7, 8_
 
 - [ ] 7. Benchmark
@@ -67,7 +68,7 @@ Schedule (proposed): Task 1 by Nov 21, core app (Tasks 2–6) by Nov 28, polish 
 - [ ] 9. Write-up and submission
   - [ ] 9.1 README final: problem, how it works, claims boundary, results, limitations, disclosures, how to run.
   - [ ] 9.2 Finish the Kiro write-up from the running draft.
-  - [ ] 9.3 Video script and recording **[HW]**: under 3 minutes, on the builder's machine, no copyrighted music, no logos; YouTube public.
+  - [ ] 9.3 Video script and recording **[HW]**: under 3 minutes, on the builder's machine, no copyrighted music, no logos, model named generically (record with `?generic`); YouTube public.
   - [ ] 9.4 Text description for the form.
   - [ ] 9.5 Final compliance check against `docs/submission/deliverables.md`; tag the submitted commit; submit before the deadline.
   - _Requirements: 12_

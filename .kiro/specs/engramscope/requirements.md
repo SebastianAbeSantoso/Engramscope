@@ -163,16 +163,16 @@ These apply to the spec, README, write-up and video.
 
 1. THE repository SHALL be public, SHALL carry an open-source license detected by GitHub, and SHALL include `.kiro/` at the root, not listed in `.gitignore`.
 2. THE submission SHALL include a URL to the working app, a text description, a public YouTube demo video under 3 minutes showing the app on the device it was built for, and a Kiro write-up.
-3. THE video SHALL contain no copyrighted music and no third-party logos. How the model's name is shown follows the answer to the trademark question in `docs/kiroween-rules.md`.
+3. THE video SHALL contain no copyrighted music and no third-party logos. The video SHALL refer to the model generically and SHALL NOT show its name or logo; the app SHALL support a `?generic` URL flag that replaces the model name with a generic label for recording.
 4. THE submission SHALL disclose pre-existing work used: the model and its reference code (MIT), the tokenizer, libraries, the MaltOE project (where the kill test was first run, during the submission period), and the papers cited.
 5. THE submission SHALL be made before December 4, 2026, 2:00 PM PT, entering Resurrection and Best Student Project: Resurrection.
 6. ALL deliverables SHALL be tracked in `docs/submission/deliverables.md`, and the Kiro write-up kept as a running draft in `docs/submission/kiro-writeup.md`.
 
-## Decisions (builder accepted the proposed answers on 2026-11-11)
+## Decisions (builder, 2026-11-11)
 
 1. **Category:** Resurrection (Semon and Lashley as the old idea). The interface is still polished per Req 7.
 2. **Layer 14:** shown alongside layer 1, labelled as unclear.
 3. **Client-side:** fully client-side if the decode index passes gate G1; otherwise a free static-plus-serverless fallback.
 4. **Lesion stretch (Req 9):** decided after the core is done, by November 30.
 5. **Second model (Req 10):** stretch, after the core.
-6. **Video naming:** Devpost is emailed now; until answered, "DeepSeek" appears only in plain text and no logos are shown.
+6. **Video naming:** no email to Devpost. The README, the app and the written submission name the model in plain text. The video refers to it generically ("an open-weight frontier model") and shows no logos; the app has a URL flag that swaps the model name for that generic label while recording.
