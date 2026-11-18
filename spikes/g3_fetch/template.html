@@ -15,7 +15,7 @@
 </head>
 <body>
 <h1>Engramscope gate G3: can your browser fetch Engram rows fast enough?</h1>
-<p>This page fetches 96 small byte ranges (12,672 bytes) per phrase straight from the model files on Hugging Face, the way the app will. It does not run a model. It tries three phrases at three concurrency levels, with the browser cache off, and checks every byte against a SHA-256 computed in Python.</p>
+<p>This page fetches 96 small byte ranges (12,672 bytes) per phrase straight from the model files on Hugging Face, the way the app will. It does not run a model. It tries nine phrases whose rows have not been fetched before, cycling through three concurrency levels, then repeats the first phrase. The browser cache is off. It checks every byte against a SHA-256 computed in Python.</p>
 <p>Press <b>Run</b>, wait about a minute, then press <b>Copy results</b> and paste the text into the chat.</p>
 <button id="run">Run</button><button id="copy" disabled>Copy results</button>
 <table id="tbl"><thead><tr><th>Run</th><th>Concurrency</th><th>Total ms</th><th>Median request ms</th><th>p95 request ms</th><th>Retries</th><th>Bytes OK</th></tr></thead><tbody></tbody></table>
@@ -53,7 +53,7 @@ const pct = (a, p) => { const s = [...a].sort((x, y) => x - y); return s[Math.mi
 
 async function run() {
   document.getElementById("run").disabled = true;
-  const result = { gate: "G3", page_version: 1, when: new Date().toISOString(), userAgent: navigator.userAgent,
+  const result = { gate: "G3", page_version: 2, when: new Date().toISOString(), userAgent: navigator.userAgent,
     connection: navigator.connection ? { effectiveType: navigator.connection.effectiveType, downlinkMbps: navigator.connection.downlink, rttMs: navigator.connection.rtt } : null,
     resolve: [], runs: [], errors: [] };
   try {
@@ -68,8 +68,11 @@ async function run() {
       log(`resolved ${shard} -> ${host} in ${Math.round(performance.now() - t0)} ms`);
     }
     const tbody = document.querySelector("#tbl tbody");
-    for (const n of CONC) {
-      for (const p of V.phrases) {
+    // each phrase once, cycling the concurrency levels, then the first phrase again (warm cache)
+    const plan = V.phrases.map((p, i) => ({ p, n: CONC[i % CONC.length], cache: "cold" }));
+    plan.push({ p: V.phrases[0], n: CONC[0], cache: "warm (repeat)" });
+    for (const { p, n, cache } of plan) {
+      {
         const stats = { times: [], retries: 0 };
         const t0 = performance.now();
         const parts = await pool(p.ranges, n, (g) => getRange(cdn[g.shard], g.start, g.length, stats));
@@ -77,10 +80,10 @@ async function run() {
         const all = new Uint8Array(parts.reduce((s, x) => s + x.length, 0)); let o = 0;
         for (const x of parts) { all.set(x, o); o += x.length; }
         const ok = hex(await crypto.subtle.digest("SHA-256", all)) === p.sha256;
-        const row = { phrase: p.phrase, concurrency: n, total_ms: Math.round(total), median_ms: Math.round(pct(stats.times, 0.5)), p95_ms: Math.round(pct(stats.times, 0.95)), retries: stats.retries, requests: p.ranges.length, bytes: all.length, sha256_ok: ok };
+        const row = { phrase: p.phrase, cdn_cache: cache, concurrency: n, total_ms: Math.round(total), median_ms: Math.round(pct(stats.times, 0.5)), p95_ms: Math.round(pct(stats.times, 0.95)), retries: stats.retries, requests: p.ranges.length, bytes: all.length, sha256_ok: ok };
         result.runs.push(row);
         const tr = document.createElement("tr");
-        tr.innerHTML = `<td>${p.phrase}</td><td>${n}</td><td>${row.total_ms}</td><td>${row.median_ms}</td><td>${row.p95_ms}</td><td>${row.retries}</td><td class="${ok ? "ok" : "bad"}">${ok ? "yes" : "NO"}</td>`;
+        tr.innerHTML = `<td>${p.phrase} (${cache})</td><td>${n}</td><td>${row.total_ms}</td><td>${row.median_ms}</td><td>${row.p95_ms}</td><td>${row.retries}</td><td class="${ok ? "ok" : "bad"}">${ok ? "yes" : "NO"}</td>`;
         tbody.appendChild(tr);
       }
     }

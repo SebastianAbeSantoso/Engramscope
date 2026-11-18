@@ -1,6 +1,6 @@
 """Gate G3 helper: write vectors.json with the byte ranges the browser prototype fetches.
 
-For three dev phrases (never benchmark phrases), take the last token position and both Engram
+For nine G3-only phrases (never benchmark or dev phrases), take the last token position and both Engram
 layers: 24 rows per layer, each a 256-byte FP8 row plus its 8-byte E8M0 scale, so 96 ranges per
 phrase. Also stores the SHA-256 of all fetched bytes in order, so the page can check it got the
 right bytes.
@@ -14,7 +14,10 @@ from tokenizers import Tokenizer
 import killtest as K
 
 REV = "314113f8a7dadb388215396ba5fbee2c610a04d6"
-PHRASES = ["the Eiffel Tower", "Yogyakarta", "the weekend"]
+# Phrases used only by G3, so their rows were never fetched before (no warm CDN cache).
+# Not in bench/phrases.jsonl or bench/dev_phrases.txt. The page runs each once (cold) and repeats the first (warm).
+PHRASES = ["a lighthouse keeper", "the Andromeda galaxy", "Komodo National Park", "a bowl of ramen", "the Trojan horse",
+           "Ki Hajar Dewantara", "a thunderstorm", "the Rosetta Stone", "Danau Kelimutu"]
 
 
 def main(out):
