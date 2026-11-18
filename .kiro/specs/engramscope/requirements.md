@@ -168,11 +168,11 @@ These apply to the spec, README, write-up and video.
 5. THE submission SHALL be made before December 4, 2026, 2:00 PM PT, entering Resurrection and Best Student Project: Resurrection.
 6. ALL deliverables SHALL be tracked in `docs/submission/deliverables.md`, and the Kiro write-up kept as a running draft in `docs/submission/kiro-writeup.md`.
 
-## Open Questions (proposed answers in brackets; the builder decides)
+## Decisions (builder accepted the proposed answers on 2026-11-11)
 
-1. **Category:** Resurrection (Semon and Lashley as the old idea) or Costume Contest (the interface as the main prize)? [Resurrection; the interface is still polished per Req 7.]
-2. **Layer 14:** it reads mostly as noise with this decoding. Show it with that caveat, or show layer 1 only? [Show both, with layer 14 labelled as unclear.]
-3. **Fully client-side, or a small server for decoding?** [Client-side, if the compressed decode index passes Task 1; otherwise a free static-plus-serverless fallback.]
-4. **Lesion stretch (Req 9):** worth about $50–150 of rented GPU time near the end? [Decide after the core is done, by November 30.]
-5. **Second model (Req 10):** in scope as a stretch, or out? [Stretch, after the core.]
-6. **Video naming:** email Devpost about naming "DeepSeek" on screen? [Yes, now; until answered, use the name only in plain text and no logos.]
+1. **Category:** Resurrection (Semon and Lashley as the old idea). The interface is still polished per Req 7.
+2. **Layer 14:** shown alongside layer 1, labelled as unclear.
+3. **Client-side:** fully client-side if the decode index passes gate G1; otherwise a free static-plus-serverless fallback.
+4. **Lesion stretch (Req 9):** decided after the core is done, by November 30.
+5. **Second model (Req 10):** stretch, after the core.
+6. **Video naming:** Devpost is emailed now; until answered, "DeepSeek" appears only in plain text and no logos are shown.

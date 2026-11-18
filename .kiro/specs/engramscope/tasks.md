@@ -7,7 +7,7 @@ Schedule (proposed): Task 1 by Nov 21, core app (Tasks 2–6) by Nov 28, polish 
 ## Pre-flight
 
 - [x] P0. Kill test of the idea (done 2026-11-19 in the MaltOE repo; copied to `spikes/engram_readout/` and `docs/findings/engram-killtest.md`). _Requirements: 6_
-- [ ] P1. Builder: answer the open questions at the end of `requirements.md`.
+- [x] P1. Builder: answer the open questions at the end of `requirements.md` (accepted the proposed answers, 2026-11-11).
 - [ ] P2. Builder: set the repository's About description in the GitHub UI, and confirm GitHub shows the MIT license. _Requirements: 12.1_
 - [ ] P3. Draft and send the trademark clarification email to Devpost (Kiro drafts, builder sends). _Requirements: 12.3_
 
