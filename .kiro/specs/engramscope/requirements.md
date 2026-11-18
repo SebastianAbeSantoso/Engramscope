@@ -2,22 +2,31 @@
 
 ## Introduction
 
-Engramscope reads what a frontier language model remembers about a phrase, **without running the model**. DeepSeek-V4.1-Flash (284B parameters, MIT license) keeps two large lookup tables called *Engram*, at layers 1 and 14: about 384 million rows each, 189 GiB in total. The address of each row is a hash of the last few tokens of the text. Engramscope computes those addresses in the browser and fetches only the needed rows from the public model files with HTTP range requests: 24 rows per layer, about 6 KB of data plus scales. It then projects the rows the way the model does and decodes the result into words.
+Engramscope reruns Karl Lashley's search for the engram on a machine memory where every trace has an address.
 
-A kill test on 2026-11-19 (`docs/findings/engram-killtest.md`) showed two things:
-- Read directly, the rows do **not** predict the next token.
-- They **do** point at concepts related to the phrase. In 30 phrases, 22 had a related word in the top 10 for layer 1, against 0 of 30 for random rows and 8 of 30 for the phrase's own last-token embedding. For example, "the Eiffel Tower" decoded to Paris, France and Louvre.
+Lashley spent about 30 years removing parts of rats' cortex to find where a learned habit was stored. In 1950 he concluded that he could not localize it. The loss depended on how much cortex was removed (*mass action*), and the parts of a functional area were *equipotential* ("In Search of the Engram", 1950, pp. 469 and 478). Richard Semon, who coined *engram* in 1904, defined retrieval (*ecphory*) as a trace becoming active again when part of the original stimulus recurs (*The Mneme*, 1921, p. 138). Sources and page numbers are in `docs/theory-sources.md`.
 
-The name and story come from neuroscience. Richard Semon coined *engram* for a memory trace in 1904. Karl Lashley spent decades looking for where engrams live in the brain and concluded in 1950 that he could not localize them. In this model an engram has an exact address computed from the text. Sources are in `docs/theory-sources.md`.
+DeepSeek-V4.1-Flash (284B parameters, MIT license) has two lookup tables called *Engram*, at layers 1 and 14: about 384 million rows each, 189 GiB in total. At each position the model fetches 24 rows per table, one for each of 3 n-gram sizes (2, 3, 4 tokens) × 8 hash heads. Each address is a hash of the last few tokens, so every trace of a phrase can be found, read and removed exactly, which was never possible in a brain.
 
-Kiroween category: **Resurrection** (proposed). Deadline: December 4, 2026, 2:00 PM PT (December 5, 06:00 WITA).
+Engramscope does three things:
+1. **Reads** a phrase's traces without running the model. The browser computes the model's own addresses and fetches the rows from the public model files with HTTP range requests (about 12 KB per phrase). It projects the rows the way the model does and decodes them into words. This is the measuring instrument.
+2. **Runs the lesion experiments.** It removes traces in pre-registered patterns and measures what survives: a mass-action curve over lesion size, equipotentiality tests (does *which* trace is removed matter?), and Semon's partial-cue test. The protocol (`bench/lesion-protocol.md`) is committed before any run.
+3. **Lets anyone do it.** The app shows a phrase's 24 traces and lets the viewer remove them and watch the memory degrade, next to the recorded results.
+
+A kill test on 2026-11-19 (`docs/findings/engram-killtest.md`) showed that the instrument works at all. Read directly, the rows do not predict the next token, but they do point at related concepts. 22 of 30 pilot phrases had a related word in the top 10 for layer 1, against 0 of 30 for random rows. For example, "the Eiffel Tower" decoded to Paris, France and Louvre.
+
+Kiroween category: **Resurrection** (Decision 1). Deadline: December 4, 2026, 2:00 PM PT (December 5, 06:00 WITA).
 
 ### Claims boundary
 
 These apply to the spec, README, write-up and video.
 
 - Engram, its hashing and its tables are DeepSeek's work ([Cheng et al., arXiv 2601.07372](https://arxiv.org/abs/2601.07372); the model's `inference/engram.py`). Engramscope claims none of it.
-- Engramscope's claimed contribution is limited to: **reading a released model's Engram rows directly, without running the model, over HTTP from a browser, and showing what they encode, with controls that show the readout is not noise.**
+- Engramscope's claimed contribution is limited to:
+  1. **Lashley's lesion experiments (mass action, equipotentiality) and Semon's partial-cue retrieval, rerun as pre-registered trace lesions on a released model's Engram memory;**
+  2. **the instrument they need: reading the Engram rows directly, without running the model, over HTTP from a browser, and decoding them, with controls that show the readout is not noise.**
+- A **trace lesion** removes rows from the value-vector sum before decoding. It shows how a stored concept is spread across traces, not what the running model forgets. Results are labelled that way. The behavioural version (Req 10) is a stretch goal.
+- Nothing here is a claim about biological memory. The experiments borrow Lashley's and Semon's questions and methods, not their conclusions.
 - Related work edits the tables ([EngramEdit](https://arxiv.org/abs/2610.10533)), compresses them ([CP](https://arxiv.org/abs/2610.21810), [GateRQ](https://arxiv.org/abs/2610.35985)), fetches them remotely for inference ([remote Engram over RDMA/TCP](https://huggingface.co/ProprietaryLegal/dsv41-remote-engram-rdma)), or reads them from disk on demand (llama.cpp n-gram read mode, DwarfStar). Engramscope cites these and does not claim remote row access or on-demand reads.
 - Every quality claim comes from the benchmark in Requirement 6, with its controls. Examples shown in the UI or video are labelled as examples.
 
@@ -30,7 +39,10 @@ These apply to the spec, README, write-up and video.
 - **Readout:** decoding a value vector into words by cosine similarity with the model's input token embeddings.
 - **Decode index:** a compressed copy of what the readout needs (token embeddings and value projection), small enough to ship to a browser.
 - **Control:** a readout of something that should carry no information about the phrase (random rows, rows of an unrelated phrase), shown next to the real result.
-- **Lesion:** zeroing a phrase's rows and observing what the running model can no longer recall (Lashley's method). Needs the full model.
+- **Trace:** one of the 24 rows fetched for a position and layer, together with its contribution to the value vector (`Wv[:, block] · row`).
+- **Trace lesion:** removing a set of traces from the value-vector sum and decoding the rest (Req 9). Readout level; no model run.
+- **Behavioural lesion:** zeroing traces in the running model and observing what it can no longer recall (Req 10). Needs the full model.
+- **Retention:** the share of phrases whose concept hit survives a lesion, among phrases with a hit when intact (`bench/lesion-protocol.md`, M2).
 
 ## Requirements
 
@@ -108,7 +120,7 @@ These apply to the spec, README, write-up and video.
 
 #### Acceptance Criteria
 
-1. THE interface SHALL be a complete product, not a debug page: a landing view with one input, a result view, an inside-the-lookup view, and an About page with sources and the benchmark.
+1. THE interface SHALL be a complete product, not a debug page: a landing view, the experiments view (recorded lesion results, Req 9.6), the live lesion view, a read view (decoded words and the inside-the-lookup pipeline), and an About page with sources and the benchmark.
 2. THE app SHALL work on current desktop Chrome, Edge and Firefox, and SHALL be usable on a phone-width screen.
 3. THE visual design SHALL be atmospheric and spooky in a way that serves the function (memory traces, fading, addresses), without obscuring the data.
 4. THE app SHALL offer example phrases, and SHALL work for any phrase the user types.
@@ -116,32 +128,41 @@ These apply to the spec, README, write-up and video.
 
 ### Requirement 8: Theory and history
 
-**User Story:** As a judge in the Resurrection category, I want the old idea to be accurate and central, not decoration.
+**User Story:** As a judge in the Resurrection category, I want the old research to be what the project does, not decoration.
 
 #### Acceptance Criteria
 
 1. EVERY statement about Semon, Lashley or the history of the engram SHALL come from `docs/theory-sources.md`, which records what each source says and where.
-2. THE app and README SHALL connect the history to a working feature: an engram with a computable address that can be read (Semon's term), and, if the stretch is done, a lesion experiment (Lashley's method).
-3. THE README SHALL label clearly which parts are DeepSeek's design and which are Engramscope's.
+2. EACH lesion experiment in Requirement 9 SHALL name the question it reruns and the source and page it comes from. The README, app and video SHALL present the experiments as the core of the project and the readout as the instrument.
+3. THE README SHALL label clearly which parts are DeepSeek's design, which parts are Lashley's and Semon's questions and methods, and which parts are Engramscope's.
+4. THE README and app SHALL state that the results say nothing about biological memory.
 
-### Requirement 9: Lesion experiment (stretch)
+### Requirement 9: Lesion experiments
 
-**User Story:** As a viewer, I want to see what the model forgets when one memory is removed, the experiment Lashley ran on rats.
+**User Story:** As a viewer, I want to see Lashley's experiments run on a memory where every trace can be found, so that I can see whether this memory is localized or distributed.
 
 #### Acceptance Criteria
 
-1. WHERE time and budget allow, THE project SHALL run the full model on rented hardware with the rows of selected phrases zeroed, and SHALL record the model's answers to prompts about those phrases with and without the lesion.
+1. THE lesion protocol (`bench/lesion-protocol.md`) SHALL be committed before any lesion is run. Its interpretation rules SHALL be approved by the builder before the first run. Its commit hash SHALL be recorded in every result.
+2. THE experiments SHALL cover, at minimum:
+   - **mass action:** retention against the number of traces removed, with random lesions of each size;
+   - **equipotentiality:** structured lesions (by n-gram size, by head) compared with random lesions of the same size, plus single-trace lesions and single-trace sparing;
+   - **partial cue:** retrieval from one n-gram size alone, and from the phrase after different preceding words.
+3. THE experiments SHALL use the pre-registered benchmark phrases (Req 6) and the exact readout in Python, not the compressed browser index. Layer 1 is primary and layer 14 is reported alongside.
+4. EVERY result SHALL be reported with 95% bootstrap intervals over phrases and with its reference levels (chance from the random-rows control; the orthogonal reference for vector similarity).
+5. THE wording of each conclusion SHALL follow the approved interpretation rules. IF a rule's outcome is "irregular" or unclear, THEN the result SHALL be shown without a summary label.
+6. THE app SHALL show the recorded results as the experiment's findings, and SHALL offer a live lesion view where the viewer removes traces of any phrase and sees the decoded words and vector similarity change. The live view is labelled as exploration.
+7. RAW outputs SHALL be stored in `docs/results/`, and the app SHALL read its experiment figures from them.
+
+### Requirement 10: Behavioural lesion (stretch)
+
+**User Story:** As a viewer, I want to see what the running model forgets when a phrase's traces are removed, the full version of Lashley's experiment.
+
+#### Acceptance Criteria
+
+1. WHERE time and budget allow, THE project SHALL run the full model on rented hardware with selected traces zeroed (conditions chosen from Req 9's protocol and pre-registered in an addendum), and SHALL record the model's answers to fixed prompts about those phrases with and without the lesion.
 2. THE results SHALL be shown as recorded results, labelled with the hardware and date, not as a live feature.
 3. IF the lesion has no measurable effect, THEN that result SHALL be reported.
-
-### Requirement 10: Other models (stretch)
-
-**User Story:** As a viewer, I want to compare what different models remember.
-
-#### Acceptance Criteria
-
-1. WHERE time allows, THE app SHALL support a second model with an n-gram lookup table (candidates: Qwen3.8-Flash-Next, LongCat-Flash-Lite), with the same exactness checks as Requirement 1.
-2. IF a candidate's hashing or table layout cannot be reproduced exactly, THEN it SHALL NOT be added.
 
 ### Requirement 11: Engineering standards
 
@@ -170,9 +191,10 @@ These apply to the spec, README, write-up and video.
 
 ## Decisions (builder, 2026-11-11)
 
-1. **Category:** Resurrection (Semon and Lashley as the old idea). The interface is still polished per Req 7.
+1. **Category:** Resurrection. The old research is Lashley's lesion experiments and Semon's retrieval rule, rerun as the core of the project (Decision 7). The interface is still polished per Req 7.
 2. **Layer 14:** shown alongside layer 1, labelled as unclear.
 3. **Client-side:** fully client-side if the decode index passes gate G1; otherwise a free static-plus-serverless fallback.
-4. **Lesion stretch (Req 9):** decided after the core is done, by November 30.
-5. **Second model (Req 10):** stretch, after the core.
+4. **Behavioural lesion (Req 10, formerly Req 9):** stretch; decided after the core is done, by November 30.
+5. **Second model:** cut (Decision 7) to make room for the lesion experiments.
 6. **Video naming:** no email to Devpost. The README, the app and the written submission name the model in plain text. The video refers to it generically ("an open-weight frontier model") and shows no logos; the app has a URL flag that swaps the model name for that generic label while recording.
+7. **Scope change (2026-11-11):** the lesion experiments become the core (Req 9). Without them the project would only examine DeepSeek's design and use the old research as a story. The readout becomes the instrument. The second-model stretch is cut. The behavioural lesion stays as a stretch (Req 10).

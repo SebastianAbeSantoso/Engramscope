@@ -35,6 +35,8 @@ That became Engramscope. *(Builder: add how this compared with vibe coding.)*
   - **G5:** the research-integrity rule required primary sources. Kiro read Semon's 1904 first edition (German), the 1921 English translation and Lashley's 1950 paper, and recorded page numbers. The scan of Lashley's famous sentence is missing the page where it starts, so the docs only allow quoting the verified half.
   - **G6:** prior-art re-check; it also found a newer checkpoint of the model.
 - **planned:** G3 (browser latency) on the builder's machine, then the Task 1.7 checkpoint.
+- **Scope change after the gates.** The builder asked whether the project was only dissecting DeepSeek's implementation, not implementing the old research. It was: Semon and Lashley were only framing. The spec was rewritten so that Lashley's lesion experiments (mass action, equipotentiality) and Semon's partial-cue test, rerun on the Engram traces, are the core (Req 9). The readout became the instrument, and the second-model stretch was cut. Kiro wrote the lesion protocol as a pre-registration and committed it before any lesion run. The protocol's interpretation rules wait for the builder's approval, because the research-integrity steering says pass marks come from the builder.
+- The same steering rule caught Kiro claiming a negative prior-art result ("no lesion study found") before running that search. The search then found a whole-table removal result (GateRQ) that is now cited.
 
 ## Steering
 

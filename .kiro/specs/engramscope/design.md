@@ -2,9 +2,9 @@
 
 ## Overview
 
-Engramscope is a static web app plus a small Python toolkit.
+Engramscope reruns Lashley's lesion experiments and Semon's partial-cue test on DeepSeek-V4.1-Flash's Engram memory (Req 9). It is a static web app plus a small Python toolkit.
 
-- **Python toolkit (`tools/`)** builds everything the browser needs from the pinned model files: hash constants, the compressed token map, the decode index, and test vectors. It also runs the benchmark. It is the reference implementation.
+- **Python toolkit (`tools/`)** runs the science: the readout benchmark (Req 6) and the lesion experiments (Req 9), both with the exact readout. It also builds everything the browser needs from the pinned model files (hash constants, the compressed token map, the decode index, test vectors, and the recorded experiment results). It is the reference implementation.
 - **Web app (`web/`)** tokenizes the phrase, computes addresses, fetches rows from the Hugging Face CDN with range requests, projects and decodes them with the decode index, and shows the result. No Engramscope server.
 
 ```mermaid
@@ -15,6 +15,8 @@ flowchart LR
     B --> A2[decode index]
     B --> A3[test vectors]
     HF --> BM[tools/bench.py] --> R[docs/results/]
+    HF --> LS[tools/lesion.py] --> R
+    R --> A4[recorded experiment results]
   end
   subgraph Browser[Browser, per phrase]
     P[phrase] --> T[tokenizer] --> H[hash: 24 addresses x 2 layers]
@@ -23,6 +25,8 @@ flowchart LR
     A2 --> D
     D --> W[decoded words, per row and per n-gram]
     F --> C[control: random rows]
+    W --> L[live lesion: remove traces, re-decode]
+    A4 --> X[experiments view]
   end
   A1 --> H
 ```
@@ -56,6 +60,7 @@ All values below were read from the model files on 2026-11-19 (kill test).
 - `readout.py`: value vector `Wv @ concat(rows)`, per-row contributions `Wv[:, block_c] @ row_c`, cosine decoding against embeddings.
 - `build_assets.py`: writes `web/public/assets/<revision>/` (constants JSON, token map, decode index, test vectors).
 - `bench.py`: Requirement 6.
+- `lesion.py`: Requirement 9, following `bench/lesion-protocol.md` exactly (Section 8 below).
 
 ### 2. Decode index (Gate G1 decides the format)
 
@@ -91,10 +96,11 @@ Gate G2 checks token ids against the Python `tokenizers` output on 1,000 strings
 React + Vite + TypeScript, built to a static site on GitHub Pages.
 
 Views:
-- **Landing:** one input ("What do you want the model to remember?"), example phrases, one line on what is happening.
-- **Result:** decoded words for layer 1 (and 14, labelled), the control beside them, bytes fetched ("12 KB of 189 GiB"), time taken.
-- **Inside:** the pipeline from Req 3, with each of the 24 rows as a small card: n-gram window, head, address, byte offset, top words for that row alone.
-- **About:** history (from `docs/theory-sources.md`), what DeepSeek built and what Engramscope adds, the benchmark table with intervals, limitations, sources.
+- **Landing:** Lashley's question in one line ("Where is a memory stored?"), one input, example phrases, and the way into the experiments.
+- **Experiments:** the recorded results of Req 9, one panel per question, each naming its source and page. Mass-action curve with intervals and references; equipotentiality comparison (structured against random lesions); partial-cue results. Read from `docs/results/lesion-*.json`.
+- **Live lesion:** a phrase's 24 traces as a 3 × 8 grid (n-gram size × head). The viewer switches traces off and on, or uses presets matching the protocol's conditions. The decoded words and the vector similarity to the intact memory update at once, because the value vector is a sum: no new fetch, one decode per change. Labelled as exploration.
+- **Read:** decoded words for layer 1 (and 14, labelled), the control beside them, bytes fetched ("12 KB of 189 GiB"), time taken. Inside it, the pipeline from Req 3, with each of the 24 rows as a card: n-gram window, head, address, byte offset, top words for that row alone.
+- **About:** history (from `docs/theory-sources.md`), what is DeepSeek's, Lashley's and Semon's, and Engramscope's, the benchmark table with intervals, limitations, sources.
 
 Visual direction (Req 7.3): dark, archival, "memory traces". Rows appear as faint traces that sharpen as their bytes arrive. The decoded words fade in by similarity. Data stays legible: no effect hides a number.
 
@@ -106,9 +112,17 @@ Visual direction (Req 7.3): dark, archival, "memory traces". Rows appear as fain
 - Output: `docs/results/bench-<date>.json` with per-phrase decoded lists, and a Markdown table with hit@k and 95% bootstrap intervals (2,000 resamples).
 - The 30-phrase pilot from the kill test is kept as a pilot and not counted.
 
+### 8. Lesion experiments (`tools/lesion.py`, Req 9)
+
+- **Protocol:** `bench/lesion-protocol.md` defines conditions, measures, seeds, references and the interpretation rules. `lesion.py` encodes those conditions, and a unit test checks them against the protocol's table. The script records the protocol's git hash and refuses to run if the file has uncommitted changes or differs from its approval commit.
+- **Computation:** for each phrase and layer, fetch the 24 rows once, compute the 24 contributions `cᵢ` (5,120-dim each), and evaluate every condition as a sum of a subset of them. That is a few thousand decodes per phrase. Batching all decodes per phrase into one matrix product against the embedding table (129,280 × 5,120) keeps a full run within minutes on the sandbox CPU (**estimate**; measured on the first run).
+- **Context condition (C2):** the phrase is re-tokenized after each prefix. Rows whose address is unchanged are counted and reused.
+- **Output:** JSON with per-condition decoded lists and measures, and a Markdown report that applies the approved rules mechanically and prints the outcome of each.
+- **Browser:** reads the recorded results only. The live lesion view uses the compressed decode index, and its numbers are labelled as approximate (Req 4.4).
+
 ## Correctness properties
 
-For property-based tests (`hypothesis` in Python; shared test vectors for the web).
+For property-based tests (`hypothesis` in Python; shared test vectors for the web). Properties 1–8 and 10 are Python; 9 is web.
 
 1. **Hash parity:** for any token sequence, the reference `addresses()` equals a direct transcription of `inference/engram.py` run with numpy int64 arithmetic.
 2. **Address range:** every address for column c lies in `[offset_c, offset_c + prime_c)`, and the ranges of different columns do not overlap.
@@ -119,10 +133,11 @@ For property-based tests (`hypothesis` in Python; shared test vectors for the we
 7. **FP8 round trip:** decoding all 256 E4M3 codes matches a reference library; E8M0 code 255 is NaN and never appears in fetched scales.
 8. **Linearity:** the sum of the 24 per-row contributions equals the full value vector (within float tolerance).
 9. **Web parity:** the browser hash and readout match the Python test vectors exactly (addresses) or within tolerance (vectors).
+10. **Lesion additivity:** for any subset S, decoding `v_S` from the stored contributions equals decoding `Wv · concat(rows with S zeroed)`; the empty lesion equals the intact readout, and removing all 24 rows gives the zero vector (reported as "nothing left", not decoded).
 
 ## Testing strategy
 
-- Python: `pytest` + `hypothesis` for properties 1–8; network tests marked and skipped unless `ENGRAMSCOPE_TEST_NETWORK=1`.
+- Python: `pytest` + `hypothesis` for properties 1–8 and 10; network tests marked and skipped unless `ENGRAMSCOPE_TEST_NETWORK=1`.
 - Web: `vitest` for hash, FP8, offsets and readout against test vectors; Playwright smoke test of the built site against a recorded fixture (no live CDN in CI).
 - CI: GitHub Actions for Python and web lint and tests.
 
@@ -144,3 +159,5 @@ For property-based tests (`hypothesis` in Python; shared test vectors for the we
 | Hub rate limits | Errors for heavy users | Resolve once per shard; back-off |
 | Trademark rule in the video | Disqualification risk | Video names the model generically (`?generic` flag); no logos |
 | Prior art appears | Novelty claim narrows | Re-check before submission (Task 1.6, Task 9) |
+| Lesion results are trivial (e.g. every curve follows the orthogonal reference) | Weaker story | Report it: that itself answers Lashley's question for this memory (traces are independent and equal). The protocol's references make "trivial" visible instead of hidden |
+| Trace lesions read as claims about the model's behaviour | Overclaim | Label every result "trace lesion (readout)"; behavioural lesion only via Req 10 |
