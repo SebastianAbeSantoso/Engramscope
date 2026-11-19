@@ -56,14 +56,14 @@ Schedule (proposed): Task 1 by Nov 21; Python reference, benchmark and lesion ru
   - _Requirements: 2, 3, 4, 7, 8_
 
 - [ ] 7. Benchmark
-  - [ ] 7.1 `bench.py` with all controls and bootstrap intervals; run on the committed phrase set.
+  - [x] 7.1 `bench.py` with all controls and bootstrap intervals; run on the committed phrase set. **Done:** layer 1 hit@10 61.8% [53.7, 69.9], beats every control (`docs/results/bench-2026-11-19.md`).
   - [ ] 7.2 Write `docs/results/` and the README/About numbers from the output only.
   - [ ] 7.3 **Checkpoint:** the builder reviews the result; if layer 1 does not beat every control, the claims are revised (Req 6.5).
   - _Requirements: 6_
 
 - [ ] 8. Lesion experiments (core; after Task 7, which supplies the chance level)
-  - [ ] 8.1 `lesion.py` per the approved protocol, with a test that its conditions match the protocol table, and the git-hash guard.
-  - [ ] 8.2 Run on layers 1 and 14; write `docs/results/lesion-<date>.{json,md}` from the output only, with the rule outcomes applied mechanically.
+  - [x] 8.1 `lesion.py` per the approved protocol, with a test that its conditions match the protocol table, and the git-hash guard.
+  - [x] 8.2 Run on layers 1 and 14; write `docs/results/lesion-<date>.{json,md}` from the output only, with the rule outcomes applied mechanically. **Done:** `docs/results/lesion-2026-11-19.md`; summary for review in `docs/findings/experiments-2026-11-19.md`.
   - [ ] 8.3 Experiments view in the app (reads the recorded results) and live lesion view (3 × 8 trace grid, presets for the protocol's conditions, labelled as exploration).
   - [ ] 8.4 **Checkpoint:** the builder reviews the results and the wording that follows from the rules before it goes into the README, app or video.
   - _Requirements: 8, 9_
