@@ -35,7 +35,7 @@ All results are **trace lesions (readout)**: traces are removed from the value-v
   - Half the concepts are gone only when **19.0** traces are removed [18.0, 19.8].
   - Shape statistic S = 0.19 [0.14, 0.23].
 - **Equipotentiality (Q2).**
-  - **"Equipotential across heads."** Removing any one hash head (3 traces) costs the same as removing 3 random traces, within the corrected intervals of about ±6 points. Each head holds 12.3–12.8% of the vector's energy.
+  - **"Equipotential across heads."** Removing any one hash head (3 traces) costs the same as removing 3 random traces: the differences run from −4.0 to +3.9 points, and every corrected interval includes zero. Each head holds 12.3–12.7% of the vector's energy.
   - **"Not equipotential across n-gram sizes."** Removing the 8 two-word traces leaves the concept in **10.5%** of phrases, against 87.8% for 8 random traces. Removing the 8 four-word traces leaves it in 98.7%, which is less damaging than chance.
 - **Single traces (B1, descriptive).** A single trace is critical in 3.9% of phrases. On their own, an average of 3.6 of the 24 traces keep the concept.
 - **Semon's partial cue (Q3a).** "A 2-gram cue alone retrieves the concept above chance": 94.7% of phrases. The 3-word traces alone retrieve it in 15.8% (also above chance), and the 4-word traces alone in 0%.
@@ -54,10 +54,10 @@ Why it could look like this, an interpretation that has not been tested:
 ## 3. Caveats
 
 - **Padding.** Phrases were tokenized alone, as registered. For short phrases, the windows longer than the phrase contain padding, which favours the two-word traces. The pre-registered split by length shows the same pattern in phrases of 4 or more tokens, which have no padding: removing the two-word traces costs 50.2 points [19.2, 78.5]. There are only 12 such phrases with a hit, so that interval is wide.
-- **Single words are not in this memory (exploratory, not pre-registered).** None of the 17 single-token phrases ("coffee", "Bali", "DNA", …) has a readable trace, alone or after any of the five lead-ins. For the 106 multi-token phrases, the hit rate is 71.7%. Engram's own paper presents it as a memory for multi-token patterns ([Cheng et al. 2026](https://arxiv.org/html/2601.07372), Sec. 6.5). For the app, example phrases should be multi-word names, and single words should get an honest "nothing readable here".
+- **Single words are not in this memory (exploratory, not pre-registered).** None of the 17 single-token phrases ("coffee", "Bali", "DNA", …) has a readable trace, alone or after any of the five lead-ins. For the 106 multi-token phrases, the hit rate is 71.7%. In Engram's own paper the gate fires on multi-token entities and set phrases ([Cheng et al. 2026](https://arxiv.org/html/2601.07372), Sec. 6.5). For the app, example phrases should be multi-word names, and single words should get an honest "nothing readable here".
 - **Readout, not behaviour.** The running model also uses the rows in its gate, and later layers can compensate. Whether the model forgets anything is the behavioural lesion (Req 10).
 - **Decoding is an approximation** (nearest input embeddings). These numbers use the exact readout; the browser index will be approximate.
 
 ## 4. Draft wording for the README (needs approval)
 
-> We reran Karl Lashley's lesion experiments on a language model's memory, pre-registered. Each phrase is stored in 24 traces. The stored concept survives until about 19 of them are removed. Any of the 8 hash heads can stand in for any other, but the two-word traces cannot be replaced: remove those 8 and the concept is gone in 9 of 10 phrases. That is the pattern Lashley described in rat cortex in 1950: some regions are essential, and within a region the parts are interchangeable. It describes this model's memory, not brains.
+> We reran Karl Lashley's lesion experiments on a language model's memory, pre-registered. Each phrase is stored in 24 traces. Half of the stored concepts are still readable after 19 of the 24 are removed at random. Any of the 8 hash heads can stand in for any other, but the two-word traces cannot be replaced: remove those 8 and the concept is gone in 9 of 10 phrases. That is the pattern Lashley described in rat cortex in 1950: some regions are essential, and within a region the parts are interchangeable. It describes this model's memory, not brains.
