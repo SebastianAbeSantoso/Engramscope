@@ -2,6 +2,7 @@
 
 Checks rule 3 of bench/README.md for the phrase's own words, set sizes, duplicates, and disjointness from the pilot.
 """
+
 import json
 import unicodedata
 from collections import Counter
@@ -145,7 +146,11 @@ P = {
         ("the laundry", "washing detergent clothes dryer 衣服 wash"),
     ],
 }
-PILOT = [l.strip() for l in open("bench/dev_phrases.txt", encoding="utf-8") if l.strip() and not l.startswith("#")][:30]
+PILOT = [
+    line.strip()
+    for line in open("bench/dev_phrases.txt", encoding="utf-8")
+    if line.strip() and not line.startswith("#")
+][:30]
 
 
 def norm(w):

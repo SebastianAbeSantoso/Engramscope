@@ -24,15 +24,15 @@ Schedule (proposed): Task 1 by Nov 21; Python reference, benchmark and lesion ru
   - [x] 1.7 **Checkpoint:** the builder reviews gates G1–G6, confirms the decode index size budget and the latency target, **approves the lesion protocol's interpretation rules (Section 6)**, and approves the build. **Done 2026-11-19:** decode index fitted d=1024 int4, about 92 MB (builder); rules delegated to Kiro and finalized before any run; latency target proposed (Decision 10), to be confirmed at 6.6.
 
 - [ ] 2. Scaffolding
-  - [ ] 2.1 Python project with `uv`: `tools/engramscope/` package, `pyproject.toml` with ruff and pytest config, Python 3.12.
+  - [x] 2.1 Python project with `uv`: `tools/engramscope/` package, `pyproject.toml` with ruff and pytest config, Python 3.12.
   - [ ] 2.2 Web app with Vite, React, TypeScript, vitest, eslint; GitHub Pages build.
   - [ ] 2.3 GitHub Actions CI: Python lint and tests; web lint, tests and build.
   - _Requirements: 11_
 
 - [ ] 3. Reference implementation
-  - [ ] 3.1 `hashing.py` with the Req 1.2 checks, ported from the spike.
-  - [ ] 3.2 `fetch.py`, `fp8.py`, `readout.py`, including per-row contributions.
-  - [ ] 3.3 Property tests 1–8 and 10 from design.
+  - [x] 3.1 `hashing.py` with the Req 1.2 checks, ported from the spike.
+  - [x] 3.2 `hub.py` (fetch), `fp8.py`, `readout.py`, including per-row contributions.
+  - [x] 3.3 Property tests 1–8 and 10 from design (26 tests incl. network; `ENGRAMSCOPE_TEST_NETWORK=1 uv run pytest`).
   - _Requirements: 1, 3.2, 11.1_
 
 - [ ] 4. Asset build
