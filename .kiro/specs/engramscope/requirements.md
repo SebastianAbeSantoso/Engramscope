@@ -189,7 +189,7 @@ These apply to the spec, README, write-up and video.
 5. THE submission SHALL be made before December 4, 2026, 2:00 PM PT, entering Resurrection and Best Student Project: Resurrection.
 6. ALL deliverables SHALL be tracked in `docs/submission/deliverables.md`, and the Kiro write-up kept as a running draft in `docs/submission/kiro-writeup.md`.
 
-## Decisions (builder, 2026-11-11)
+## Decisions (builder, 2026-11-19)
 
 1. **Category:** Resurrection. The old research is Lashley's lesion experiments and Semon's retrieval rule, rerun as the core of the project (Decision 7). The interface is still polished per Req 7.
 2. **Layer 14:** shown alongside layer 1, labelled as unclear.
@@ -197,4 +197,7 @@ These apply to the spec, README, write-up and video.
 4. **Behavioural lesion (Req 10, formerly Req 9):** stretch; decided after the core is done, by November 30.
 5. **Second model:** cut (Decision 7) to make room for the lesion experiments.
 6. **Video naming:** no email to Devpost. The README, the app and the written submission name the model in plain text. The video refers to it generically ("an open-weight frontier model") and shows no logos; the app has a URL flag that swaps the model name for that generic label while recording.
-7. **Scope change (2026-11-11):** the lesion experiments become the core (Req 9). Without them the project would only examine DeepSeek's design and use the old research as a story. The readout becomes the instrument. The second-model stretch is cut. The behavioural lesion stays as a stretch (Req 10).
+7. **Scope change (2026-11-19):** the lesion experiments become the core (Req 9). Without them the project would only examine DeepSeek's design and use the old research as a story. The readout becomes the instrument. The second-model stretch is cut. The behavioural lesion stays as a stretch (Req 10).
+8. **Decode index (Req 5.2):** fitted, d = 1,024, 4-bit: about 66 MB of embeddings plus 12.6 MB per layer, about 92 MB in total, downloaded once and cached (builder, from the G1 options). The browser's words are labelled approximate; every number in the experiments comes from the exact readout in Python.
+9. **Lesion interpretation rules (Req 9.1):** the builder delegated the choice to Kiro ("up to you since whats the best for the project"). Kiro finalized and approved them before any run (`bench/lesion-protocol.md`, change log).
+10. **Latency target (Req 2.5), proposed by Kiro from G3, to be confirmed by the builder at checkpoint 6.6:** for a phrase not fetched before, layer-1 words within 1.5 s of submitting on the builder's connection, not counting the first load of the session. Measured fetch time on that connection: 1.07–1.09 s at concurrency 32.

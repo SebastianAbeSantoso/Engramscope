@@ -2,7 +2,7 @@
 
 The reference for every historical statement in the README, app, write-up and video (rule in `.kiro/steering/research-integrity.md`). If a claim isn't here, check the source first and add it.
 
-Status 2026-11-11: **primary sources read** (Task 1.5, gate G5). Page numbers are the printed page numbers of the editions named. Quotes are short and exact; use them only as written here.
+Status 2026-11-19: **primary sources read** (Task 1.5, gate G5). Page numbers are the printed page numbers of the editions named. Quotes are short and exact; use them only as written here.
 
 ## Richard Semon (1859–1918), *Die Mneme* (1904)
 
@@ -27,7 +27,7 @@ What he says:
 - **Mass action** (Section VII, from p. 469). Rats trained in a maze lost more of the habit the more cortex was removed. With 5–10% destroyed the loss "may be scarcely detectable"; with 50% or more the habit is completely lost.
 - **The famous remark** (end on p. 478; it starts on p. 477, which is missing from the scan). The visible part reads: "that learning just is not possible. It is difficult to conceive of a mechanism which can satisfy the conditions set for it. Nevertheless, in spite of such evidence against it, learning does sometimes occur." **Quote only this part** until p. 477 is checked. The often-quoted opening of the sentence is not verified here.
 - **Conclusions** (p. 478, numbered):
-  - (2) "It is not possible to demonstrate the isolated localization of a memory trace anywhere within the nervous system." Also: "The engram is represented throughout the region."
+  - (2) "It is not possible to demonstrate the isolated localization of a memory trace anywhere within the nervous system." He adds that limited regions may be essential for learning or retaining a particular activity, but "within such regions the parts are functionally equivalent." Also: "The engram is represented throughout the region."
   - (3) The associative areas "are not storehouses for specific memories."
 - **Multiple representation** (conclusion 5, p. 479). The equivalence of cortical regions "points to multiple representation"; "equivalent traces are established throughout the functional area."
 

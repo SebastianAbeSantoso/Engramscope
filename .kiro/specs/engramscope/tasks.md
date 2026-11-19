@@ -7,7 +7,7 @@ Schedule (proposed): Task 1 by Nov 21; Python reference, benchmark and lesion ru
 ## Pre-flight
 
 - [x] P0. Kill test of the idea (done 2026-11-19 in the MaltOE repo; copied to `spikes/engram_readout/` and `docs/findings/engram-killtest.md`). _Requirements: 6_
-- [x] P1. Builder: answer the open questions at the end of `requirements.md` (accepted the proposed answers, 2026-11-11).
+- [x] P1. Builder: answer the open questions at the end of `requirements.md` (answered 2026-11-19; see Decisions in `requirements.md`).
 - [ ] P2. Builder: set the repository's About description in the GitHub UI, and confirm GitHub shows the MIT license. _Requirements: 12.1_
 - [x] P3. Trademark approach decided without emailing Devpost: plain-text name in README, app and written submission; generic wording in the video (Decision 6). _Requirements: 12.3_
 
@@ -16,12 +16,12 @@ Schedule (proposed): Task 1 by Nov 21; Python reference, benchmark and lesion ru
 - [ ] 1. Feasibility gates
   - [x] 1.1 G1 decode index: build PCA-256 int8 embeddings and folded value matrices; measure top-10 overlap with the exact readout on 50 fixed phrases and the pilot score with both; record size. Try d = 512 or vocabulary restriction if needed. _Requirements: 5_ **Done:** measured, no small index matches the exact readout well; best per size is fitted d=1024 int4 (~92 MB total, 0.60 top-10 overlap on layer 1). Options in `docs/findings/g1-decode-index.md`; the builder picks at 1.7.
   - [x] 1.2 G2 tokenizer parity: transformers.js `AutoTokenizer` against Python `tokenizers` on 1,000 strings (CJK, Indonesian, emoji, leading spaces). Fall back to a WebAssembly build of `tokenizers` if any id differs. _Requirements: 1.1_ **Done:** 0 mismatches of 1,000 for `@huggingface/tokenizers` 0.2.0 and transformers.js 4.3.2; use the former (`docs/findings/g2-tokenizer.md`).
-  - [ ] 1.3 G3 browser fetch **[HW]**: a one-page prototype that resolves the CDN URLs and fetches 96 ranges; the builder opens it on their connection and reports the time. _Requirements: 2.4, 2.5_
+  - [x] 1.3 G3 browser fetch **[HW]**: a one-page prototype that resolves the CDN URLs and fetches 96 ranges; the builder opens it on their connection and reports the time. _Requirements: 2.4, 2.5_ **Done:** on the builder's PC, 1.07–1.09 s per phrase at concurrency 32 (cold), 0.54 s warm; all bytes verified (`docs/findings/g3-browser-fetch.md`).
   - [x] 1.4 G4 benchmark set: write and commit at least 100 phrases with related-word sets before any readout (categories: places, people, events, science, culture, Indonesian topics, everyday things). _Requirements: 6.1, 6.2_ **Done:** 123 phrases committed in ec0e429 before any readout (`bench/README.md`).
   - [x] 1.5 G5 history sources: find and read primary or close-to-primary sources for Semon (1904) and Lashley (1950); write `docs/theory-sources.md` with what each says and where. _Requirements: 8.1_ **Done:** Semon 1904 (German first edition) and 1921 (English) and Lashley 1950 read, with page numbers, in `docs/theory-sources.md`. Lashley pp. 476–477 are missing from the scan used.
   - [x] 1.6 G6 prior-art re-check for direct Engram readouts and n-gram table interpretability. _Requirements: claims boundary_ **Done:** no prior tool or study decodes row contents (`docs/findings/g6-prior-art.md`); a newer checkpoint `-1017` exists.
   - [x] 1.6b Write and commit the lesion protocol (`bench/lesion-protocol.md`) before any lesion run. _Requirements: 9.1_
-  - [ ] 1.7 **Checkpoint:** the builder reviews gates G1–G6, confirms the decode index size budget and the latency target, **approves the lesion protocol's interpretation rules (Section 6)**, and approves the build.
+  - [x] 1.7 **Checkpoint:** the builder reviews gates G1–G6, confirms the decode index size budget and the latency target, **approves the lesion protocol's interpretation rules (Section 6)**, and approves the build. **Done 2026-11-19:** decode index fitted d=1024 int4, about 92 MB (builder); rules delegated to Kiro and finalized before any run; latency target proposed (Decision 10), to be confirmed at 6.6.
 
 - [ ] 2. Scaffolding
   - [ ] 2.1 Python project with `uv`: `tools/engramscope/` package, `pyproject.toml` with ruff and pytest config, Python 3.12.

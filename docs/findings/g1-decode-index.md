@@ -1,4 +1,4 @@
-# Gate G1: decode index (2026-11-11)
+# Gate G1: decode index (2026-11-19)
 
 **Question.** Can the browser decode Engram readouts into words without downloading the full embedding table (129,280 × 5,120, 1.3 GB in BF16)?
 

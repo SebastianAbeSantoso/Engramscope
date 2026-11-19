@@ -1,10 +1,10 @@
-# Gate G6: prior-art re-check (2026-11-11)
+# Gate G6: prior-art re-check (2026-11-19)
 
 **Question.** Has anyone already decoded what DeepSeek's Engram rows store, or built a tool that reads them without running the model?
 
 **Result: nothing found that does either.** Existing work explains when the memory is used, how to store or serve it, or how to redesign it. None of it decodes the content of the rows. A search can only show what it finds, so the claim stays: "we found no prior tool or study that decodes Engram rows directly". Re-check before submission (Task 9.5).
 
-Searches run (web search, 2026-11-11):
+Searches run (web search, 2026-11-19):
 - Engram conditional memory and interpretability;
 - probing or decoding rows without running the model;
 - interpretability of hashed n-gram embeddings;
@@ -26,7 +26,7 @@ Searches run (web search, 2026-11-11):
 
 - **Safe wording:** "Engramscope reads DeepSeek-V4.1-Flash's Engram rows over HTTP without running the model and decodes them into words. We found no earlier tool or study that decodes row contents."
 - **Not safe:** "first to interpret Engram". The paper's gate visualization is a form of interpretation.
-- **Lesions** (searched separately on 2026-11-11 with lesion and ablation queries):
+- **Lesions** (searched separately on 2026-11-19 with lesion and ablation queries):
   - **Whole-table removal exists.** GateRQ reports that removing the Engram tables from DeepSeek-V4.1-Flash costs 36.8 PopQA points ([arXiv 2610.35985, abstract](https://arxiv.org/abs/2610.35985)). That is a behavioural lesion of the entire memory. Cite it as the "all traces removed" end point that Engramscope does not measure.
   - **Component ablations while training:** the Engram paper (Sec. 6.2, Fig. 5); a collision study ([arXiv 2601.16531](https://arxiv.org/html/2601.16531v1)).
   - **"Computational lesions" of language models** are an existing method in general (e.g. [arXiv 2604.10627](https://arxiv.org/pdf/2604.10627v1.pdf)). Lashley is used as an analogy in interpretability writing ([example](https://interpreted.substack.com/p/the-limitations-of-anthropics-attribution)).

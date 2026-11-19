@@ -1,6 +1,6 @@
 # Lesion protocol (pre-registered)
 
-Status: **written and committed before any lesion was run.** The commit that adds this file is the pre-registration commit; `lesion.py` records its hash in every result. The interpretation rules in Section 6 are **proposed by Kiro and wait for the builder's approval** (research-integrity rule: pass marks come from the builder). No lesion runs until they are approved. Any change after that gets a dated note at the end of this file.
+Status: **written and committed before any lesion was run** (a6caabf, 2026-11-19). **Interpretation rules finalized and approved on 2026-11-19, still before any run** (Section 6 and the change log). The builder delegated the choice of rules to Kiro. `lesion.py` records the commit of this file in every result and refuses to run on any other version. Any later change gets a dated note in the change log.
 
 What had been seen before writing this: the kill-test pilot (30 dev phrases, intact readouts only) and gate G1. G1 decoded single rows of the 50 dev phrases to measure compression, not lesions, and never touched the benchmark phrases. No readout of `bench/phrases.jsonl` has been run.
 
@@ -69,22 +69,39 @@ References shown with the results. These are not controls.
 
 Uncertainty: 95% percentile bootstrap over phrases, 2,000 resamples, seed 20261111. Reported for every curve point and condition.
 
-## 6. Interpretation rules (PROPOSED, need the builder's approval)
+## 6. Interpretation rules (approved 2026-11-19)
 
-Applied to layer 1, measure M2, in this order. Each rule names its comparison, so the wording in the README and app follows from the numbers.
+The rules apply to layer 1, measure M2, in this order. Each rule names its comparison, so the wording in the README and app follows from the numbers. Layer 14 gets the same rules if it passes the power guard.
 
-- **Q1, mass action.**
-  - Say **"graded"** if mean M2 does not increase as k grows (allowing overlap of the 95% intervals between neighbouring k), and no single step between neighbouring k values accounts for more than half of the total drop from A0 to A(23).
-  - Say **"threshold-like"** if one step accounts for more than half of the drop.
-  - Otherwise say **"irregular"**, and show the curve.
+- **Power guard.** A layer gets labels only if at least 30 phrases have an intact concept hit (M1 = 1 under A0). Otherwise its results are shown with intervals and no labels.
+- **Q1, mass action.** Let R(k) be mean retention over phrases at lesion size k. R(0) = 1, then the A(k) points for k = 1 … 23. Let D = 1 − R(23) be the total drop.
+  1. If R(23) ≥ 0.5, say **"redundant: most concepts survive with a single trace"**.
+  2. Otherwise, if R rises between two neighbouring sizes and their 95% intervals do not overlap, say **"irregular"** and show the curve without another label.
+  3. Otherwise compute the shape statistic S, the mean over k from 0 to 23 of (R(k) − L(k)) / D. Here L is the straight line from (0, 1) to (23, R(23)), R is interpolated linearly between measured sizes, and the mean uses the trapezoid rule. S = 0 is a straight line. S = +0.5 is the limit for a curve that stays at 1 and collapses at the end; S = −0.5 for one that collapses at once. The 95% interval comes from 2,000 bootstrap resamples over phrases.
+     - Interval inside [−0.1, 0.1]: **"proportional, as in Lashley's mass action"**.
+     - Interval entirely above 0.1: **"late collapse: the traces stand in for each other until most are gone"**.
+     - Interval entirely below −0.1: **"early loss: each trace removed costs more than its share"**.
+     - Anything else: no label.
+  4. Always report k50, the lesion size at which R crosses 0.5 (linear interpolation), with its 95% interval.
 - **Q2, equipotentiality.**
-  - Compare each structured lesion, B3(n) and B4(h), with the random lesions of the same size, A(8) and A(3).
-  - A structured lesion is **"special"** if its mean M2 lies outside the 2.5–97.5% range of the means of 2,000 bootstrap draws of the random condition.
-  - Say **"equipotential at this level"** if no B3 and no B4 lesion is special, and **"localized to n-gram size n" / "head h"** for each special one.
-  - Separately, for B1: report the share of phrases in which one single-row lesion flips the hit to a miss. Call a phrase's trace **"single-point"** if exactly one row does that.
+  - Each structured lesion is compared with random lesions of the same size: B3(n) (8 traces) with A(8), B4(h) (3 traces) with A(3). Per phrase, d = M2(structured) − M2(random), where the random M2 is that phrase's mean over its 50 subsets. Bootstrap the mean of d over phrases, 10,000 resamples. There are 11 comparisons, so each uses a Bonferroni-corrected two-sided interval (percentiles 0.227 and 99.773).
+  - A structured lesion is **"special"** if its interval excludes 0. It is **"more damaging than chance"** if the interval is below 0, **"less damaging"** if above.
+  - Say **"equipotential across heads"** if no B4 lesion is special, and **"equipotential across n-gram sizes"** if no B3 lesion is special. Otherwise name each special lesion and its direction.
+  - B1 is descriptive: report the share of phrases where at least one single-trace lesion turns the hit into a miss, and the share where exactly one trace does (**"single-point"**).
 - **Q3, partial cue.**
-  - **Q3a:** for each n, report C1(n) M2 with its interval. Say "a size-n cue alone retrieves the concept" for a phrase set if the interval's lower bound is above the chance level.
-  - **Q3b:** report M2 per context, and the share of rows recurring per n-gram size. No pass mark; the rule is to show both side by side.
+  - **Q3a:** for each n, per phrase d = M2(C1(n)) − chance, where chance is that phrase's random-rows hit (0 or 1) at the same layer, from the readout benchmark. Bootstrap the mean of d over phrases, 10,000 resamples, Bonferroni-corrected over the 3 sizes (percentiles 0.833 and 99.167). If the interval lies above 0, say **"a size-n cue alone retrieves the concept above chance"**.
+  - **Q3b:** report M2 per context with its 95% interval, beside the share of the 24 traces whose address recurs. No label.
+- **Secondary analysis (descriptive, no labels).** B3 and C1 split by the phrase's length in tokens (`" " + phrase`), in bins 1, 2, 3 and ≥4 tokens. The bins were chosen from the token counts before any readout: 17, 45, 39 and 22 phrases. Length matters because at the last position, windows longer than the phrase reach before its start and contain padding. For a 2-token phrase, only the 2-gram window lies inside the phrase; for a 1-token phrase, none does.
+
+## 6b. Predictions (written before any run)
+
+These are written down so that a confirmed prediction counts for something and a failed one is visible. The results are reported against them either way.
+
+- **P1, heads.** No head lesion is special. The 8 heads hash the same n-gram into different tables, so they are interchangeable by construction. The model has a reason to store the same content in each: summing them averages out hash collisions.
+- **P2, n-gram sizes.** At least one n-gram-size lesion is special. In the 2-token bin, removing the 2-gram traces is more damaging than chance, and removing the 3- or 4-gram traces is not. This bin is checked with its own 95% interval of d.
+- **No prediction** for the shape of the mass-action curve (Q1), single traces (B1), or the partial-cue conditions (Q3).
+
+If P1 and P2 both hold, the result would parallel Lashley's conclusion (2): limited regions may be essential, but within such a region the parts are functionally equivalent (1950, p. 478). The parallel is claimed only if the rules above produce both labels.
 
 ## 7. Output
 
@@ -94,4 +111,9 @@ Applied to layer 1, measure M2, in this order. Each rule names its comparison, s
 
 ## Change log
 
-- (none yet)
+- **2026-11-19, before any run: Section 6 finalized and approved; Section 6b added.** The builder delegated the decision ("up to you since whats the best for the project"). Changes from the proposed version (a6caabf):
+  - Added the power guard.
+  - Q1: the largest-step rule depended on the uneven spacing of the lesion sizes, so it was replaced by the interpolated shape statistic S with a ±0.1 band. The labels "redundant", "late collapse" and "early loss" were added, and k50 is always reported.
+  - Q2 and Q3a: each now uses paired per-phrase differences with Bonferroni-corrected intervals (10,000 resamples). The proposed version compared one mean with an unpaired bootstrap range.
+  - Added the secondary analysis by phrase length and the predictions.
+- **Note on the seed.** 20261111 is an arbitrary fixed number. It was chosen while Kiro's session date was wrongly set to 2026-11-11 (the real date was 2026-11-19). It stays unchanged because it is part of the pre-registration.

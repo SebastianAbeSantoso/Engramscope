@@ -1,4 +1,4 @@
-# Gate G2: tokenizer parity (2026-11-11)
+# Gate G2: tokenizer parity (2026-11-19)
 
 **Result: pass.** Both JavaScript tokenizers give exactly the same token ids as the Python reference on all 1,000 test strings.
 

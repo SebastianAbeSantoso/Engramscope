@@ -70,7 +70,13 @@ The exact readout needs the input embedding table (129,280 × 5,120 BF16, 1.32 G
 - **Fold the projection into the value matrix:** `M_layer = P × Wv` (d × 6,144) in float16, about **3 MB per layer**. A value vector in the reduced space is then `M_layer @ x` with `x` the 6,144 fetched values. Per-row contributions are `M_layer[:, block_c] @ row_c`.
 - Decoding is a 129,280 × 256 int8 dot product per readout (33M multiply-adds), fast in WebAssembly or plain JS with typed arrays.
 
-Gate G1 measures top-10 overlap between this readout and the exact one on a fixed phrase set, and the benchmark score with both. If overlap is too low, try in order: larger d (512, 64 MB); restrict the vocabulary to tokens that decode to whole words; or a fallback that ships the exact matrices with lazy, chunked loading. The size budget is confirmed by the builder at the Task 1 checkpoint.
+**Chosen after G1 (Decision 8):** the readout-fitted projection, d = 1,024, 4-bit (G1: top-10 overlap 0.60 with the exact readout on layer 1, about 92 MB with both layers). Shipping plan:
+- Store the embedding side as 4 chunks of 256 dimensions, each with its own per-token fp16 scale. The fitted directions are ordered by importance, so the first chunk alone is the d = 256 index. The browser decodes as soon as chunk 1 arrives (about 17 MB) and sharpens the words as the rest load. This also suits the visual direction (traces that sharpen).
+- Cache the chunks in the browser (Cache Storage), so the download happens once per browser.
+- Build the assets in CI from the pinned revision and deploy them with the Pages artifact, so no large binaries go into git. Task 4.2 measures the shipped format (per-chunk scales, each loading stage) against the exact readout, as Req 5.3 requires.
+- First load is about 92 MB: roughly 15 s at 50 Mbps (**estimate**).
+
+Gate G1 measured top-10 overlap between this readout and the exact one on a fixed phrase set, and the benchmark score with both. If overlap is too low, try in order: larger d (512, 64 MB); restrict the vocabulary to tokens that decode to whole words; or a fallback that ships the exact matrices with lazy, chunked loading. The size budget is confirmed by the builder at the Task 1 checkpoint.
 
 ### 3. Tokenizer in the browser (Gate G2)
 

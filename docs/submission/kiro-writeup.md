@@ -2,7 +2,7 @@
 
 Running draft of the Kiro write-up (Req 12.6, deliverable D11). Kiro adds to it at every checkpoint; the builder edits it into the final version (Task 9.2). Only things that happened go here. Plans are marked **planned**, unverified items **check**.
 
-Last updated: 2026-11-11.
+Last updated: 2026-11-19.
 
 ## How the project got here (the spec gate that killed the first idea)
 

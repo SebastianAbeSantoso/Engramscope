@@ -25,3 +25,18 @@ Phrases used for gate G1 (decode index agreement) and for development. They have
 ## Tokenization
 
 Phrases are tokenized with one leading space (`" " + phrase`), as in the pilot, so that the first word gets its in-sentence token.
+
+## Analysis plan for `phrases.jsonl` (written 2026-11-19, before the first run)
+
+This fixes what Req 6 leaves open. It was written after the phrase set was committed and before any readout of it. `bench.py` follows it exactly.
+
+- **Readout:** exact. The top 10 tokens by cosine against the full, row-normalized input-embedding table (129,280 tokens), at the last position of `" " + phrase`.
+- **Conditions** (per phrase):
+  - **layer 1** and **layer 14:** the phrase's 24 rows in that layer.
+  - **random rows, layer 1** and **random rows, layer 14:** one random row from each of the 24 sub-tables (n-gram size × head), so each block of the value projection gets a row of its own table. Drawn with `numpy.random.default_rng(20261111)` in the order phrase id, layer (1, then 14), column 0–23.
+  - **last-token embedding:** the nearest input embeddings of the phrase's last token itself.
+  - **shuffled:** the layer-1 rows of another phrase, scored against this phrase's set. The pairing is phrase i ↔ phrase ((i − 1 + 61) mod 123) + 1. Categories are contiguous blocks of at most 23 ids, so a shift of 61 never pairs a phrase with its own category.
+- **Hit:** a top-k decoded token (stripped, lowercased) is in the phrase's related set, after removing the phrase's own decoded tokens from the set.
+- **Report:** hit@1, hit@5 and hit@10 for every condition, with 95% percentile bootstrap intervals over phrases (2,000 resamples, seed 20261111). Hit@10 per category is descriptive.
+- **"Beats" (Req 6.5):** layer 1 beats a control if the 95% paired bootstrap interval of the per-phrase difference in hit@10 (layer 1 minus control) lies entirely above 0. The claim needs every control beaten. That is an intersection of tests, so no multiplicity correction is needed. The controls are layer 14, random rows (layer 1), the last-token embedding and shuffled.
+- **Provenance:** every result records the commit and blob hash of `phrases.jsonl`, the code commit, and the model revision. `bench.py` refuses to run if `phrases.jsonl` has uncommitted changes or was last changed by any commit other than ec0e429.
