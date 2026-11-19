@@ -22,6 +22,13 @@ Engramscope is judged partly on whether its claims hold up. These rules apply to
 - If layer 1 does not beat every control, say so plainly and do not claim the readout works.
 - Examples in the UI or video are labelled as examples, never presented as the result.
 
+## The lesion experiments
+
+- The protocol (`bench/lesion-protocol.md`) is committed before any lesion run, and its interpretation rules are approved by the builder before the first run. After that, changes only go into its dated change log, never silently.
+- Conclusions use the wording the approved rules produce. No summary label where a rule says "irregular" or the result is unclear.
+- Every lesion result is labelled "trace lesion (readout)". Never describe it as what the model forgets; that needs the behavioural lesion.
+- Report a trivial or null result as plainly as an interesting one.
+
 ## Claims
 
 - State the claim exactly as in `product.md`.

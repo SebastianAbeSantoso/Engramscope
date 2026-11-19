@@ -1,0 +1,123 @@
+{"id": 1, "category": "places", "phrase": "the Leaning Tower of Pisa", "related": ["italy", "italian", "意大利", "tuscany", "galileo"]}
+{"id": 2, "category": "places", "phrase": "the Grand Canyon", "related": ["arizona", "colorado", "亚利桑那", "america", "usa", "美国"]}
+{"id": 3, "category": "places", "phrase": "Machu Picchu", "related": ["peru", "inca", "incas", "秘鲁", "andes", "印加"]}
+{"id": 4, "category": "places", "phrase": "the Kremlin", "related": ["moscow", "russia", "russian", "莫斯科", "俄罗斯", "putin", "soviet"]}
+{"id": 5, "category": "places", "phrase": "Angkor Wat", "related": ["cambodia", "khmer", "柬埔寨", "temple", "siem", "hindu"]}
+{"id": 6, "category": "places", "phrase": "the Golden Gate Bridge", "related": ["san", "francisco", "california", "旧金山", "加州", "bay"]}
+{"id": 7, "category": "places", "phrase": "Times Square", "related": ["york", "manhattan", "纽约", "broadway", "america", "美国"]}
+{"id": 8, "category": "places", "phrase": "the Acropolis", "related": ["athens", "greece", "greek", "雅典", "希腊", "parthenon"]}
+{"id": 9, "category": "places", "phrase": "Stonehenge", "related": ["england", "britain", "english", "英国", "druids", "neolithic", "salisbury"]}
+{"id": 10, "category": "places", "phrase": "the Dead Sea", "related": ["israel", "jordan", "以色列", "约旦", "salt", "jerusalem"]}
+{"id": 11, "category": "places", "phrase": "Kilimanjaro", "related": ["tanzania", "africa", "african", "非洲", "坦桑尼亚", "kenya"]}
+{"id": 12, "category": "places", "phrase": "the Forbidden City", "related": ["beijing", "北京", "china", "chinese", "中国", "emperor", "ming", "qing"]}
+{"id": 13, "category": "places", "phrase": "the Alps", "related": ["switzerland", "swiss", "瑞士", "austria", "mountains", "skiing", "france"]}
+{"id": 14, "category": "places", "phrase": "Silicon Valley", "related": ["california", "加州", "google", "apple", "tech", "startups", "startup", "stanford"]}
+{"id": 15, "category": "places", "phrase": "the Vatican", "related": ["pope", "catholic", "rome", "罗马", "教皇", "天主教", "italy"]}
+{"id": 16, "category": "places", "phrase": "Chernobyl", "related": ["ukraine", "nuclear", "乌克兰", "radiation", "soviet", "reactor"]}
+{"id": 17, "category": "places", "phrase": "the Panama Canal", "related": ["ships", "atlantic", "pacific", "太平洋", "大西洋", "suez"]}
+{"id": 18, "category": "places", "phrase": "Hollywood", "related": ["movies", "movie", "film", "films", "电影", "actors", "california", "los", "angeles"]}
+{"id": 19, "category": "places", "phrase": "the Louvre", "related": ["paris", "巴黎", "france", "法国", "museum", "mona", "lisa"]}
+{"id": 20, "category": "places", "phrase": "the Himalayas", "related": ["nepal", "everest", "tibet", "india", "尼泊尔", "珠穆朗玛", "西藏"]}
+{"id": 21, "category": "people", "phrase": "Napoleon Bonaparte", "related": ["france", "french", "法国", "emperor", "waterloo", "corsica"]}
+{"id": 22, "category": "people", "phrase": "Marie Curie", "related": ["radium", "polonium", "radioactivity", "physics", "chemistry", "nobel", "物理", "化学"]}
+{"id": 23, "category": "people", "phrase": "Nikola Tesla", "related": ["electricity", "edison", "electric", "alternating", "爱迪生", "inventor", "musk"]}
+{"id": 24, "category": "people", "phrase": "Ludwig van Beethoven", "related": ["mozart", "bach", "symphony", "composer", "莫扎特", "巴赫", "作曲家", "交响曲"]}
+{"id": 25, "category": "people", "phrase": "Vincent van Gogh", "related": ["painter", "sunflowers", "向日葵", "starry", "impressionist", "gauguin", "画家", "monet"]}
+{"id": 26, "category": "people", "phrase": "Mahatma Gandhi", "related": ["india", "indian", "印度", "independence", "nehru", "nonviolence"]}
+{"id": 27, "category": "people", "phrase": "Nelson Mandela", "related": ["south", "africa", "apartheid", "南非", "african"]}
+{"id": 28, "category": "people", "phrase": "Genghis Khan", "related": ["mongol", "mongols", "mongolia", "蒙古", "empire"]}
+{"id": 29, "category": "people", "phrase": "Confucius", "related": ["china", "chinese", "中国", "儒家", "analects", "philosopher", "论语", "laozi", "老子"]}
+{"id": 30, "category": "people", "phrase": "Karl Marx", "related": ["communism", "communist", "engels", "共产主义", "capital", "socialism", "lenin", "恩格斯"]}
+{"id": 31, "category": "people", "phrase": "Steve Jobs", "related": ["apple", "iphone", "苹果", "mac", "wozniak", "pixar"]}
+{"id": 32, "category": "people", "phrase": "Elvis Presley", "related": ["rock", "roll", "singer", "memphis", "猫王", "beatles"]}
+{"id": 33, "category": "people", "phrase": "Michael Jordan", "related": ["basketball", "nba", "bulls", "chicago", "篮球", "kobe", "lebron"]}
+{"id": 34, "category": "people", "phrase": "Cleopatra", "related": ["egypt", "egyptian", "埃及", "caesar", "antony", "pharaoh"]}
+{"id": 35, "category": "people", "phrase": "Sigmund Freud", "related": ["psychoanalysis", "psychology", "unconscious", "心理学", "jung", "vienna", "精神分析"]}
+{"id": 36, "category": "people", "phrase": "Alan Turing", "related": ["computer", "computing", "enigma", "计算机", "machine", "codebreaker", "ai"]}
+{"id": 37, "category": "people", "phrase": "Pablo Picasso", "related": ["painter", "cubism", "立体主义", "画家", "spanish", "spain", "guernica"]}
+{"id": 38, "category": "people", "phrase": "Galileo Galilei", "related": ["telescope", "astronomy", "copernicus", "天文学", "kepler", "newton", "italian"]}
+{"id": 39, "category": "people", "phrase": "Frida Kahlo", "related": ["mexico", "mexican", "墨西哥", "painter", "rivera", "画家"]}
+{"id": 40, "category": "people", "phrase": "Muhammad Ali", "related": ["boxing", "boxer", "拳击", "heavyweight", "tyson", "frazier"]}
+{"id": 41, "category": "events", "phrase": "the Cold War", "related": ["soviet", "ussr", "苏联", "america", "nuclear", "美国", "communism", "berlin"]}
+{"id": 42, "category": "events", "phrase": "the Moon landing", "related": ["apollo", "armstrong", "nasa", "阿波罗", "astronaut", "astronauts"]}
+{"id": 43, "category": "events", "phrase": "the Black Death", "related": ["plague", "鼠疫", "pandemic", "bubonic", "medieval", "epidemic"]}
+{"id": 44, "category": "events", "phrase": "the fall of the Berlin Wall", "related": ["germany", "german", "德国", "1989", "soviet", "cold", "communism"]}
+{"id": 45, "category": "events", "phrase": "the Industrial Revolution", "related": ["steam", "factories", "factory", "britain", "蒸汽", "industrialization", "coal"]}
+{"id": 46, "category": "events", "phrase": "the September 11 attacks", "related": ["terrorism", "terrorist", "terrorists", "恐怖", "qaeda", "bin", "laden", "twin", "towers"]}
+{"id": 47, "category": "events", "phrase": "the Renaissance", "related": ["italy", "florence", "leonardo", "michelangelo", "意大利", "medici"]}
+{"id": 48, "category": "events", "phrase": "the Great Depression", "related": ["1929", "unemployment", "economic", "recession", "roosevelt", "crash", "经济"]}
+{"id": 49, "category": "events", "phrase": "the American Civil War", "related": ["lincoln", "slavery", "confederate", "confederacy", "union", "林肯", "grant", "gettysburg"]}
+{"id": 50, "category": "events", "phrase": "the Russian Revolution", "related": ["lenin", "bolshevik", "bolsheviks", "列宁", "tsar", "soviet", "苏联", "stalin"]}
+{"id": 51, "category": "events", "phrase": "the Spanish flu", "related": ["1918", "pandemic", "epidemic", "virus", "病毒"]}
+{"id": 52, "category": "events", "phrase": "the Holocaust", "related": ["nazi", "nazis", "hitler", "jews", "jewish", "纳粹", "希特勒", "auschwitz", "犹太"]}
+{"id": 53, "category": "events", "phrase": "the Boston Tea Party", "related": ["colonists", "revolution", "america", "american", "british", "tax", "taxes", "美国"]}
+{"id": 54, "category": "events", "phrase": "the Cultural Revolution", "related": ["mao", "毛泽东", "china", "中国", "red", "guards"]}
+{"id": 55, "category": "events", "phrase": "the Battle of Waterloo", "related": ["napoleon", "拿破仑", "wellington", "belgium", "1815", "french"]}
+{"id": 56, "category": "science", "phrase": "photosynthesis", "related": ["chlorophyll", "plants", "plant", "sunlight", "叶绿素", "植物", "carbon", "glucose"]}
+{"id": 57, "category": "science", "phrase": "the theory of relativity", "related": ["einstein", "爱因斯坦", "spacetime", "physics", "物理", "gravity"]}
+{"id": 58, "category": "science", "phrase": "DNA", "related": ["gene", "genes", "genetic", "chromosome", "基因", "rna", "double", "helix", "染色体"]}
+{"id": 59, "category": "science", "phrase": "black holes", "related": ["hawking", "gravity", "event", "horizon", "spacetime", "引力", "astrophysics", "galaxy", "霍金"]}
+{"id": 60, "category": "science", "phrase": "the periodic table", "related": ["elements", "element", "mendeleev", "chemistry", "化学", "元素", "atomic"]}
+{"id": 61, "category": "science", "phrase": "plate tectonics", "related": ["earthquakes", "earthquake", "continents", "continental", "地震", "geology", "volcano"]}
+{"id": 62, "category": "science", "phrase": "vaccines", "related": ["immunity", "immune", "vaccination", "virus", "antibodies", "免疫", "病毒"]}
+{"id": 63, "category": "science", "phrase": "the Big Bang", "related": ["universe", "cosmology", "宇宙", "expansion", "cosmic", "inflation"]}
+{"id": 64, "category": "science", "phrase": "neurons", "related": ["brain", "synapse", "synapses", "大脑", "axon", "neural", "nervous"]}
+{"id": 65, "category": "science", "phrase": "climate change", "related": ["global", "warming", "carbon", "emissions", "全球变暖", "碳排放", "greenhouse"]}
+{"id": 66, "category": "science", "phrase": "antibiotics", "related": ["bacteria", "bacterial", "penicillin", "细菌", "青霉素", "infection", "infections"]}
+{"id": 67, "category": "science", "phrase": "the speed of light", "related": ["einstein", "relativity", "photons", "photon", "physics", "vacuum"]}
+{"id": 68, "category": "science", "phrase": "volcanoes", "related": ["lava", "magma", "eruption", "eruptions", "岩浆", "喷发"]}
+{"id": 69, "category": "science", "phrase": "the human genome", "related": ["dna", "genes", "gene", "基因", "sequencing", "chromosomes"]}
+{"id": 70, "category": "science", "phrase": "artificial intelligence", "related": ["machine", "learning", "neural", "robots", "机器学习", "深度学习", "神经网络"]}
+{"id": 71, "category": "culture", "phrase": "Harry Potter", "related": ["hogwarts", "rowling", "wizard", "magic", "魔法", "霍格沃茨", "hermione", "dumbledore"]}
+{"id": 72, "category": "culture", "phrase": "The Lord of the Rings", "related": ["tolkien", "hobbit", "frodo", "gandalf", "托尔金", "霍比特"]}
+{"id": 73, "category": "culture", "phrase": "the Beatles", "related": ["lennon", "mccartney", "liverpool", "band", "列侬"]}
+{"id": 74, "category": "culture", "phrase": "Pokémon", "related": ["pikachu", "nintendo", "皮卡丘", "任天堂", "ash"]}
+{"id": 75, "category": "culture", "phrase": "the Bible", "related": ["jesus", "god", "christian", "christianity", "基督教", "耶稣", "testament", "gospel"]}
+{"id": 76, "category": "culture", "phrase": "Romeo and Juliet", "related": ["shakespeare", "莎士比亚", "verona", "tragedy", "hamlet"]}
+{"id": 77, "category": "culture", "phrase": "Game of Thrones", "related": ["westeros", "stark", "lannister", "targaryen", "dragons", "hbo"]}
+{"id": 78, "category": "culture", "phrase": "Super Mario", "related": ["nintendo", "luigi", "任天堂", "bowser", "princess", "peach", "zelda"]}
+{"id": 79, "category": "culture", "phrase": "jazz", "related": ["blues", "swing", "saxophone", "trumpet", "armstrong", "布鲁斯", "coltrane"]}
+{"id": 80, "category": "culture", "phrase": "sushi", "related": ["japan", "japanese", "日本", "rice", "sashimi", "wasabi", "生鱼片"]}
+{"id": 81, "category": "culture", "phrase": "Christmas", "related": ["santa", "claus", "december", "jesus", "gifts", "easter", "reindeer"]}
+{"id": 82, "category": "culture", "phrase": "Mickey Mouse", "related": ["disney", "迪士尼", "minnie", "donald", "cartoon", "walt"]}
+{"id": 83, "category": "culture", "phrase": "ballet", "related": ["dance", "dancer", "dancers", "tchaikovsky", "舞蹈", "swan", "nutcracker"]}
+{"id": 84, "category": "culture", "phrase": "K-pop", "related": ["korea", "korean", "韩国", "bts", "idol", "idols", "seoul", "blackpink"]}
+{"id": 85, "category": "culture", "phrase": "the Quran", "related": ["islam", "muslim", "muslims", "allah", "muhammad", "伊斯兰", "穆斯林"]}
+{"id": 86, "category": "indonesian", "phrase": "Borobudur", "related": ["buddhist", "buddhism", "temple", "java", "javanese", "indonesia", "magelang", "candi", "yogyakarta", "印尼", "佛教"]}
+{"id": 87, "category": "indonesian", "phrase": "Bali", "related": ["hindu", "indonesia", "印尼", "denpasar", "ubud", "beach", "island", "kuta"]}
+{"id": 88, "category": "indonesian", "phrase": "Jakarta", "related": ["indonesia", "印尼", "capital", "ibukota", "batavia", "java", "bandung", "surabaya"]}
+{"id": 89, "category": "indonesian", "phrase": "Soekarno", "related": ["indonesia", "印尼", "independence", "merdeka", "hatta", "suharto", "soeharto", "president", "presiden"]}
+{"id": 90, "category": "indonesian", "phrase": "batik", "related": ["indonesia", "javanese", "java", "textile", "fabric", "kain", "印尼", "sarong"]}
+{"id": 91, "category": "indonesian", "phrase": "rendang", "related": ["padang", "minangkabau", "beef", "sapi", "curry", "indonesia", "malaysia", "印尼", "nasi"]}
+{"id": 92, "category": "indonesian", "phrase": "nasi goreng", "related": ["indonesia", "印尼", "sambal", "mie", "satay", "sate", "kecap"]}
+{"id": 93, "category": "indonesian", "phrase": "Komodo dragon", "related": ["lizard", "lizards", "reptile", "indonesia", "flores", "varanus", "monitor", "蜥蜴", "印尼"]}
+{"id": 94, "category": "indonesian", "phrase": "Krakatoa", "related": ["volcano", "eruption", "1883", "indonesia", "sunda", "tsunami", "火山", "java", "sumatra"]}
+{"id": 95, "category": "indonesian", "phrase": "gamelan", "related": ["java", "javanese", "bali", "balinese", "music", "gong", "orchestra", "indonesia", "印尼", "音乐"]}
+{"id": 96, "category": "indonesian", "phrase": "wayang kulit", "related": ["java", "javanese", "dalang", "gamelan", "mahabharata", "ramayana", "indonesia"]}
+{"id": 97, "category": "indonesian", "phrase": "Pancasila", "related": ["indonesia", "ideology", "soekarno", "sukarno", "garuda", "印尼", "principles", "uud"]}
+{"id": 98, "category": "indonesian", "phrase": "Lake Toba", "related": ["sumatra", "batak", "volcano", "supervolcano", "medan", "samosir", "indonesia", "印尼"]}
+{"id": 99, "category": "indonesian", "phrase": "Raja Ampat", "related": ["papua", "diving", "coral", "reef", "reefs", "indonesia", "印尼", "sorong"]}
+{"id": 100, "category": "indonesian", "phrase": "Majapahit", "related": ["empire", "kingdom", "java", "javanese", "hayam", "wuruk", "gajah", "mada", "hindu", "kerajaan"]}
+{"id": 101, "category": "indonesian", "phrase": "Garuda Indonesia", "related": ["airline", "airlines", "flights", "aviation", "airport", "jakarta", "航空", "maskapai", "lion"]}
+{"id": 102, "category": "indonesian", "phrase": "Gojek", "related": ["grab", "ojek", "motorcycle", "ride", "startup", "tokopedia", "jakarta", "uber"]}
+{"id": 103, "category": "indonesian", "phrase": "angklung", "related": ["bamboo", "bambu", "sunda", "sundanese", "bandung", "music", "instrument", "gamelan"]}
+{"id": 104, "category": "indonesian", "phrase": "the Dutch East Indies", "related": ["batavia", "colonial", "colony", "indonesia", "voc", "java", "印尼", "sumatra"]}
+{"id": 105, "category": "indonesian", "phrase": "Mount Bromo", "related": ["volcano", "java", "tengger", "semeru", "malang", "crater", "火山", "indonesia"]}
+{"id": 106, "category": "indonesian", "phrase": "sate ayam", "related": ["peanut", "kacang", "sauce", "skewer", "skewers", "indonesia", "madura", "lontong"]}
+{"id": 107, "category": "indonesian", "phrase": "Toraja", "related": ["sulawesi", "funeral", "funerals", "tongkonan", "makassar", "indonesia", "印尼", "buffalo"]}
+{"id": 108, "category": "indonesian", "phrase": "Kartini", "related": ["women", "emancipation", "raden", "jepara", "feminism", "indonesia", "印尼", "heroine", "pahlawan"]}
+{"id": 109, "category": "everyday", "phrase": "coffee", "related": ["caffeine", "espresso", "latte", "cappuccino", "tea", "starbucks", "beans", "茶"]}
+{"id": 110, "category": "everyday", "phrase": "a toothbrush", "related": ["toothpaste", "teeth", "dental", "牙膏", "牙齿", "floss", "dentist"]}
+{"id": 111, "category": "everyday", "phrase": "an umbrella", "related": ["rain", "raining", "rainy", "雨", "下雨", "wet"]}
+{"id": 112, "category": "everyday", "phrase": "a bicycle", "related": ["cycling", "pedal", "pedals", "wheels", "cyclist", "helmet"]}
+{"id": 113, "category": "everyday", "phrase": "the refrigerator", "related": ["freezer", "cold", "food", "ice", "kitchen", "冷冻"]}
+{"id": 114, "category": "everyday", "phrase": "a wedding", "related": ["bride", "groom", "marriage", "married", "新娘", "结婚", "honeymoon"]}
+{"id": 115, "category": "everyday", "phrase": "breakfast", "related": ["eggs", "cereal", "morning", "pancakes", "toast", "coffee", "lunch", "早上"]}
+{"id": 116, "category": "everyday", "phrase": "the dentist", "related": ["teeth", "tooth", "dental", "牙齿", "cavity", "cavities", "orthodontist"]}
+{"id": 117, "category": "everyday", "phrase": "a passport", "related": ["visa", "travel", "airport", "immigration", "签证", "customs", "citizenship"]}
+{"id": 118, "category": "everyday", "phrase": "homework", "related": ["school", "students", "student", "teacher", "assignment", "assignments", "学生", "exam"]}
+{"id": 119, "category": "everyday", "phrase": "a smartphone", "related": ["iphone", "android", "apps", "app", "samsung", "apple", "touchscreen"]}
+{"id": 120, "category": "everyday", "phrase": "the alarm clock", "related": ["wake", "waking", "morning", "snooze", "sleep", "早上"]}
+{"id": 121, "category": "everyday", "phrase": "a birthday party", "related": ["cake", "candles", "presents", "gifts", "balloons", "蛋糕", "celebrate"]}
+{"id": 122, "category": "everyday", "phrase": "rush hour", "related": ["traffic", "commute", "commuters", "交通", "congestion", "jam", "subway"]}
+{"id": 123, "category": "everyday", "phrase": "the laundry", "related": ["washing", "detergent", "clothes", "dryer", "衣服", "wash"]}

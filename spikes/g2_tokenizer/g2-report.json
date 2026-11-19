@@ -1,0 +1,22 @@
+{
+ "@huggingface/tokenizers / with_special": {
+  "mismatches": 0,
+  "ms_total": 59,
+  "examples": []
+ },
+ "@huggingface/tokenizers / no_special": {
+  "mismatches": 0,
+  "ms_total": 18,
+  "examples": []
+ },
+ "transformers.js AutoTokenizer / with_special": {
+  "mismatches": 0,
+  "ms_total": 53,
+  "examples": []
+ },
+ "transformers.js AutoTokenizer / no_special": {
+  "mismatches": 0,
+  "ms_total": 19,
+  "examples": []
+ }
+}

@@ -3,7 +3,7 @@
 Tracker for everything the Devpost form and the Official Rules ask for (Req 12, `docs/kiroween-rules.md`). Kept current at every checkpoint.
 
 **Deadline:** Friday, December 4, 2026, 2:00 PM PT (Saturday, December 5, 06:00 WITA). No extensions.
-**Entrant:** solo student. **Category:** Resurrection (proposed). **Bonus:** Best Student Project: Resurrection (Best Demo is automatic).
+**Entrant:** solo student. **Category:** Resurrection (Decision 1). **Bonus:** Best Student Project: Resurrection (Best Demo is automatic).
 
 Status: `done`, `in progress`, `not started`, `blocked`, `optional`. Owner: **B** = builder, **K** = Kiro.
 
@@ -12,8 +12,8 @@ Status: `done`, `in progress`, `not started`, `blocked`, `optional`. Owner: **B*
 | # | Deliverable | Rule | Owner | Status | Notes |
 | --- | --- | --- | --- | --- | --- |
 | D1 | Public GitHub repo | Rules §4 | B | done | `SebastianAbeSantoso/Engramscope` |
-| D2 | Open-source license shown in the About section | Rules §4 | K adds, B checks | in progress | MIT added on `initial-spec`; shows after merge to `main` |
-| D3 | `/.kiro` at the root of `main`, not ignored | Rules §4 | K | in progress | on `initial-spec`; reaches `main` when the PR merges |
+| D2 | Open-source license shown in the About section | Rules §4 | K adds, B checks | in progress | MIT on `main` since PR #1; B to confirm GitHub shows it (P2) |
+| D3 | `/.kiro` at the root of `main`, not ignored | Rules §4 | K | done | on `main` since PR #1 |
 | D4 | All source, assets and instructions in the repo | Rules §4 | K | not started | |
 | D5 | URL to the working app | Rules §4 | K | not started | GitHub Pages (Req 11.5) |
 | D6 | App stays available until Jan 29, 2027, 1:00 PM PT | Rules §4, Testing | B | not started | Pages + pinned model revision |

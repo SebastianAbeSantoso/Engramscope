@@ -23,11 +23,21 @@ That became Engramscope. *(Builder: add how this compared with vibe coding.)*
 
 - **Kiro Web, Vibe mode** for the whole process so far: research, kill test, spec, scaffolding.
 - Kiro IDE, CLI and Crew: not used so far.
+- Sessions in Kiro Web keep running when the browser tab is closed (per kiro.dev docs, cloud sessions).
 
 ## Spec-driven development
 
 - `.kiro/specs/engramscope/`: requirements (with a claims boundary and open questions for the builder), design (pinned model facts, components, correctness properties), tasks (feasibility gates first, then build).
-- **planned:** Task 1 gates (decode index fidelity, tokenizer parity, browser latency, pre-registered benchmark set, history sources, prior-art re-check) before the build.
+- Task 1 gates, run in the sandbox before any app code:
+  - **G4:** 123 benchmark phrases with related-word sets, committed (ec0e429) before any readout of them. The authoring rules and what the author had already seen are written down in `bench/README.md`.
+  - **G1:** the planned 33 MB decode index failed its measurement (20% top-10 overlap with the exact readout). Kiro then fitted the projection to the readout instead of the embeddings and tested 4-bit storage. The best option per megabyte reached 60% at about 92 MB. The result went back to the builder as a choice, instead of the plan being changed quietly.
+  - **G2:** both browser tokenizers matched Python on 1,000 strings with 0 mismatches.
+  - **G5:** the research-integrity rule required primary sources. Kiro read Semon's 1904 first edition (German), the 1921 English translation and Lashley's 1950 paper, and recorded page numbers. The scan of Lashley's famous sentence is missing the page where it starts, so the docs only allow quoting the verified half.
+  - **G6:** prior-art re-check; it also found a newer checkpoint of the model.
+- **planned:** G3 (browser latency) on the builder's machine, then the Task 1.7 checkpoint.
+- **Scope change after the gates.** The builder asked whether the project was only dissecting DeepSeek's implementation, not implementing the old research. It was: Semon and Lashley were only framing. The spec was rewritten so that Lashley's lesion experiments (mass action, equipotentiality) and Semon's partial-cue test, rerun on the Engram traces, are the core (Req 9). The readout became the instrument, and the second-model stretch was cut. Kiro wrote the lesion protocol as a pre-registration and committed it before any lesion run. The protocol's interpretation rules wait for the builder's approval, because the research-integrity steering says pass marks come from the builder.
+- **Pre-registration in practice.** The builder delegated the lesion rules to Kiro. Before any run, Kiro tightened them: paired tests with Bonferroni correction, a power guard, and a shape statistic that does not depend on the uneven lesion sizes. It also wrote two predictions down, and committed it all (9d79b32). Code guards refuse to run if the phrase file or the protocol differs from its registered commit. Kiro then built the Python reference with 26 tests (hypothesis property tests against a transcription of DeepSeek's reference hash, FP8 against `ml_dtypes`, lesion additivity) and ran the benchmark and the lesions in the sandbox (about 13 minutes). Both predictions held. The rules, applied mechanically, produced the parallel with Lashley's 1950 conclusion. A null result would have been reported the same way.
+- The same steering rule caught Kiro claiming a negative prior-art result ("no lesion study found") before running that search. The search then found a whole-table removal result (GateRQ) that is now cited.
 
 ## Steering
 
