@@ -41,7 +41,7 @@ Secondary sources, kept for context:
 
 | Old idea | Engramscope | Label |
 | --- | --- | --- |
-| Engram: a lasting change written into a substance by a stimulus (Semon 1904, p. 20) | A row of DeepSeek-V4.1-Flash's Engram table, written by training | the model's designers chose the name; whether they meant Semon is not checked |
+| Engram: a lasting change written into a substance by a stimulus (Semon 1904, p. 20) | A row of DeepSeek-V4.1-Flash's Engram table, written by training | the model's designers chose the name, but their paper never mentions Semon (its text searched on 2026-11-19), so the link to Semon is the name only |
 | Ecphory: an engram becomes active again when part of the original stimulus recurs (Semon 1921, p. 138) | The last 2–4 tokens of the text (part of the context) compute an address and retrieve a stored row | **ours**; an analogy that fits Semon's definition |
 | Association of simultaneous engrams (Semon 1921, p. 27) | Rows retrieved together are summed into one value vector | **ours**; analogy only |
 | Lashley could not find the isolated location of a memory (1950, p. 478) | Every row has an address computable from the text | **ours**; a contrast, not a claim about brains |
