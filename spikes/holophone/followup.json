@@ -1,0 +1,99 @@
+{
+ "rows_speech_3": [
+  {
+   "sentence": 0,
+   "right": 0.3194038081195452,
+   "best_wrong": 0.12934239270501655,
+   "identified": true
+  },
+  {
+   "sentence": 1,
+   "right": 0.2796910292112974,
+   "best_wrong": 0.19850754529077178,
+   "identified": true
+  },
+  {
+   "sentence": 2,
+   "right": 0.19426342483173714,
+   "best_wrong": 0.046248067807624436,
+   "identified": true
+  }
+ ],
+ "control": [
+  0.08916642974026086,
+  0.06490995015991333,
+  0.1076039294461965
+ ],
+ "lesions_speech": [
+  {
+   "lesion": "25% of resonators removed at random (5 draws)",
+   "identified": [
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "mean_margin": 0.072
+  },
+  {
+   "lesion": "50% of resonators removed at random (5 draws)",
+   "identified": [
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "mean_margin": 0.044
+  },
+  {
+   "lesion": "75% of resonators removed at random (5 draws)",
+   "identified": [
+    3,
+    3,
+    3,
+    2,
+    2
+   ],
+   "mean_margin": 0.013
+  },
+  {
+   "lesion": "90% of resonators removed at random (5 draws)",
+   "identified": [
+    2,
+    0,
+    2,
+    3,
+    1
+   ],
+   "mean_margin": -0.0
+  },
+  {
+   "lesion": "97% of resonators removed at random (5 draws)",
+   "identified": [
+    1,
+    2,
+    3,
+    1,
+    2
+   ],
+   "mean_margin": -0.001
+  },
+  {
+   "lesion": "band 0-500 Hz removed (12% of resonators)",
+   "identified": 3,
+   "mean_margin": 0.12
+  },
+  {
+   "lesion": "band 500-1500 Hz removed (25% of resonators)",
+   "identified": 3,
+   "mean_margin": 0.121
+  },
+  {
+   "lesion": "band 1500-4000 Hz removed (62% of resonators)",
+   "identified": 3,
+   "mean_margin": 0.039
+  }
+ ]
+}

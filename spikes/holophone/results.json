@@ -1,0 +1,444 @@
+{
+ "criteria": "3/3 identified and mean margin >= 0.05 (see docstring)",
+ "runs": [
+  {
+   "label": "white noise",
+   "identified": "3/3",
+   "mean_margin": 0.09659138567731328,
+   "rows": [
+    {
+     "sentence": 0,
+     "right": 0.12373548433723813,
+     "best_wrong": 0.0018867582784325872,
+     "identified": true
+    },
+    {
+     "sentence": 1,
+     "right": 0.10000831323826208,
+     "best_wrong": 0.004520264540095561,
+     "identified": true
+    },
+    {
+     "sentence": 2,
+     "right": 0.08035485500534255,
+     "best_wrong": 0.007917472730374764,
+     "identified": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "label": "speech",
+   "identified": "3/3",
+   "mean_margin": 0.139753418786389,
+   "rows": [
+    {
+     "sentence": 0,
+     "right": 0.3194038081195452,
+     "best_wrong": 0.12934239270501655,
+     "identified": true
+    },
+    {
+     "sentence": 1,
+     "right": 0.2796910292112974,
+     "best_wrong": 0.19850754529077178,
+     "identified": true
+    },
+    {
+     "sentence": 2,
+     "right": 0.19426342483173714,
+     "best_wrong": 0.046248067807624436,
+     "identified": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "label": "whispered speech",
+   "identified": "1/3",
+   "mean_margin": 0.005386173699499526,
+   "rows": [
+    {
+     "sentence": 0,
+     "right": 0.2363852580576824,
+     "best_wrong": 0.4851024729324256,
+     "identified": false
+    },
+    {
+     "sentence": 1,
+     "right": 0.49599854205124044,
+     "best_wrong": 0.1978094604607877,
+     "identified": true
+    },
+    {
+     "sentence": 2,
+     "right": 0.0892597230771221,
+     "best_wrong": 0.1225730686943331,
+     "identified": false
+    }
+   ],
+   "pass": false
+  },
+  {
+   "label": "speech, 5 stored",
+   "identified": "5/5",
+   "mean_margin": 0.09345686984857088,
+   "rows": [
+    {
+     "sentence": 0,
+     "right": 0.19866791085901905,
+     "best_wrong": 0.12897576710677436,
+     "identified": true
+    },
+    {
+     "sentence": 1,
+     "right": 0.2163619739278946,
+     "best_wrong": 0.13672530925636994,
+     "identified": true
+    },
+    {
+     "sentence": 2,
+     "right": 0.10210599382210682,
+     "best_wrong": 0.09035821829746289,
+     "identified": true
+    },
+    {
+     "sentence": 3,
+     "right": 0.16699412496581043,
+     "best_wrong": 0.05703418540695191,
+     "identified": true
+    },
+    {
+     "sentence": 4,
+     "right": 0.22919957362948706,
+     "best_wrong": 0.032951747893904475,
+     "identified": true
+    }
+   ]
+  },
+  {
+   "label": "whispered speech, 5 stored",
+   "identified": "1/5",
+   "mean_margin": -0.05882789643928728,
+   "rows": [
+    {
+     "sentence": 0,
+     "right": 0.20589008879322898,
+     "best_wrong": 0.1440325110880401,
+     "identified": true
+    },
+    {
+     "sentence": 1,
+     "right": 0.15102307837864054,
+     "best_wrong": 0.15494362142427023,
+     "identified": false
+    },
+    {
+     "sentence": 2,
+     "right": 0.1334623367144456,
+     "best_wrong": 0.21493814776161416,
+     "identified": false
+    },
+    {
+     "sentence": 3,
+     "right": 0.14814639755795514,
+     "best_wrong": 0.20962769087946445,
+     "identified": false
+    },
+    {
+     "sentence": 4,
+     "right": 0.06999646390446013,
+     "best_wrong": 0.2791158763917778,
+     "identified": false
+    }
+   ]
+  },
+  {
+   "label": "speech, 8 stored",
+   "identified": "6/8",
+   "mean_margin": 0.03667512296363911,
+   "rows": [
+    {
+     "sentence": 0,
+     "right": 0.158994751307558,
+     "best_wrong": 0.15728909643698794,
+     "identified": true
+    },
+    {
+     "sentence": 1,
+     "right": 0.19102255830002335,
+     "best_wrong": 0.14931848533875314,
+     "identified": true
+    },
+    {
+     "sentence": 2,
+     "right": 0.0956234071402789,
+     "best_wrong": 0.09660279574433842,
+     "identified": false
+    },
+    {
+     "sentence": 3,
+     "right": 0.13477514192658066,
+     "best_wrong": 0.10305617581905802,
+     "identified": true
+    },
+    {
+     "sentence": 4,
+     "right": 0.19521774950769682,
+     "best_wrong": 0.08970708930783189,
+     "identified": true
+    },
+    {
+     "sentence": 5,
+     "right": 0.05014806430779648,
+     "best_wrong": 0.07290923884639894,
+     "identified": false
+    },
+    {
+     "sentence": 6,
+     "right": 0.10671537819686713,
+     "best_wrong": 0.08958167616448409,
+     "identified": true
+    },
+    {
+     "sentence": 7,
+     "right": 0.32154158880167094,
+     "best_wrong": 0.20217309812150697,
+     "identified": true
+    }
+   ]
+  },
+  {
+   "label": "whispered speech, 8 stored",
+   "identified": "1/8",
+   "mean_margin": -0.10752714119134762,
+   "rows": [
+    {
+     "sentence": 0,
+     "right": 0.12669517939082384,
+     "best_wrong": 0.2934464951173265,
+     "identified": false
+    },
+    {
+     "sentence": 1,
+     "right": 0.3160077622790899,
+     "best_wrong": 0.15150121194311622,
+     "identified": true
+    },
+    {
+     "sentence": 2,
+     "right": 0.07315006572225449,
+     "best_wrong": 0.15108868223254526,
+     "identified": false
+    },
+    {
+     "sentence": 3,
+     "right": 0.10170450233307063,
+     "best_wrong": 0.2846308810992695,
+     "identified": false
+    },
+    {
+     "sentence": 4,
+     "right": 0.08999419909706693,
+     "best_wrong": 0.2334291109704928,
+     "identified": false
+    },
+    {
+     "sentence": 5,
+     "right": 0.07026082774331954,
+     "best_wrong": 0.22663337197217026,
+     "identified": false
+    },
+    {
+     "sentence": 6,
+     "right": 0.05599825236890899,
+     "best_wrong": 0.2710475317168922,
+     "identified": false
+    },
+    {
+     "sentence": 7,
+     "right": 0.2078457729484248,
+     "best_wrong": 0.29009640636192735,
+     "identified": false
+    }
+   ]
+  }
+ ],
+ "lesions": [
+  {
+   "label": "whisper, 25% of resonators removed",
+   "identified": "1/3",
+   "mean_margin": -0.0027668812486942966,
+   "rows": [
+    {
+     "sentence": 0,
+     "right": 0.020072164715409666,
+     "best_wrong": 0.0865129607395088,
+     "identified": false
+    },
+    {
+     "sentence": 1,
+     "right": 0.09026473811394015,
+     "best_wrong": 0.024879352461598937,
+     "identified": true
+    },
+    {
+     "sentence": 2,
+     "right": 0.02570667899528004,
+     "best_wrong": 0.032951912369605006,
+     "identified": false
+    }
+   ]
+  },
+  {
+   "label": "whisper, 50% of resonators removed",
+   "identified": "1/3",
+   "mean_margin": -0.007606567188224834,
+   "rows": [
+    {
+     "sentence": 0,
+     "right": 0.01137568205439716,
+     "best_wrong": 0.03818499010101558,
+     "identified": false
+    },
+    {
+     "sentence": 1,
+     "right": 0.03583553452437168,
+     "best_wrong": 0.016919777395919103,
+     "identified": true
+    },
+    {
+     "sentence": 2,
+     "right": -0.0008827373308860933,
+     "best_wrong": 0.014043413315622566,
+     "identified": false
+    }
+   ]
+  },
+  {
+   "label": "whisper, 75% of resonators removed",
+   "identified": "2/3",
+   "mean_margin": 0.004246624327458363,
+   "rows": [
+    {
+     "sentence": 0,
+     "right": 0.002630272453560002,
+     "best_wrong": 0.01109994617834547,
+     "identified": false
+    },
+    {
+     "sentence": 1,
+     "right": 0.017963960040653853,
+     "best_wrong": 0.011088054696304386,
+     "identified": true
+    },
+    {
+     "sentence": 2,
+     "right": 0.018567138715108247,
+     "best_wrong": 0.0042334973522971595,
+     "identified": true
+    }
+   ]
+  },
+  {
+   "label": "whisper, 90% of resonators removed",
+   "identified": "2/3",
+   "mean_margin": -0.002492536728463628,
+   "rows": [
+    {
+     "sentence": 0,
+     "right": 0.009305356361400638,
+     "best_wrong": 0.00568774128604592,
+     "identified": true
+    },
+    {
+     "sentence": 1,
+     "right": -0.003536399701994314,
+     "best_wrong": -0.006892927357684548,
+     "identified": true
+    },
+    {
+     "sentence": 2,
+     "right": -0.012055950784169217,
+     "best_wrong": 0.0023958021322666185,
+     "identified": false
+    }
+   ]
+  },
+  {
+   "label": "whisper, band 0-1000 Hz removed",
+   "identified": "1/3",
+   "mean_margin": -0.0040394853846550905,
+   "rows": [
+    {
+     "sentence": 0,
+     "right": 0.16921374480299622,
+     "best_wrong": 0.45545218318313035,
+     "identified": false
+    },
+    {
+     "sentence": 1,
+     "right": 0.47233390201383185,
+     "best_wrong": 0.13877677606221325,
+     "identified": true
+    },
+    {
+     "sentence": 2,
+     "right": 0.08870108983402587,
+     "best_wrong": 0.14813823355947559,
+     "identified": false
+    }
+   ]
+  },
+  {
+   "label": "whisper, band 1000-2000 Hz removed",
+   "identified": "2/3",
+   "mean_margin": 0.027397493128495,
+   "rows": [
+    {
+     "sentence": 0,
+     "right": 0.2271059181277799,
+     "best_wrong": 0.3901518143057007,
+     "identified": false
+    },
+    {
+     "sentence": 1,
+     "right": 0.40643875663583023,
+     "best_wrong": 0.16879784092526748,
+     "identified": true
+    },
+    {
+     "sentence": 2,
+     "right": 0.06312088463053447,
+     "best_wrong": 0.05552342477769144,
+     "identified": true
+    }
+   ]
+  },
+  {
+   "label": "whisper, band 2000-4000 Hz removed",
+   "identified": "1/3",
+   "mean_margin": -0.007435936144151621,
+   "rows": [
+    {
+     "sentence": 0,
+     "right": 0.17569191569909928,
+     "best_wrong": 0.36874147954183994,
+     "identified": false
+    },
+    {
+     "sentence": 1,
+     "right": 0.3712527826068461,
+     "best_wrong": 0.1821522754281217,
+     "identified": true
+    },
+    {
+     "sentence": 2,
+     "right": 0.07599430085492993,
+     "best_wrong": 0.0943530526233685,
+     "identified": false
+    }
+   ]
+  }
+ ]
+}
