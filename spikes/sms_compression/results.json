@@ -1,0 +1,86 @@
+{
+ "prereg": "PREREG.md",
+ "seed": 20261120,
+ "langs": {
+  "en": {
+   "n": 200,
+   "median_chars": 47.5,
+   "methods": {
+    "plain SMS": {
+     "median_bpc": 7.0,
+     "mean_bpc": 7.112,
+     "fit_one_sms": 0.95
+    },
+    "zlib": {
+     "median_bpc": 8.0,
+     "mean_bpc": 6.878,
+     "fit_one_sms": 0.985
+    },
+    "brotli": {
+     "median_bpc": 8.179,
+     "mean_bpc": 6.727,
+     "fit_one_sms": 0.985
+    },
+    "ts_sms (RWKV 169M)": {
+     "median_bpc": 2.214,
+     "mean_bpc": 2.192,
+     "fit_one_sms": 1.0,
+     "roundtrip_failures": 0,
+     "sec_per_msg": 1.357
+    },
+    "Qwen/Qwen2.5-0.5B (ideal AC)": {
+     "median_bpc": 2.702,
+     "mean_bpc": 2.419,
+     "fit_one_sms": 1.0,
+     "sec_per_msg": 0.159
+    },
+    "HuggingFaceTB/SmolLM2-360M (ideal AC)": {
+     "median_bpc": 2.538,
+     "mean_bpc": 2.318,
+     "fit_one_sms": 1.0,
+     "sec_per_msg": 0.148
+    }
+   }
+  },
+  "id": {
+   "n": 200,
+   "median_chars": 187.5,
+   "methods": {
+    "plain SMS": {
+     "median_bpc": 7.0,
+     "mean_bpc": 7.04,
+     "fit_one_sms": 0.3
+    },
+    "zlib": {
+     "median_bpc": 5.665,
+     "mean_bpc": 5.566,
+     "fit_one_sms": 0.615
+    },
+    "brotli": {
+     "median_bpc": 5.8,
+     "mean_bpc": 5.703,
+     "fit_one_sms": 0.585
+    },
+    "ts_sms (RWKV 169M)": {
+     "median_bpc": 2.852,
+     "mean_bpc": 2.8,
+     "fit_one_sms": 1.0,
+     "roundtrip_failures": 0,
+     "sec_per_msg": 3.949
+    },
+    "Qwen/Qwen2.5-0.5B (ideal AC)": {
+     "median_bpc": 2.425,
+     "mean_bpc": 2.36,
+     "fit_one_sms": 1.0,
+     "sec_per_msg": 0.263
+    },
+    "HuggingFaceTB/SmolLM2-360M (ideal AC)": {
+     "median_bpc": 2.601,
+     "mean_bpc": 2.549,
+     "fit_one_sms": 1.0,
+     "sec_per_msg": 0.262
+    }
+   }
+  }
+ }
+}
