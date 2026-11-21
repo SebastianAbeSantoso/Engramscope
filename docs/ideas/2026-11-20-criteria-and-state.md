@@ -61,3 +61,18 @@ Every direction that would make it *build* something on the Engram memory alread
   - The app.
 
 Builder, 2026-11-21: **MaltOE was the best idea of the whole search**, "it just had a negative result".
+
+## Update, 2026-11-21 evening: three searches with the MaltOE-shaped filter
+
+The builder confirmed the filter: a working engine or system, a forgotten theory as its core mechanism, aimed at a real limit of today's hardware. A MaltOE lesson was added: the mechanism must beat the obvious modern baseline at matched resources.
+
+- Three parallel searches (AI hardware limits; non-AI limits; theory-first) checked about 100 theories and mechanisms. **Nothing passed every filter.** Each was either already in working code or loses to the modern baseline. Notes are in `2026-11-21-search-notes/`.
+- The patterns behind that:
+  - Batch-1 decode can only beat its bandwidth limit by reading fewer bytes, reusing them, or skipping them, and all three are taken.
+  - For VRAM, "quantize harder until it fits" beats old mechanisms down to about 2.5 bits.
+  - Elsewhere the modern equivalent is already built in, or the gain is 2% or less.
+- **Convergent near-miss** (found independently by searches A and C): slack stealing (Lehoczky & Ramos-Thuel 1992; Liu & Layland 1973). A local LLM runs only in an unmodified game's idle GPU time.
+  - Prior art: NVIDIA NVIGI does this inside the game's own process.
+  - It lives or dies on whether Windows' idle GPU priority class already protects frame times. That needs a one-day kill test on the builder's laptop.
+  - The builder passed on GPU sharing earlier ("try another topic"), so this is the same use case in a sharper form.
+- Other near-miss (search B): sign-language video at under 10 kbps (Sperling et al. 1985). It probably loses to pose keypoints (VC4ASL) at matched bytes.

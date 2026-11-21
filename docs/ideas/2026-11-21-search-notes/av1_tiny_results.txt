@@ -1,0 +1,12 @@
+64x96 target=2k actual=5.54kbps psnr=26.236584dB ssim=0.798747 frames=766
+64x96 target=3k actual=6.00kbps psnr=26.978418dB ssim=0.820276 frames=766
+64x96 target=5k actual=6.70kbps psnr=27.935801dB ssim=0.847687 frames=766
+64x96 target=8k actual=9.70kbps psnr=30.251547dB ssim=0.892100 frames=766
+32x48 target=2k actual=7.25kbps psnr=30.869668dB ssim=0.944051 frames=766
+32x48 target=3k actual=7.28kbps psnr=31.023110dB ssim=0.945760 frames=766
+32x48 target=5k actual=6.69kbps psnr=30.214660dB ssim=0.942970 frames=766
+32x48 target=8k actual=9.68kbps psnr=33.445321dB ssim=0.966283 frames=766
+16x24 target=2k actual=7.26kbps psnr=36.551892dB ssim=0.995710 frames=766
+16x24 target=3k actual=7.28kbps psnr=37.066867dB ssim=0.996237 frames=766
+16x24 target=5k actual=6.67kbps psnr=34.812742dB ssim=0.993770 frames=766
+16x24 target=8k actual=9.53kbps psnr=40.124166dB ssim=0.998217 frames=766
