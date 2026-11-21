@@ -42,3 +42,22 @@ Start from a **real use the builder has**, then find the old paper that solves i
 - **Openings left in #5 are weak:**
   - TRM has research code but no product; its wins are puzzles, which have no real use.
   - Decorrelated crowds would be research-wow with no clear use.
+
+## Update, 2026-11-21: can Engramscope be upgraded out of "just looking at DeepSeek's design"?
+
+Every direction that would make it *build* something on the Engram memory already exists, with code or a paper:
+- **Edit or write facts into the memory:**
+  - EngramEdit ([arXiv 2610.10533](https://arxiv.org/abs/2610.10533), code at [ModalityDance/EngramEdit](https://github.com/ModalityDance/EngramEdit)).
+  - "User as Engram", per-user facts written as local edits ([arXiv 2606.19172](https://arxiv.org/pdf/2606.19172v1)).
+  - Sequential Engram editing and its forgetting ([arXiv 2607.24805](https://arxiv.org/html/2607.24805)).
+  - A "delete 2 KB to forget a fact" tool would be a narrower version of these.
+- **Shrink the memory using the "heads are interchangeable" result:**
+  - GateRQ cuts table memory 7.8× without retraining, for about 1 PopQA point ([arXiv 2610.35985](https://arxiv.org/abs/2610.35985)).
+  - 4-bit tables save about 75% ([arXiv 2610.31646](https://ar5iv.labs.arxiv.org/html/2610.31646)).
+  - Dropping heads is the same move as MaltOE's width cut, which lost to lower-bit files at matched bytes (MaltOE G3: width 75% gave 1.16× perplexity; Q3_K_M at the same bytes gave 1.006×).
+- **Stream or transplant the memory:** vLLM disk-backed tables ([PR #56757](https://github.com/vllm-project/vllm/pull/56757)); colibri; XMemTransfer.
+- **What's left only improves the study:**
+  - A behavioural lesion: run the real model with a phrase's essential traces deleted. This needs a rented machine.
+  - The app.
+
+Builder, 2026-11-21: **MaltOE was the best idea of the whole search**, "it just had a negative result".
