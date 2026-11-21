@@ -248,7 +248,7 @@ def train(method, lr, tokens, budget=1500, tag="", evals=None):
         opts.append(torch.optim.SparseAdam(sparse, lr=lr))
     base_lrs = [lr if isinstance(o, torch.optim.SparseAdam) else w_lr for o in opts]
     stream = data()["stream"]
-    steps_total = tokens // (SEQ * BATCH)
+    steps_total = -(-tokens // (SEQ * BATCH))  # round up so every milestone checkpoint is reached
     state = {"step": 0, "seconds": 0.0, "log": []}
     ck = d / "ckpt.pt"
     if ck.exists():

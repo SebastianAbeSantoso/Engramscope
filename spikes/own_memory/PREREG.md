@@ -53,3 +53,6 @@ Let `r_mem = 1 − PPL_mem / PPL_base` and `r_lora = 1 − PPL_lora / PPL_base`,
 ## Change log
 
 - 2026-11-21, before the commit and before any training on real data: data preparation, the hash test (passed: 1,024 positions × 8 columns), and a 2-step smoke test on random token ids ran first, to check the code. No result depends on them.
+- 2026-11-22, after the LR pilot, before the main runs:
+  - **Pilot result.** Untrained base: selection-slice PPL 21.56. Memory after 300k tokens: 21.50 at LR 3e-4, 21.10 at 1e-3, **20.07 at 3e-3 (chosen)**. LoRA: 17.29 at 1e-4, 16.26 at 3e-4, **15.88 at 1e-3 (chosen)**. Both winners sit at the top of their pre-registered grids. The grids stay as registered, so both methods may be slightly under-tuned.
+  - **Bug fix, no rule changed.** The step count rounded down (pilot runs trained 299,008 tokens, not 300,000), so the 2M milestone checkpoint would never have been saved. Main runs now round up (2,002,944 tokens for 2M).
