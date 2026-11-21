@@ -29,3 +29,16 @@ Running record so we stop rediscovering the same dead ends. Deadline Dec 4, 2026
 ## Proposal to break the loop
 
 Start from a **real use the builder has**, then find the old paper that solves it. Starting from "cool old idea" keeps failing filter 3 or 6. Candidate pains tied to the builder (Indonesia, RX 6650 XT 8 GB, student, bad local-AI support): weak/no GPU for local models; metered or patchy mobile data; study workload.
+
+## Update, late 2026-11-20
+
+- **Category:** Resurrection is not fixed. Frankenstein is also acceptable. Skeleton Crew and Costume Contest don't interest the builder.
+- **Dasher + LLM** rejected. The Dasher project is under active development (v6). The belief "hands-free writing is slow" is false: stenography and Dasher itself already exist.
+- **Belief ballot:** of 8 beliefs, the builder holds and would be wowed by only **#5, "a small AI can't beat a big one."**
+- **#5 is already broken publicly, with code:**
+  - TRM, "Less is More: Recursive Reasoning with Tiny Networks" ([arXiv 2510.04871](https://arxiv.org/html/2510.04871v1), Oct 2025). With 7M parameters it scores 45% on ARC-AGI-1, above DeepSeek R1, o3-mini and Gemini 2.5 Pro. A probabilistic follow-up exists ([arXiv 2605.19943](https://arxiv.org/html/2605.19943)).
+  - In 2026, task-specific small models beat frontier ones on narrow jobs: Forbes, June 2026; Cactus "Needle 3"; ["How 3B beats 100B+"](https://www.edenai.co/post/tiny-llms-that-beat-giant-models-how-efficient-3b-parameter-models-compete-with).
+  - Crowds of models fail because their errors correlate. In ["Nine judges, two effective votes"](https://arxiv.org/html/2605.29800) (May 2026), 9 frontier judges gave about 2 independent votes, and the best single judge matched the panel.
+- **Openings left in #5 are weak:**
+  - TRM has research code but no product; its wins are puzzles, which have no real use.
+  - Decorrelated crowds would be research-wow with no clear use.
