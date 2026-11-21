@@ -76,3 +76,17 @@ The builder confirmed the filter: a working engine or system, a forgotten theory
   - It lives or dies on whether Windows' idle GPU priority class already protects frame times. That needs a one-day kill test on the builder's laptop.
   - The builder passed on GPU sharing earlier ("try another topic"), so this is the same use case in a sharper form.
 - Other near-miss (search B): sign-language video at under 10 kbps (Sperling et al. 1985). It probably loses to pose keypoints (VC4ASL) at matched bytes.
+
+## Update, 2026-11-21 night: started from community demand instead of a theory
+
+New tack: read the most-upvoted OPEN feature requests in the big local-AI engines (llama.cpp, ollama, ComfyUI, LM Studio, koboldcpp, exo, web-llm, jan), on the theory that upvotes prove real use and "still open" hints nobody shipped it. Then look for an old theory that solves one.
+
+Top open signals found:
+- ollama: reranking models (290), MCP (222), import multi-file GGUF (165), AMD Ryzen NPU (147), Intel NPU, rate-limit/slow-connection downloads (#3162, #2006).
+- llama.cpp: new backends (Apple ANE, AMD XDNA/NPU, DirectML), sparse-MoE, disaggregated prefill/decode.
+- exo: CUDA on Linux, Vulkan, RDMA, Raspberry Pi.
+- Recurring hardware-limit cluster: "use CPU to offload MoE weights" (ollama #11772, 74 — taken), auto-size context to a VRAM budget, context-length OOM, NPU idle on laptops.
+
+Verdict: the demand side converges on the same places as the theory side. The biggest items are either already taken (MoE offload, KV/context), plain backend engineering with no old-theory core (NPU/Vulkan/ANE backends), or feature-adds (reranking, MCP), not a forgotten-theory engine. Nothing new passes the filter.
+
+**Conclusion of the whole search (14+ rounds):** under the confirmed filter (a built engine; a forgotten theory as the core mechanism; a real hardware limit; beats the modern baseline at matched resources; not already shipped; 10-day build), the space is exhausted for this window. Decision owed to the builder.
