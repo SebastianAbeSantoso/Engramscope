@@ -40,3 +40,28 @@ Notes (descriptive):
 - The memory was still improving (3.9% from 2M to 6M). Its mean gate fell to 0.525 (0.621 at 2M).
 - Still no memorisation: the memory's memo/val ratio is 1.028 (base 1.020). LoRA's advantage on the early slice is gone (1.003).
 - Training speed on the sandbox CPU: memory 1285 tok/s, LoRA 904 tok/s.
+
+## Bigger-table test (2026-11-22; rules: `PREREG-bigtable.md`, committed in 4f59d1e before the run)
+
+| Memory table | Rows | Val PPL 0.5M | Val PPL 1M | Val PPL 2M | Memo/val ratio at 2M |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| small (main test) | 524,450 | 19.721 | 19.022 | 18.520 | 1.023 |
+| 16x bigger | 8,388,916 | 19.726 | 19.049 | 18.546 | 1.026 |
+
+- **H1, table size matters** (needs <= 17.964): 18.546, so **H1 fails**. The 16x table scores the same as the small one at every checkpoint.
+- **H2, beats LoRA** (needs <= 15.725): **fails**.
+- The memorisation ratio stays at the base model's level, so the bigger table does not memorise either.
+- **Decision for the 1.7B test** (rule fixed in PREREG-bigtable.md): use a small table, sized to keep the 135M ratio of memory to LoRA trainable parameters.
+
+## Exploratory diagnostic (not pre-registered): is the gain in the rows?
+
+`diag_shuffle.py` scores the 6M small-table memory with its trained rows, with the rows randomly permuted, and with every row replaced by the mean row:
+
+| Rows | Val PPL |
+| --- | ---: |
+| trained | 17.798 |
+| shuffled | 21.740 |
+| mean row | 21.780 |
+| base model (no memory) | 21.785 |
+
+With the wrong or the average rows, the whole gain disappears. So the memory's gain comes from n-gram-specific content in its rows, not from the dense part acting on generic rows. Combined with H1, table size is not what limits it at this data scale. A remaining candidate, not tested, is the design itself: a frozen backbone that was never trained to read the memory.
