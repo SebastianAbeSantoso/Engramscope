@@ -132,7 +132,7 @@ class Hash:
     def __call__(self, ids):  # ids: int64 [B, T] -> rows [B, T, n_cols]
         c = self.map[ids]
         b, t = c.shape
-        shifted = [c] + [np.concatenate([np.full((b, s), self.pad), c[:, :-s]], axis=1) for s in range(1, MAX_N)]
+        shifted = [c] + [np.concatenate([np.full((b, s), self.pad, dtype=np.int64), c[:, :-s]], axis=1) for s in range(1, MAX_N)]
         rolling = shifted[0] * self.mult[0]
         cols = []
         for i in range(1, MAX_N):
