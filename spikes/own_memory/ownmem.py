@@ -33,7 +33,9 @@ SEED = 20261121
 SEQ, BATCH = 512, 8
 WARMUP = 20
 INSERT_AFTER = 1  # 0-based decoder layer index (the module sits after layer 2)
-N_HEADS, MAX_N, ROW_DIM, PRIME_START = 4, 3, 64, 65536
+N_HEADS, MAX_N, ROW_DIM = 4, 3, 64
+PRIME_START = int(os.environ.get("OWNMEM_PRIME_START", "65536"))  # rows per column start here (bigger-table test: 1048576)
+CKPT_EVERY = int(os.environ.get("OWNMEM_CKPT_EVERY", "300"))  # seconds between resumable checkpoints
 SEL_TOKENS, MEMO_TOKENS, STREAM_TOKENS = 100_000, 200_000, 6_500_000
 PILOT_TOKENS = 300_000
 PILOT_LRS = {"mem": [3e-4, 1e-3, 3e-3], "lora": [1e-4, 3e-4, 1e-3]}
@@ -261,9 +263,11 @@ def train(method, lr, tokens, budget=1500, tag="", evals=None):
         state = saved["state"]
     t_start, last_save = time.time(), time.time()
 
-    def save(path):
-        torch.save({"params": [p.detach().clone() for p in sparse + dense], "opts": [o.state_dict() for o in opts],
-                    "state": state}, path)
+    def save(path, with_opt=True):
+        blob = {"params": [p.detach() for p in sparse + dense], "state": state}
+        if with_opt:
+            blob["opts"] = [o.state_dict() for o in opts]
+        torch.save(blob, path)
 
     while state["step"] < steps_total:
         s = state["step"]
@@ -285,8 +289,8 @@ def train(method, lr, tokens, budget=1500, tag="", evals=None):
         done_tokens = state["step"] * SEQ * BATCH
         hit = [m for m in MILESTONES if m <= tokens and (s * SEQ * BATCH) < m <= done_tokens]
         for m in hit:
-            save(d / f"milestone-{m}.pt")
-        if time.time() - last_save > 300:
+            save(d / f"milestone-{m}.pt", with_opt=False)
+        if time.time() - last_save > CKPT_EVERY:
             save(ck)
             last_save = time.time()
         if time.time() - t_start > budget and state["step"] < steps_total:
@@ -374,10 +378,13 @@ def cmd_base():
 
 if __name__ == "__main__":
     cmd, args = sys.argv[1], sys.argv[2:]
-    budget = 1500
+    budget, tag = 1500, ""
     if "--budget" in args:
         i = args.index("--budget")
         budget, args = int(args[i + 1]), args[:i] + args[i + 2 :]
+    if "--tag" in args:
+        i = args.index("--tag")
+        tag, args = args[i + 1], args[:i] + args[i + 2 :]
     if cmd == "prep":
         cmd_prep()
     elif cmd == "hashtest":
@@ -389,7 +396,7 @@ if __name__ == "__main__":
     elif cmd == "base":
         cmd_base()
     elif cmd == "train":
-        train(args[0], float(args[1]), int(args[2]), budget=budget)
+        train(args[0], float(args[1]), int(args[2]), budget=budget, tag=tag)
     elif cmd == "eval":
         eval_milestone(args[0], int(args[1]))
     else:
