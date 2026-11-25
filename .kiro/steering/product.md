@@ -16,6 +16,10 @@ Kiroween 2026, Resurrection category. Solo student builder. Deadline December 4,
 
 Engramscope's contribution is limited to (1) Lashley's lesion experiments and Semon's partial-cue retrieval, rerun as pre-registered trace lesions on a released model's Engram memory, and (2) the instrument they need: reading the Engram rows directly, without running the model, over HTTP from a browser, and decoding them, with controls that show the readout is not noise. Trace lesions show how a stored concept is spread across traces, not what the running model forgets. Nothing here is a claim about biological memory. Engram itself, its hashing and tables are DeepSeek's (Cheng et al., arXiv 2601.07372). Remote and on-demand row access for inference already exist and are cited, not claimed.
 
+## Side test (Req 13)
+
+The own-memory test asks whether DeepSeek's memory design helps a frozen model it wasn't trained with, against LoRA, under pre-registered rules: KILL at 135M, a narrow PASS at 1.7B. It comes after the lesion experiments in every presentation. It is not part of the claim: adding Engram-style memory to a frozen model is prior work (Engram Adapter, TF-Engram, NGM), so never call it new or first. Its value is the controlled comparison and reporting both outcomes.
+
 ## Vocabulary
 
 - **Engram table, row, address, compressed id, value vector, readout, decode index, control, trace, trace lesion, behavioural lesion, retention:** as defined in the requirements glossary. Use these terms consistently.

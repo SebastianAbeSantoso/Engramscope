@@ -126,6 +126,13 @@ Visual direction (Req 7.3): dark, archival, "memory traces". Rows appear as fain
 - **Output:** JSON with per-condition decoded lists and measures, and a Markdown report that applies the approved rules mechanically and prints the outcome of each.
 - **Browser:** reads the recorded results only. The live lesion view uses the compressed decode index, and its numbers are labelled as approximate (Req 4.4).
 
+### 9. Own-memory side test (`spikes/own_memory/`, Req 13)
+
+- **Question:** does DeepSeek's memory design help a model it wasn't trained with? A small Engram-style memory (2- and 3-gram windows × 4 heads, 64-dim rows, the reference hash) is inserted after decoder layer 2 of a frozen SmolLM2 model and trained alone. The baseline is LoRA r=64 on all linear layers, on the same data and budget.
+- **Code:** `ownmem.py` (135M, sandbox CPU) and `scale.py` (1.7B, NVIDIA GPU; the table lives in CPU RAM and only looked-up rows move to the GPU). `rent.sh` runs `scale.py` on a rented Linux GPU in the background, with pinned packages on a clean uv-managed Python, and sends the results back by one-time code. `laptop.ps1` does the same on Windows.
+- **Rules:** `PREREG.md` (135M), `PREREG-bigtable.md`, `PREREG-1.7B.md`, each committed before its run. Every step skips when its result exists, so a stopped run resumes.
+- **Output:** `results/` and `RESULTS.md`. It stays a spike: `tools/` and `web/` don't import it.
+
 ## Correctness properties
 
 For property-based tests (`hypothesis` in Python; shared test vectors for the web). Properties 1–8 and 10 are Python; 9 is web.

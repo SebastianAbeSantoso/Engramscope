@@ -13,7 +13,7 @@ Engramscope asks Lashley's questions of this memory:
 
 The experiments are pre-registered in [`bench/lesion-protocol.md`](bench/lesion-protocol.md), committed before any run. They are **trace lesions**: they remove rows from what the model would add to its internal state, and decode the rest. They show how a stored concept is spread across traces, not what the running model forgets. They say nothing about brains.
 
-> **Status (2026-11-19):** the pre-registered readout benchmark and lesion experiments have run; the results are in [`docs/results/`](docs/results/) and under the builder's review ([summary](docs/findings/experiments-2026-11-19.md)). The web app is next.
+> **Status (2026-11-25):** the pre-registered readout benchmark and lesion experiments have run; the results are in [`docs/results/`](docs/results/) and under the builder's review ([summary](docs/findings/experiments-2026-11-19.md)). A side test of DeepSeek's memory design on frozen SmolLM2 models, against LoRA, is in [`spikes/own_memory/RESULTS.md`](spikes/own_memory/RESULTS.md). The web app is next.
 
 ## The instrument: reading a trace without running the model
 

@@ -29,6 +29,7 @@ These apply to the spec, README, write-up and video.
 - Nothing here is a claim about biological memory. The experiments borrow Lashley's and Semon's questions and methods, not their conclusions.
 - Related work edits the tables ([EngramEdit](https://arxiv.org/abs/2610.10533)), compresses them ([CP](https://arxiv.org/abs/2610.21810), [GateRQ](https://arxiv.org/abs/2610.35985)), fetches them remotely for inference ([remote Engram over RDMA/TCP](https://huggingface.co/ProprietaryLegal/dsv41-remote-engram-rdma)), or reads them from disk on demand (llama.cpp n-gram read mode, DwarfStar). Engramscope cites these and does not claim remote row access or on-demand reads.
 - Every quality claim comes from the benchmark in Requirement 6, with its controls. Examples shown in the UI or video are labelled as examples.
+- The own-memory side test (Req 13) is not part of the claimed contribution. Adding Engram-style memory to a frozen model is prior work ([Engram Adapter](https://arxiv.org/abs/2608.29327), [TF-Engram](https://arxiv.org/html/2607.07388), [NGM](https://arxiv.org/abs/2605.16893); related: [Memory Grafting](https://arxiv.org/abs/2605.20948)). Engramscope reports the test as a pre-registered comparison with LoRA, with both outcomes, and claims no new method.
 
 ## Glossary
 
@@ -189,6 +190,18 @@ These apply to the spec, README, write-up and video.
 5. THE submission SHALL be made before December 4, 2026, 2:00 PM PT, entering Resurrection and Best Student Project: Resurrection.
 6. ALL deliverables SHALL be tracked in `docs/submission/deliverables.md`, and the Kiro write-up kept as a running draft in `docs/submission/kiro-writeup.md`.
 
+### Requirement 13: Own-memory side test
+
+**User Story:** As a judge, I want to know whether DeepSeek's memory design is useful outside DeepSeek's model, tested as honestly as the lesions, so that I can see what the design does and doesn't buy.
+
+#### Acceptance Criteria
+
+1. EACH run SHALL have its rules (setup, baseline, budget, pass and kill conditions) committed before it starts, in `spikes/own_memory/PREREG*.md`. Changes after a commit SHALL go in that file's change log, dated, saying whether any result existed yet.
+2. THE memory SHALL use the reference hashing (`engramscope.hashing`) on a frozen backbone, and SHALL be compared with a LoRA baseline on the same data, token budget and machine, with a learning-rate pilot for each method on a slice never used for the final numbers.
+3. EVERY outcome SHALL be reported as the rule gives it, including KILL. Exploratory runs SHALL be written down before they run and labelled exploratory; they SHALL NOT change a pre-registered outcome.
+4. RESULTS SHALL be stored in `spikes/own_memory/results/` and summarised in `spikes/own_memory/RESULTS.md`, with the hardware, versions and code commit, and with the related work named in the claims boundary.
+5. THE README and app SHALL present this test as a side test, after the lesion experiments, and SHALL NOT call it new.
+
 ## Decisions (builder, 2026-11-19)
 
 1. **Category:** Resurrection. The old research is Lashley's lesion experiments and Semon's retrieval rule, rerun as the core of the project (Decision 7). The interface is still polished per Req 7.
@@ -201,3 +214,10 @@ These apply to the spec, README, write-up and video.
 8. **Decode index (Req 5.2):** fitted, d = 1,024, 4-bit: about 66 MB of embeddings plus 12.6 MB per layer, about 92 MB in total, downloaded once and cached (builder, from the G1 options). The browser's words are labelled approximate; every number in the experiments comes from the exact readout in Python.
 9. **Lesion interpretation rules (Req 9.1):** the builder delegated the choice to Kiro ("up to you since whats the best for the project"). Kiro finalized and approved them before any run (`bench/lesion-protocol.md`, change log).
 10. **Latency target (Req 2.5), proposed by Kiro from G3, to be confirmed by the builder at checkpoint 6.6:** for a phrase not fetched before, layer-1 words within 1.5 s of submitting on the builder's connection, not counting the first load of the session. Measured fetch time on that connection: 1.07–1.09 s at concurrency 32.
+
+## Decisions (2026-11-21 to 2026-11-25)
+
+11. **Own-memory side test (Req 13):** the builder asked to submit Engramscope plus a small n-gram memory on a bigger model ("just submit… Engramscope + small n-gram on 3b"). Kiro ran it as a kill test first: SmolLM2-135M on the sandbox CPU. Outcome KILL at 6M tokens (memory 17.798 vs LoRA 16.483), so the bigger model was not cleared by that rule. A bigger-table test (H1, H2 failed) and a row-shuffle diagnostic followed.
+12. **1.7B re-test on a rented GPU:** pre-registered before any run (`PREREG-1.7B.md`, cd4f870), with the table sized by the bigger-table rule. The builder's laptop was unavailable, so it ran on a Vast.ai RTX 5090 from the builder's phone. Outcome PASS (memory 8.868 vs LoRA 8.949, base 11.129), by 0.9%.
+13. **Exploratory LoRA follow-up:** after the PASS, the builder approved one more LoRA run at learning rate 3e-4, written down before it ran. It can't change the PASS.
+14. **No new method claimed for Req 13:** prior work found after the runs (claims boundary) does the same basic move. The test is reported as a controlled comparison.
