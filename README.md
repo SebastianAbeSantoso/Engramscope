@@ -1,14 +1,23 @@
 # Engramscope
 
-**Read a model's memory without running it.**
+**Lashley's search for the engram, rerun on a memory where every trace has an address.**
 
-DeepSeek-V4.1-Flash, a 284-billion-parameter open model, keeps two giant lookup tables called *Engram*: about 384 million rows each, 189 GiB together. Each row's address is a hash of the last few words of the text. Engramscope computes those addresses in your browser, fetches only the rows it needs from the public model files, and shows what they hold. No GPU, no download, no model run.
+In 1950 Karl Lashley summed up about 30 years of removing parts of rats' cortex to find where a learned habit was stored. He could not localize it. The loss grew with how much cortex was removed (*mass action*), and within a functional area the parts were equivalent for the trace (*equipotentiality*). Richard Semon, who coined *engram* in 1904, said a trace is retrieved when part of the original stimulus recurs. ([Sources with page numbers](docs/theory-sources.md).)
 
-> **Status:** specification and feasibility phase for Kiroween 2026. The app doesn't exist yet; the [kill test](docs/findings/engram-killtest.md) does.
+DeepSeek-V4.1-Flash, a 284-billion-parameter open model, has a memory called *Engram*: two lookup tables of about 384 million rows each, 189 GiB together. For every position in a text the model fetches 24 rows per table, one per n-gram size (2, 3 or 4 tokens) and hash head (8). Each row's address is a hash of the last few tokens. So every trace of a phrase can be found, read and removed exactly, which was never possible in a brain.
 
-## What the kill test found
+Engramscope asks Lashley's questions of this memory:
+- **Mass action:** does what a phrase's traces store fade gradually as more of them are removed, or collapse at some point?
+- **Equipotentiality:** at equal lesion size, does it matter *which* traces go?
+- **Semon's partial cue:** does part of the cue (one n-gram size, or the phrase after different words) still retrieve it?
 
-We reproduced the model's own hashing and read the layer-1 table directly:
+The experiments are pre-registered in [`bench/lesion-protocol.md`](bench/lesion-protocol.md), committed before any run. They are **trace lesions**: they remove rows from what the model would add to its internal state, and decode the rest. They show how a stored concept is spread across traces, not what the running model forgets. They say nothing about brains.
+
+> **Status (2026-11-25):** the pre-registered readout benchmark and lesion experiments have run; the results are in [`docs/results/`](docs/results/) and under the builder's review ([summary](docs/findings/experiments-2026-11-19.md)). A side test of DeepSeek's memory design on frozen SmolLM2 models, against LoRA, is in [`spikes/own_memory/RESULTS.md`](spikes/own_memory/RESULTS.md). The web app is next.
+
+## The instrument: reading a trace without running the model
+
+Engramscope computes the model's own addresses in the browser, fetches only the needed rows from the public model files with HTTP range requests (about 12 KB per phrase), projects them the way the model does, and decodes them into words. The kill test showed that this reads something real:
 
 | Phrase | Nearest words for the rows (layer 1) |
 | --- | --- |
@@ -17,7 +26,7 @@ We reproduced the model's own hashing and read the layer-1 table directly:
 | Søren Kierkegaard | Nietzsche, Hegel, Heidegger, Kant, Wittgenstein |
 | Yogyakarta | Jakarta, Indonesia, Bali |
 
-These are examples. The measured result, on a 30-phrase pilot: a related word not contained in the phrase appeared in the top 10 for **22 of 30** phrases, against **0 of 30** for random rows and **8 of 30** for the phrase's own last-word embedding. Read as next-word predictions, the same rows score at chance. A pre-registered benchmark of at least 100 phrases is part of the plan.
+These are examples. The measured result, on a 30-phrase pilot: a related word not contained in the phrase appeared in the top 10 for **22 of 30** phrases, against **0 of 30** for random rows and **8 of 30** for the phrase's own last-word embedding. Read as next-word predictions, the same rows score at chance. A pre-registered benchmark of 123 phrases ([`bench/`](bench/)) comes before the lesion runs.
 
 ## How it works
 
@@ -30,23 +39,23 @@ These are examples. The measured result, on a 30-phrase pilot: a related word no
 ## What is DeepSeek's and what is ours
 
 - **DeepSeek's:** Engram, its hashing and its tables ([Cheng et al., 2026, arXiv 2601.07372](https://arxiv.org/abs/2601.07372)); the model and its reference code (MIT).
-- **Ours:** reading a released model's Engram rows directly, without running the model, over HTTP from a browser, and showing what they encode, with controls.
+- **Lashley's and Semon's:** the questions and the lesion method (1950; 1904/1921).
+- **Ours:** rerunning those experiments as pre-registered trace lesions on a released model's Engram memory, and the instrument they need: reading the rows directly, without running the model, over HTTP from a browser, with controls.
+- **Not ours:** removing the whole Engram memory from the running model has been measured ([GateRQ, arXiv 2610.35985](https://arxiv.org/abs/2610.35985): −36.8 PopQA points).
 - **Not ours:** fetching rows remotely or on demand during inference already exists ([remote Engram over RDMA/TCP](https://huggingface.co/ProprietaryLegal/dsv41-remote-engram-rdma); llama.cpp n-gram read mode). Other work edits ([EngramEdit](https://arxiv.org/abs/2610.10533)) or compresses ([CP](https://arxiv.org/abs/2610.21810), [GateRQ](https://arxiv.org/abs/2610.35985)) the tables.
-
-## Why "engram"
-
-Richard Semon coined *engram* for a physical memory trace in 1904. Karl Lashley spent about 30 years removing parts of rats' brains to find where a memory lives, and concluded in 1950 that he could not localize it. In this model an engram has an exact address you can compute from the text. (Sources: [`docs/theory-sources.md`](docs/theory-sources.md). This is an analogy; it says nothing about brains.)
 
 ## Limitations
 
 - Decoding by nearest input embeddings is an approximation; it assumes the rows' projection lives in the model's embedding space, which is plausible at layer 1 and not proven.
 - The model mixes each row in through a gate that depends on its internal state. Engramscope can't compute that without running the model, so a decoded row shows what is stored, not how strongly it was used.
 - Layer 14 mostly reads as noise with this decoding.
+- Trace lesions act on the readout, not on the running model. The model also uses the rows for its gate, and later layers may compensate. A behavioural lesion on rented hardware is a stretch goal.
 
 ## Repository
 
 - [`.kiro/specs/engramscope/`](.kiro/specs/engramscope/): requirements, design, tasks.
-- [`spikes/engram_readout/`](spikes/engram_readout/): the kill-test scripts.
+- [`bench/`](bench/): the pre-registered benchmark phrases and lesion protocol.
+- [`spikes/`](spikes/): the kill test and feasibility-gate scripts.
 - [`docs/`](docs/): findings, history sources, rules check, submission tracker.
 
 Built with [Kiro](https://kiro.dev) for [Kiroween 2026](https://kiroween.devpost.com/).

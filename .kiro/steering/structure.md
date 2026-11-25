@@ -17,8 +17,10 @@ Engramscope/
 │   ├── kiroween-rules.md    Devpost rules check
 │   └── submission/          deliverables tracker, running Kiro write-up
 ├── spikes/engram_readout/   kill-test scripts (throwaway; reference for tools/)
-├── tools/engramscope/       Python reference: hashing, fetch, fp8, readout, build_assets, bench
-├── bench/phrases.jsonl      pre-registered benchmark phrases (committed before readouts)
+├── spikes/own_memory/       side test (Req 13): PREREG*.md, ownmem.py, scale.py, rent.sh, laptop.ps1, results/, RESULTS.md
+├── tools/engramscope/       Python reference: hub (fetch), hashing, fp8, readout, scoring, bench, lesion, provenance
+├── tools/scripts/           one-off generators (the pre-registered phrase file)
+├── bench/                   pre-registered phrases (phrases.jsonl), analysis plan (README.md), lesion protocol
 ├── web/                     React + Vite app; public/assets/<revision>/ holds built assets
 ├── tests/                   Python tests
 ├── README.md

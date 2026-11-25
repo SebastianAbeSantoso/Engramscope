@@ -1,0 +1,17 @@
+{
+ "budget": 20000000,
+ "base_val_ppl": 11.128617803315489,
+ "mem_val_ppl": 8.868298026265094,
+ "lora_val_ppl": 8.949389083364057,
+ "r_mem": 0.20310876130340194,
+ "r_lora": 0.1958220471280976,
+ "outcome": "PASS",
+ "lines": [
+  "1.7B test (NVIDIA GeForce RTX 5090, torch 2.14.1+cu130): budget 20M tokens per method",
+  "base val PPL 11.129",
+  "mem: 2M val 9.238 memo 9.307, 5M val 9.117 memo 9.256, 10M val 8.988 memo 9.209, 20M val 8.868 memo 9.096; trained 0.58 h at lr 0.01",
+  "lora: 2M val 9.371 memo 8.854, 5M val 9.488 memo 9.240, 10M val 9.972 memo 10.023, 20M val 8.949 memo 8.967; trained 1.08 h at lr 0.001",
+  "r_mem 20.31%, r_lora 19.58%; PASS needs r_mem >= 3% and mem PPL <= LoRA PPL",
+  "OUTCOME: PASS"
+ ]
+}

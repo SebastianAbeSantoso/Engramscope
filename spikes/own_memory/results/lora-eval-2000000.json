@@ -1,0 +1,15 @@
+{
+ "run": "/projects/sandbox/_scratch/ownmem/runs/lora-lr0.001-2000000",
+ "milestone": 2000000,
+ "train_seconds": 2146.3504540920258,
+ "val": {
+  "loss": 2.7552445228848614,
+  "ppl": 15.724885527108333,
+  "tokens": 265209
+ },
+ "memo": {
+  "loss": 2.715715440114339,
+  "ppl": 15.115420382456088,
+  "tokens": 199290
+ }
+}

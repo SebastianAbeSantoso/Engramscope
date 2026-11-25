@@ -1,0 +1,17 @@
+{
+ "run": "/projects/sandbox/_scratch/ownmem/runs/big-mem-lr0.003-2000000",
+ "milestone": 1000000,
+ "train_seconds": 799.0182242393494,
+ "val": {
+  "loss": 2.947011773067173,
+  "ppl": 19.048946021127332,
+  "tokens": 265209,
+  "mean_gate": 0.6005420271371831
+ },
+ "memo": {
+  "loss": 2.9718826526250597,
+  "ppl": 19.528650674707805,
+  "tokens": 199290,
+  "mean_gate": 0.6066860211201203
+ }
+}

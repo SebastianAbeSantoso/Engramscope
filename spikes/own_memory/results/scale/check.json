@@ -1,0 +1,62 @@
+{
+ "model": "HuggingFaceTB/SmolLM2-1.7B",
+ "device": "cuda",
+ "torch": "2.14.1+cu130",
+ "transformers": "5.24.0",
+ "peft": "0.22.0",
+ "python": "3.12.16",
+ "prime_start": 242944,
+ "gpu": "NVIDIA GeForce RTX 5090",
+ "vram_gb": 31.35,
+ "driver": "580.173.02",
+ "ram_gb": 62.6,
+ "gradcheck": {
+  "relative_difference": {
+   "wk.weight": 0.012470529414713383,
+   "wv.weight": 0.016194872558116913,
+   "qn.weight": 0.012053444981575012,
+   "kn.weight": 0.012053510174155235,
+   "table": 0.015572711825370789
+  },
+  "grad_norms": {
+   "wk.weight": 0.0036882127169519663,
+   "wv.weight": 0.010874406434595585,
+   "qn.weight": 9.704656986286864e-05,
+   "kn.weight": 9.704656258691102e-05,
+   "table": 0.011922995559871197
+  },
+  "ok": true
+ },
+ "mem": {
+  "micro": 4,
+  "tok_per_s": 10026.475014582336,
+  "eval_tok_per_s": 39049.90534985504,
+  "peak_vram_gb": 4.72,
+  "process_ram_gb": 4.01,
+  "trainable_params": 126532736
+ },
+ "lora": {
+  "micro": 4,
+  "tok_per_s": 5078.141896162144,
+  "eval_tok_per_s": 22115.84346935603,
+  "peak_vram_gb": 5.66,
+  "process_ram_gb": 2.65,
+  "trainable_params": 72351744
+ },
+ "projected_hours": {
+  "20M": {
+   "mem": 0.57,
+   "lora": 1.12
+  },
+  "10M": {
+   "mem": 0.29,
+   "lora": 0.56
+  },
+  "5M": {
+   "mem": 0.15,
+   "lora": 0.29
+  }
+ },
+ "budget": 20000000,
+ "projected_pilot_hours": 0.08
+}

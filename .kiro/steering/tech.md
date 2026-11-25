@@ -8,11 +8,11 @@ inclusion: always
 
 | Part | Technology |
 | --- | --- |
-| Reference toolkit and asset build | Python 3.12, `uv`, numpy, `tokenizers`, `requests`, `sympy` (primes) |
+| Reference toolkit and asset build | Python 3.12, `uv`, numpy, `tokenizers` 0.23.3, `requests`, `sympy` (primes); dev: `pytest`, `hypothesis`, `ruff`, `ml-dtypes` |
 | Web app | React, Vite, TypeScript; static site on GitHub Pages; no Engramscope server |
-| Browser tokenizer | `@huggingface/transformers` `AutoTokenizer` on the model's `tokenizer.json` (Gate G2), else a WebAssembly build of `tokenizers` |
+| Browser tokenizer | `@huggingface/tokenizers` 0.2.0 on the model's `tokenizer.json` (Gate G2: 0 mismatches in 1,000 strings) |
 | Tests | `pytest` + `hypothesis` (Python); `vitest` (web); Playwright smoke test on a recorded fixture |
-| Lint and format | `ruff check`, `ruff format` (Python); `eslint`, `prettier` (web) |
+| Lint and format | `ruff check`, `ruff format` (Python); `oxlint` (web, the Vite template's default) |
 | CI | GitHub Actions: Python lint and tests; web lint, tests, build |
 
 ## Model pin
@@ -28,8 +28,9 @@ uv run ruff check . && uv run ruff format --check .
 uv run pytest -q                                   # offline tests
 ENGRAMSCOPE_TEST_NETWORK=1 uv run pytest -q         # also tests against the live model files
 uv run python -m engramscope.build_assets           # writes web/public/assets/<revision>/
-uv run python -m engramscope.bench                  # writes docs/results/
-cd web && npm ci && npm run lint && npx vitest --run && npm run build
+uv run python -m engramscope.bench                  # readout benchmark -> docs/results/bench-<date>.*
+uv run python -m engramscope.lesion                 # lesion experiments (after bench, same commit) -> docs/results/lesion-<date>.*
+cd web && npm ci && npm run lint && npm test && npm run build   # npm test = vitest --run
 ```
 
 Never run watch modes (`vitest` without `--run`, `npm run dev`) in the Kiro sandbox.
@@ -38,4 +39,4 @@ Never run watch modes (`vitest` without `--run`, `npm run dev`) in the Kiro sand
 
 - The Kiro sandbox is Linux with no GPU and about 30 GB of RAM. Everything except browser checks and the video runs there.
 - The builder's machines: Windows laptop (RTX 4060 8 GB, 16 GB RAM) and PC (RX 6650 XT 8 GB, 32 GB RAM). Neither runs the full model; Engramscope does not need them to.
-- Large intermediate files (embedding tables as `.npy`, cached rows) never go into the repository.
+- Large intermediate files (embedding tables as `.npy`, cached rows) never go into the repository. The cache lives in `$ENGRAMSCOPE_CACHE` (default `~/.cache/engramscope`); in the Kiro sandbox use `/projects/sandbox/_scratch/escache`, with `UV_CACHE_DIR=/root/.cache/uv UV_LINK_MODE=copy UV_PYTHON_INSTALL_DIR=/projects/sandbox/_scratch/uvpy`.

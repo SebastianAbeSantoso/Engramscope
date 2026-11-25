@@ -1,0 +1,54 @@
+name: Deploy app to GitHub Pages
+# Builds the browser assets from the pinned model revision (tools/engramscope/build_assets.py),
+# runs the web tests against them, and deploys. No large binaries are committed (design.md §2).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      ENGRAMSCOPE_CACHE: ${{ github.workspace }}/.escache
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Cache built assets
+        id: assets
+        uses: actions/cache@v4
+        with:
+          path: web/public/assets
+          key: assets-314113f8-${{ hashFiles('tools/engramscope/**/*.py', 'pyproject.toml', 'uv.lock') }}
+      - name: Build assets (about 1.4 GB of model downloads; skipped when cached)
+        if: steps.assets.outputs.cache-hit != 'true'
+        run: uv sync && uv run python -m engramscope.build_assets --skip-agreement
+      - run: npm ci
+        working-directory: web
+      - run: npm test
+        working-directory: web
+      - run: npm run build
+        working-directory: web
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

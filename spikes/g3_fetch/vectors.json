@@ -1,0 +1,7036 @@
+{
+ "revision": "314113f8a7dadb388215396ba5fbee2c610a04d6",
+ "repo": "deepseek-ai/DeepSeek-V4.1-Flash",
+ "phrases": [
+  {
+   "phrase": "a lighthouse keeper",
+   "token_ids": [
+    260,
+    115921,
+    80893
+   ],
+   "ranges": [
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 269398424,
+     "length": 256,
+     "layer": 1,
+     "row": 1052335,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98313998352,
+     "length": 8,
+     "layer": 1,
+     "row": 1052335,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 5749291160,
+     "length": 256,
+     "layer": 1,
+     "row": 22458166,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98485245000,
+     "length": 8,
+     "layer": 1,
+     "row": 22458166,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 10131624344,
+     "length": 256,
+     "layer": 1,
+     "row": 39576655,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98622192912,
+     "length": 8,
+     "layer": 1,
+     "row": 39576655,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 13385159064,
+     "length": 256,
+     "layer": 1,
+     "row": 52285775,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98723865872,
+     "length": 8,
+     "layer": 1,
+     "row": 52285775,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 17379541144,
+     "length": 256,
+     "layer": 1,
+     "row": 67888830,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98848690312,
+     "length": 8,
+     "layer": 1,
+     "row": 67888830,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 20932372632,
+     "length": 256,
+     "layer": 1,
+     "row": 81767078,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98959716296,
+     "length": 8,
+     "layer": 1,
+     "row": 81767078,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 26965327256,
+     "length": 256,
+     "layer": 1,
+     "row": 105333307,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99148246128,
+     "length": 8,
+     "layer": 1,
+     "row": 105333307,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 31532960920,
+     "length": 256,
+     "layer": 1,
+     "row": 123175626,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99290984680,
+     "length": 8,
+     "layer": 1,
+     "row": 123175626,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 34279749272,
+     "length": 256,
+     "layer": 1,
+     "row": 133905268,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99376821816,
+     "length": 8,
+     "layer": 1,
+     "row": 133905268,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 38508452760,
+     "length": 256,
+     "layer": 1,
+     "row": 150423641,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99508968800,
+     "length": 8,
+     "layer": 1,
+     "row": 150423641,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 42928132760,
+     "length": 256,
+     "layer": 1,
+     "row": 167688016,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99647083800,
+     "length": 8,
+     "layer": 1,
+     "row": 167688016,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 48688028568,
+     "length": 256,
+     "layer": 1,
+     "row": 190187609,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99827080544,
+     "length": 8,
+     "layer": 1,
+     "row": 190187609,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 51422517656,
+     "length": 256,
+     "layer": 1,
+     "row": 200869207,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99912533328,
+     "length": 8,
+     "layer": 1,
+     "row": 200869207,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 54233749656,
+     "length": 256,
+     "layer": 1,
+     "row": 211850582,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100000384328,
+     "length": 8,
+     "layer": 1,
+     "row": 211850582,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 58207541912,
+     "length": 256,
+     "layer": 1,
+     "row": 227373208,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100124565336,
+     "length": 8,
+     "layer": 1,
+     "row": 227373208,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 65071335320,
+     "length": 256,
+     "layer": 1,
+     "row": 254184901,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100339058880,
+     "length": 8,
+     "layer": 1,
+     "row": 254184901,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 69594868120,
+     "length": 256,
+     "layer": 1,
+     "row": 271854951,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100480419280,
+     "length": 8,
+     "layer": 1,
+     "row": 271854951,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 70673939608,
+     "length": 256,
+     "layer": 1,
+     "row": 276070074,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100514140264,
+     "length": 8,
+     "layer": 1,
+     "row": 276070074,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 74903583640,
+     "length": 256,
+     "layer": 1,
+     "row": 292592121,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100646316640,
+     "length": 8,
+     "layer": 1,
+     "row": 292592121,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 79427434392,
+     "length": 256,
+     "layer": 1,
+     "row": 310263413,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100787686976,
+     "length": 8,
+     "layer": 1,
+     "row": 310263413,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 85307766168,
+     "length": 256,
+     "layer": 1,
+     "row": 333233459,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100971447344,
+     "length": 8,
+     "layer": 1,
+     "row": 333233459,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 86136600728,
+     "length": 256,
+     "layer": 1,
+     "row": 336471094,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100997348424,
+     "length": 8,
+     "layer": 1,
+     "row": 336471094,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 91512847768,
+     "length": 256,
+     "layer": 1,
+     "row": 357472059,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101165356144,
+     "length": 8,
+     "layer": 1,
+     "row": 357472059,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 96233163672,
+     "length": 256,
+     "layer": 1,
+     "row": 375910793,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101312866016,
+     "length": 8,
+     "layer": 1,
+     "row": 375910793,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 1776448416,
+     "length": 256,
+     "layer": 14,
+     "row": 6939249,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98363785256,
+     "length": 8,
+     "layer": 14,
+     "row": 6939249,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 6561803936,
+     "length": 256,
+     "layer": 14,
+     "row": 25632044,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98513327616,
+     "length": 8,
+     "layer": 14,
+     "row": 25632044,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 8699063712,
+     "length": 256,
+     "layer": 14,
+     "row": 33980715,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98580116984,
+     "length": 8,
+     "layer": 14,
+     "row": 33980715,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 13152205216,
+     "length": 256,
+     "layer": 14,
+     "row": 51375799,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98719277656,
+     "length": 8,
+     "layer": 14,
+     "row": 51375799,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 19564171936,
+     "length": 256,
+     "layer": 14,
+     "row": 76422544,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98919651616,
+     "length": 8,
+     "layer": 14,
+     "row": 76422544,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 22108103072,
+     "length": 256,
+     "layer": 14,
+     "row": 86359775,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98999149464,
+     "length": 8,
+     "layer": 14,
+     "row": 86359775,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 25257173152,
+     "length": 256,
+     "layer": 14,
+     "row": 98660830,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99097557904,
+     "length": 8,
+     "layer": 14,
+     "row": 98660830,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 30687375520,
+     "length": 256,
+     "layer": 14,
+     "row": 119872558,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99267251728,
+     "length": 8,
+     "layer": 14,
+     "row": 119872558,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 34238026400,
+     "length": 256,
+     "layer": 14,
+     "row": 133742288,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99378209568,
+     "length": 8,
+     "layer": 14,
+     "row": 133742288,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 37061218720,
+     "length": 256,
+     "layer": 14,
+     "row": 144770383,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99466434328,
+     "length": 8,
+     "layer": 14,
+     "row": 144770383,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 43426259616,
+     "length": 256,
+     "layer": 14,
+     "row": 169633824,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99665341856,
+     "length": 8,
+     "layer": 14,
+     "row": 169633824,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 45377988512,
+     "length": 256,
+     "layer": 14,
+     "row": 177257765,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99726333384,
+     "length": 8,
+     "layer": 14,
+     "row": 177257765,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 50629382816,
+     "length": 256,
+     "layer": 14,
+     "row": 197771024,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99890439456,
+     "length": 8,
+     "layer": 14,
+     "row": 197771024,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 54940863392,
+     "length": 256,
+     "layer": 14,
+     "row": 214612745,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100025173224,
+     "length": 8,
+     "layer": 14,
+     "row": 214612745,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 60707218848,
+     "length": 256,
+     "layer": 14,
+     "row": 237137571,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100205371832,
+     "length": 8,
+     "layer": 14,
+     "row": 237137571,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 62007475872,
+     "length": 256,
+     "layer": 14,
+     "row": 242216700,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100246004864,
+     "length": 8,
+     "layer": 14,
+     "row": 242216700,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 65916945312,
+     "length": 256,
+     "layer": 14,
+     "row": 257488065,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100368175784,
+     "length": 8,
+     "layer": 14,
+     "row": 257488065,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 71522624928,
+     "length": 256,
+     "layer": 14,
+     "row": 279385251,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100543353272,
+     "length": 8,
+     "layer": 14,
+     "row": 279385251,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 75349903008,
+     "length": 256,
+     "layer": 14,
+     "row": 294335556,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100662955712,
+     "length": 8,
+     "layer": 14,
+     "row": 294335556,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 81894592928,
+     "length": 256,
+     "layer": 14,
+     "row": 319900751,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100867477272,
+     "length": 8,
+     "layer": 14,
+     "row": 319900751,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 85190306464,
+     "length": 256,
+     "layer": 14,
+     "row": 332774632,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100970468320,
+     "length": 8,
+     "layer": 14,
+     "row": 332774632,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 89250895520,
+     "length": 256,
+     "layer": 14,
+     "row": 348636308,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101097361728,
+     "length": 8,
+     "layer": 14,
+     "row": 348636308,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 93258833568,
+     "length": 256,
+     "layer": 14,
+     "row": 364292316,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101222609792,
+     "length": 8,
+     "layer": 14,
+     "row": 364292316,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 97136668832,
+     "length": 256,
+     "layer": 14,
+     "row": 379440110,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101343792144,
+     "length": 8,
+     "layer": 14,
+     "row": 379440110,
+     "kind": "scale"
+    }
+   ],
+   "sha256": "e941670f93d8da18055bd554221460239c9d247d5243b474ac3bf209fac77960",
+   "bytes": 12672
+  },
+  {
+   "phrase": "the Andromeda galaxy",
+   "token_ids": [
+    270,
+    1890,
+    496,
+    21181,
+    41435
+   ],
+   "ranges": [
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 2130613656,
+     "length": 256,
+     "layer": 1,
+     "row": 8322707,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98372161328,
+     "length": 8,
+     "layer": 1,
+     "row": 8322707,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 5949921176,
+     "length": 256,
+     "layer": 1,
+     "row": 23241877,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98491514688,
+     "length": 8,
+     "layer": 1,
+     "row": 23241877,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 8653684120,
+     "length": 256,
+     "layer": 1,
+     "row": 33803451,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98576007280,
+     "length": 8,
+     "layer": 1,
+     "row": 33803451,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 14633867672,
+     "length": 256,
+     "layer": 1,
+     "row": 57163543,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98762888016,
+     "length": 8,
+     "layer": 1,
+     "row": 57163543,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 17859291544,
+     "length": 256,
+     "layer": 1,
+     "row": 69762855,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98863682512,
+     "length": 8,
+     "layer": 1,
+     "row": 69762855,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 22317705112,
+     "length": 256,
+     "layer": 1,
+     "row": 87178533,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99003007936,
+     "length": 8,
+     "layer": 1,
+     "row": 87178533,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 24669271704,
+     "length": 256,
+     "layer": 1,
+     "row": 96364340,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99076494392,
+     "length": 8,
+     "layer": 1,
+     "row": 96364340,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 30226286744,
+     "length": 256,
+     "layer": 1,
+     "row": 118071430,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99250151112,
+     "length": 8,
+     "layer": 1,
+     "row": 118071430,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 34385852312,
+     "length": 256,
+     "layer": 1,
+     "row": 134319733,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99380137536,
+     "length": 8,
+     "layer": 1,
+     "row": 134319733,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 37999305112,
+     "length": 256,
+     "layer": 1,
+     "row": 148434783,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99493057936,
+     "length": 8,
+     "layer": 1,
+     "row": 148434783,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 42667221400,
+     "length": 256,
+     "layer": 1,
+     "row": 166668831,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99638930320,
+     "length": 8,
+     "layer": 1,
+     "row": 166668831,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 47445282712,
+     "length": 256,
+     "layer": 1,
+     "row": 185333133,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99788244736,
+     "length": 8,
+     "layer": 1,
+     "row": 185333133,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 49526183832,
+     "length": 256,
+     "layer": 1,
+     "row": 193461653,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99853272896,
+     "length": 8,
+     "layer": 1,
+     "row": 193461653,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 55762284696,
+     "length": 256,
+     "layer": 1,
+     "row": 217821422,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100048151048,
+     "length": 8,
+     "layer": 1,
+     "row": 217821422,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 60346799256,
+     "length": 256,
+     "layer": 1,
+     "row": 235729682,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100191417128,
+     "length": 8,
+     "layer": 1,
+     "row": 235729682,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 63687473048,
+     "length": 256,
+     "layer": 1,
+     "row": 248779189,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100295813184,
+     "length": 8,
+     "layer": 1,
+     "row": 248779189,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 68981520280,
+     "length": 256,
+     "layer": 1,
+     "row": 269459061,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100461252160,
+     "length": 8,
+     "layer": 1,
+     "row": 269459061,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 70267808664,
+     "length": 256,
+     "layer": 1,
+     "row": 274483625,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100501448672,
+     "length": 8,
+     "layer": 1,
+     "row": 274483625,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 75784696216,
+     "length": 256,
+     "layer": 1,
+     "row": 296033967,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100673851408,
+     "length": 8,
+     "layer": 1,
+     "row": 296033967,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 78816213144,
+     "length": 256,
+     "layer": 1,
+     "row": 307875830,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100768586312,
+     "length": 8,
+     "layer": 1,
+     "row": 307875830,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 83669097624,
+     "length": 256,
+     "layer": 1,
+     "row": 326832410,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100920238952,
+     "length": 8,
+     "layer": 1,
+     "row": 326832410,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 87004028824,
+     "length": 256,
+     "layer": 1,
+     "row": 339859485,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101024455552,
+     "length": 8,
+     "layer": 1,
+     "row": 339859485,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 93237650072,
+     "length": 256,
+     "layer": 1,
+     "row": 364209568,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101219256216,
+     "length": 8,
+     "layer": 1,
+     "row": 364209568,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 96537802648,
+     "length": 256,
+     "layer": 1,
+     "row": 377100789,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101322385984,
+     "length": 8,
+     "layer": 1,
+     "row": 377100789,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 343075744,
+     "length": 256,
+     "layer": 14,
+     "row": 1340137,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98318992360,
+     "length": 8,
+     "layer": 14,
+     "row": 1340137,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 7486353312,
+     "length": 256,
+     "layer": 14,
+     "row": 29243565,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98542219784,
+     "length": 8,
+     "layer": 14,
+     "row": 29243565,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 9032932512,
+     "length": 256,
+     "layer": 14,
+     "row": 35284890,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98590550384,
+     "length": 8,
+     "layer": 14,
+     "row": 35284890,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 14370821536,
+     "length": 256,
+     "layer": 14,
+     "row": 56136019,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98757359416,
+     "length": 8,
+     "layer": 14,
+     "row": 56136019,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 19151044512,
+     "length": 256,
+     "layer": 14,
+     "row": 74808765,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98906741384,
+     "length": 8,
+     "layer": 14,
+     "row": 74808765,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 20806828960,
+     "length": 256,
+     "layer": 14,
+     "row": 81276673,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98958484648,
+     "length": 8,
+     "layer": 14,
+     "row": 81276673,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 26546448032,
+     "length": 256,
+     "layer": 14,
+     "row": 103697060,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99137847744,
+     "length": 8,
+     "layer": 14,
+     "row": 103697060,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 32744373408,
+     "length": 256,
+     "layer": 14,
+     "row": 127907706,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99331532912,
+     "length": 8,
+     "layer": 14,
+     "row": 127907706,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 35936536480,
+     "length": 256,
+     "layer": 14,
+     "row": 140377093,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99431288008,
+     "length": 8,
+     "layer": 14,
+     "row": 140377093,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 37847442080,
+     "length": 256,
+     "layer": 14,
+     "row": 147841568,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99491003808,
+     "length": 8,
+     "layer": 14,
+     "row": 147841568,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 41125449120,
+     "length": 256,
+     "layer": 14,
+     "row": 160646283,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99593441528,
+     "length": 8,
+     "layer": 14,
+     "row": 160646283,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 45233879968,
+     "length": 256,
+     "layer": 14,
+     "row": 176694841,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99721829992,
+     "length": 8,
+     "layer": 14,
+     "row": 176694841,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 51755418272,
+     "length": 256,
+     "layer": 14,
+     "row": 202169600,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99925628064,
+     "length": 8,
+     "layer": 14,
+     "row": 202169600,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 55052870560,
+     "length": 256,
+     "layer": 14,
+     "row": 215050273,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100028673448,
+     "length": 8,
+     "layer": 14,
+     "row": 215050273,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 61093982112,
+     "length": 256,
+     "layer": 14,
+     "row": 238648365,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100217458184,
+     "length": 8,
+     "layer": 14,
+     "row": 238648365,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 65003848864,
+     "length": 256,
+     "layer": 14,
+     "row": 253921282,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100339641520,
+     "length": 8,
+     "layer": 14,
+     "row": 253921282,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 69008134048,
+     "length": 256,
+     "layer": 14,
+     "row": 269563021,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100464775432,
+     "length": 8,
+     "layer": 14,
+     "row": 269563021,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 73335613600,
+     "length": 256,
+     "layer": 14,
+     "row": 286467238,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100600009168,
+     "length": 8,
+     "layer": 14,
+     "row": 286467238,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 74556543904,
+     "length": 256,
+     "layer": 14,
+     "row": 291236497,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100638163240,
+     "length": 8,
+     "layer": 14,
+     "row": 291236497,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 80503295392,
+     "length": 256,
+     "layer": 14,
+     "row": 314465995,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100823999224,
+     "length": 8,
+     "layer": 14,
+     "row": 314465995,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 82632637600,
+     "length": 256,
+     "layer": 14,
+     "row": 322783738,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100890541168,
+     "length": 8,
+     "layer": 14,
+     "row": 322783738,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 89592556704,
+     "length": 256,
+     "layer": 14,
+     "row": 349970922,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101108038640,
+     "length": 8,
+     "layer": 14,
+     "row": 349970922,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 91899159200,
+     "length": 256,
+     "layer": 14,
+     "row": 358981088,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101180119968,
+     "length": 8,
+     "layer": 14,
+     "row": 358981088,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 95396662432,
+     "length": 256,
+     "layer": 14,
+     "row": 372643210,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101289416944,
+     "length": 8,
+     "layer": 14,
+     "row": 372643210,
+     "kind": "scale"
+    }
+   ],
+   "sha256": "22fd5809adcd008f88b7df7c3e5d2b9f3a0b7394935d600ffd6f0d24193a8ab0",
+   "bytes": 12672
+  },
+  {
+   "phrase": "Komodo National Park",
+   "token_ids": [
+    18475,
+    14415,
+    4545,
+    6938
+   ],
+   "ranges": [
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 334559128,
+     "length": 256,
+     "layer": 1,
+     "row": 1306869,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98316034624,
+     "length": 8,
+     "layer": 1,
+     "row": 1306869,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 5217666968,
+     "length": 256,
+     "layer": 1,
+     "row": 20381509,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98468631744,
+     "length": 8,
+     "layer": 1,
+     "row": 20381509,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 12013877400,
+     "length": 256,
+     "layer": 1,
+     "row": 46929206,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98681013320,
+     "length": 8,
+     "layer": 1,
+     "row": 46929206,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 13267760024,
+     "length": 256,
+     "layer": 1,
+     "row": 51827185,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98720197152,
+     "length": 8,
+     "layer": 1,
+     "row": 51827185,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 17638147224,
+     "length": 256,
+     "layer": 1,
+     "row": 68899010,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98856771752,
+     "length": 8,
+     "layer": 1,
+     "row": 68899010,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 20578034328,
+     "length": 256,
+     "layer": 1,
+     "row": 80382944,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98948643224,
+     "length": 8,
+     "layer": 1,
+     "row": 80382944,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 26166089368,
+     "length": 256,
+     "layer": 1,
+     "row": 102211284,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99123269944,
+     "length": 8,
+     "layer": 1,
+     "row": 102211284,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 31722101400,
+     "length": 256,
+     "layer": 1,
+     "row": 123914456,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99296895320,
+     "length": 8,
+     "layer": 1,
+     "row": 123914456,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 33787376536,
+     "length": 256,
+     "layer": 1,
+     "row": 131981937,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99361435168,
+     "length": 8,
+     "layer": 1,
+     "row": 131981937,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 37261087384,
+     "length": 256,
+     "layer": 1,
+     "row": 145551120,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99469988632,
+     "length": 8,
+     "layer": 1,
+     "row": 145551120,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 42152381336,
+     "length": 256,
+     "layer": 1,
+     "row": 164657737,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99622841568,
+     "length": 8,
+     "layer": 1,
+     "row": 164657737,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 46917991320,
+     "length": 256,
+     "layer": 1,
+     "row": 183273401,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99771766880,
+     "length": 8,
+     "layer": 1,
+     "row": 183273401,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 52401287064,
+     "length": 256,
+     "layer": 1,
+     "row": 204692525,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99943119872,
+     "length": 8,
+     "layer": 1,
+     "row": 204692525,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 55257339288,
+     "length": 256,
+     "layer": 1,
+     "row": 215848979,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100032371504,
+     "length": 8,
+     "layer": 1,
+     "row": 215848979,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 59684422296,
+     "length": 256,
+     "layer": 1,
+     "row": 233142272,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100170717848,
+     "length": 8,
+     "layer": 1,
+     "row": 233142272,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 63246350232,
+     "length": 256,
+     "layer": 1,
+     "row": 247056053,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100282028096,
+     "length": 8,
+     "layer": 1,
+     "row": 247056053,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 69090052504,
+     "length": 256,
+     "layer": 1,
+     "row": 269883015,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100464643792,
+     "length": 8,
+     "layer": 1,
+     "row": 269883015,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 73195940248,
+     "length": 256,
+     "layer": 1,
+     "row": 285921639,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100592952784,
+     "length": 8,
+     "layer": 1,
+     "row": 285921639,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 74610415000,
+     "length": 256,
+     "layer": 1,
+     "row": 291446931,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100637155120,
+     "length": 8,
+     "layer": 1,
+     "row": 291446931,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 79453980824,
+     "length": 256,
+     "layer": 1,
+     "row": 310367110,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100788516552,
+     "length": 8,
+     "layer": 1,
+     "row": 310367110,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 84063292312,
+     "length": 256,
+     "layer": 1,
+     "row": 328372233,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100932557536,
+     "length": 8,
+     "layer": 1,
+     "row": 328372233,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 88951558296,
+     "length": 256,
+     "layer": 1,
+     "row": 347467022,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101085315848,
+     "length": 8,
+     "layer": 1,
+     "row": 347467022,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 90495251864,
+     "length": 256,
+     "layer": 1,
+     "row": 353497075,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101133556272,
+     "length": 8,
+     "layer": 1,
+     "row": 353497075,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 97287840920,
+     "length": 256,
+     "layer": 1,
+     "row": 380030626,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101345824680,
+     "length": 8,
+     "layer": 1,
+     "row": 380030626,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 632408736,
+     "length": 256,
+     "layer": 14,
+     "row": 2470344,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98328034016,
+     "length": 8,
+     "layer": 14,
+     "row": 2470344,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 5073780896,
+     "length": 256,
+     "layer": 14,
+     "row": 19819454,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98466826896,
+     "length": 8,
+     "layer": 14,
+     "row": 19819454,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 10552514720,
+     "length": 256,
+     "layer": 14,
+     "row": 41220758,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98638037328,
+     "length": 8,
+     "layer": 14,
+     "row": 41220758,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 14295359648,
+     "length": 256,
+     "layer": 14,
+     "row": 55841246,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98755001232,
+     "length": 8,
+     "layer": 14,
+     "row": 55841246,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 20290019232,
+     "length": 256,
+     "layer": 14,
+     "row": 79257885,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98942334344,
+     "length": 8,
+     "layer": 14,
+     "row": 79257885,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 23355088032,
+     "length": 256,
+     "layer": 14,
+     "row": 91230810,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99038117744,
+     "length": 8,
+     "layer": 14,
+     "row": 91230810,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 27391350944,
+     "length": 256,
+     "layer": 14,
+     "row": 106997462,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99164250960,
+     "length": 8,
+     "layer": 14,
+     "row": 106997462,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 29958373536,
+     "length": 256,
+     "layer": 14,
+     "row": 117024894,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99244470416,
+     "length": 8,
+     "layer": 14,
+     "row": 117024894,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 36332451488,
+     "length": 256,
+     "layer": 14,
+     "row": 141923636,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99443660352,
+     "length": 8,
+     "layer": 14,
+     "row": 141923636,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 40573252256,
+     "length": 256,
+     "layer": 14,
+     "row": 158489264,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99576185376,
+     "length": 8,
+     "layer": 14,
+     "row": 158489264,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 42450738848,
+     "length": 256,
+     "layer": 14,
+     "row": 165823196,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99634856832,
+     "length": 8,
+     "layer": 14,
+     "row": 165823196,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 46885305760,
+     "length": 256,
+     "layer": 14,
+     "row": 183145723,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99773437048,
+     "length": 8,
+     "layer": 14,
+     "row": 183145723,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 52223166368,
+     "length": 256,
+     "layer": 14,
+     "row": 203996741,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99940245192,
+     "length": 8,
+     "layer": 14,
+     "row": 203996741,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 53950624928,
+     "length": 256,
+     "layer": 14,
+     "row": 210744626,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99994228272,
+     "length": 8,
+     "layer": 14,
+     "row": 210744626,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 61253445792,
+     "length": 256,
+     "layer": 14,
+     "row": 239271270,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100222441424,
+     "length": 8,
+     "layer": 14,
+     "row": 239271270,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 62413303712,
+     "length": 256,
+     "layer": 14,
+     "row": 243801965,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100258686984,
+     "length": 8,
+     "layer": 14,
+     "row": 243801965,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 69022422432,
+     "length": 256,
+     "layer": 14,
+     "row": 269618835,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100465221944,
+     "length": 8,
+     "layer": 14,
+     "row": 269618835,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 73059165856,
+     "length": 256,
+     "layer": 14,
+     "row": 285387364,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100591370176,
+     "length": 8,
+     "layer": 14,
+     "row": 285387364,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 76795542688,
+     "length": 256,
+     "layer": 14,
+     "row": 299982586,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100708131952,
+     "length": 8,
+     "layer": 14,
+     "row": 299982586,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 79605108384,
+     "length": 256,
+     "layer": 14,
+     "row": 310957452,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100795930880,
+     "length": 8,
+     "layer": 14,
+     "row": 310957452,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 84639872672,
+     "length": 256,
+     "layer": 14,
+     "row": 330624500,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100953267264,
+     "length": 8,
+     "layer": 14,
+     "row": 330624500,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 86090641056,
+     "length": 256,
+     "layer": 14,
+     "row": 336291564,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100998603776,
+     "length": 8,
+     "layer": 14,
+     "row": 336291564,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 92567157408,
+     "length": 256,
+     "layer": 14,
+     "row": 361590456,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101200994912,
+     "length": 8,
+     "layer": 14,
+     "row": 361590456,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 96314082720,
+     "length": 256,
+     "layer": 14,
+     "row": 376226883,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101318086328,
+     "length": 8,
+     "layer": 14,
+     "row": 376226883,
+     "kind": "scale"
+    }
+   ],
+   "sha256": "ed381b4ed6fa429e794590937229e62222837d5a2292f362911f056625371b80",
+   "bytes": 12672
+  },
+  {
+   "phrase": "a bowl of ramen",
+   "token_ids": [
+    260,
+    19900,
+    294,
+    14982,
+    267
+   ],
+   "ranges": [
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 2134050712,
+     "length": 256,
+     "layer": 1,
+     "row": 8336133,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98372268736,
+     "length": 8,
+     "layer": 1,
+     "row": 8336133,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 7869483928,
+     "length": 256,
+     "layer": 1,
+     "row": 30740169,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98551501024,
+     "length": 8,
+     "layer": 1,
+     "row": 30740169,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 10998123160,
+     "length": 256,
+     "layer": 1,
+     "row": 42961416,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98649271000,
+     "length": 8,
+     "layer": 1,
+     "row": 42961416,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 15551200664,
+     "length": 256,
+     "layer": 1,
+     "row": 60746875,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98791554672,
+     "length": 8,
+     "layer": 1,
+     "row": 60746875,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 20346358168,
+     "length": 256,
+     "layer": 1,
+     "row": 79477959,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98941403344,
+     "length": 8,
+     "layer": 1,
+     "row": 79477959,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 20583013016,
+     "length": 256,
+     "layer": 1,
+     "row": 80402392,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98948798808,
+     "length": 8,
+     "layer": 1,
+     "row": 80402392,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 26846067864,
+     "length": 256,
+     "layer": 1,
+     "row": 104867450,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99144519272,
+     "length": 8,
+     "layer": 1,
+     "row": 104867450,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 31443759000,
+     "length": 256,
+     "layer": 1,
+     "row": 122827181,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99288197120,
+     "length": 8,
+     "layer": 1,
+     "row": 122827181,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 33638124440,
+     "length": 256,
+     "layer": 1,
+     "row": 131398921,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99356771040,
+     "length": 8,
+     "layer": 1,
+     "row": 131398921,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 37427883672,
+     "length": 256,
+     "layer": 1,
+     "row": 146202668,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99475201016,
+     "length": 8,
+     "layer": 1,
+     "row": 146202668,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 41456322968,
+     "length": 256,
+     "layer": 1,
+     "row": 161938759,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99601089744,
+     "length": 8,
+     "layer": 1,
+     "row": 161938759,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 48948389784,
+     "length": 256,
+     "layer": 1,
+     "row": 191204645,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99835216832,
+     "length": 8,
+     "layer": 1,
+     "row": 191204645,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 52652541080,
+     "length": 256,
+     "layer": 1,
+     "row": 205673986,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99950971560,
+     "length": 8,
+     "layer": 1,
+     "row": 205673986,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 56554867096,
+     "length": 256,
+     "layer": 1,
+     "row": 220917447,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100072919248,
+     "length": 8,
+     "layer": 1,
+     "row": 220917447,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 60363088536,
+     "length": 256,
+     "layer": 1,
+     "row": 235793312,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100191926168,
+     "length": 8,
+     "layer": 1,
+     "row": 235793312,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 64237575576,
+     "length": 256,
+     "layer": 1,
+     "row": 250928027,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100313003888,
+     "length": 8,
+     "layer": 1,
+     "row": 250928027,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 68395122328,
+     "length": 256,
+     "layer": 1,
+     "row": 267168444,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100442927224,
+     "length": 8,
+     "layer": 1,
+     "row": 267168444,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 71424724376,
+     "length": 256,
+     "layer": 1,
+     "row": 279002827,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100537602288,
+     "length": 8,
+     "layer": 1,
+     "row": 279002827,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 77726990232,
+     "length": 256,
+     "layer": 1,
+     "row": 303621053,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100734548096,
+     "length": 8,
+     "layer": 1,
+     "row": 303621053,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 81004026008,
+     "length": 256,
+     "layer": 1,
+     "row": 316421974,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100836955464,
+     "length": 8,
+     "layer": 1,
+     "row": 316421974,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 85966082200,
+     "length": 256,
+     "layer": 1,
+     "row": 335805006,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100992019720,
+     "length": 8,
+     "layer": 1,
+     "row": 335805006,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 89383009688,
+     "length": 256,
+     "layer": 1,
+     "row": 349152379,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101098798704,
+     "length": 8,
+     "layer": 1,
+     "row": 349152379,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 93857526424,
+     "length": 256,
+     "layer": 1,
+     "row": 366630960,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101238627352,
+     "length": 8,
+     "layer": 1,
+     "row": 366630960,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 95239640984,
+     "length": 256,
+     "layer": 1,
+     "row": 372029845,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101281818432,
+     "length": 8,
+     "layer": 1,
+     "row": 372029845,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 2887571616,
+     "length": 256,
+     "layer": 14,
+     "row": 11279574,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98398507856,
+     "length": 8,
+     "layer": 14,
+     "row": 11279574,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 5176786848,
+     "length": 256,
+     "layer": 14,
+     "row": 20221821,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98470045832,
+     "length": 8,
+     "layer": 14,
+     "row": 20221821,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 11213456800,
+     "length": 256,
+     "layer": 14,
+     "row": 43802563,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98658691768,
+     "length": 8,
+     "layer": 14,
+     "row": 43802563,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 13880232096,
+     "length": 256,
+     "layer": 14,
+     "row": 54219654,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98742028496,
+     "length": 8,
+     "layer": 14,
+     "row": 54219654,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 17263995808,
+     "length": 256,
+     "layer": 14,
+     "row": 67437481,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98847771112,
+     "length": 8,
+     "layer": 14,
+     "row": 67437481,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 22803832224,
+     "length": 256,
+     "layer": 14,
+     "row": 89077467,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99020891000,
+     "length": 8,
+     "layer": 14,
+     "row": 89077467,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 24869015456,
+     "length": 256,
+     "layer": 14,
+     "row": 97144589,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99085427976,
+     "length": 8,
+     "layer": 14,
+     "row": 97144589,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 30044557216,
+     "length": 256,
+     "layer": 14,
+     "row": 117361549,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99247163656,
+     "length": 8,
+     "layer": 14,
+     "row": 117361549,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 36749418912,
+     "length": 256,
+     "layer": 14,
+     "row": 143552415,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99456690584,
+     "length": 8,
+     "layer": 14,
+     "row": 143552415,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 39478852256,
+     "length": 256,
+     "layer": 14,
+     "row": 154214264,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99541985376,
+     "length": 8,
+     "layer": 14,
+     "row": 154214264,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 43589874592,
+     "length": 256,
+     "layer": 14,
+     "row": 170272945,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99670454824,
+     "length": 8,
+     "layer": 14,
+     "row": 170272945,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 49059487136,
+     "length": 256,
+     "layer": 14,
+     "row": 191638619,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99841380216,
+     "length": 8,
+     "layer": 14,
+     "row": 191638619,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 51830946976,
+     "length": 256,
+     "layer": 14,
+     "row": 202464634,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99927988336,
+     "length": 8,
+     "layer": 14,
+     "row": 202464634,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 56008055456,
+     "length": 256,
+     "layer": 14,
+     "row": 218781464,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100058522976,
+     "length": 8,
+     "layer": 14,
+     "row": 218781464,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 60310697120,
+     "length": 256,
+     "layer": 14,
+     "row": 235588658,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100192980528,
+     "length": 8,
+     "layer": 14,
+     "row": 235588658,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 61764794528,
+     "length": 256,
+     "layer": 14,
+     "row": 241268726,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100238421072,
+     "length": 8,
+     "layer": 14,
+     "row": 241268726,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 67271257504,
+     "length": 256,
+     "layer": 14,
+     "row": 262778347,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100410498040,
+     "length": 8,
+     "layer": 14,
+     "row": 262778347,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 72332902048,
+     "length": 256,
+     "layer": 14,
+     "row": 282550396,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100568674432,
+     "length": 8,
+     "layer": 14,
+     "row": 282550396,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 74138841504,
+     "length": 256,
+     "layer": 14,
+     "row": 289604847,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100625110040,
+     "length": 8,
+     "layer": 14,
+     "row": 289604847,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 80340059040,
+     "length": 256,
+     "layer": 14,
+     "row": 313828353,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100818898088,
+     "length": 8,
+     "layer": 14,
+     "row": 313828353,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 83421682336,
+     "length": 256,
+     "layer": 14,
+     "row": 325865944,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100915198816,
+     "length": 8,
+     "layer": 14,
+     "row": 325865944,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 87908867488,
+     "length": 256,
+     "layer": 14,
+     "row": 343394011,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101055423352,
+     "length": 8,
+     "layer": 14,
+     "row": 343394011,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 90308037024,
+     "length": 256,
+     "layer": 14,
+     "row": 352765767,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101130397400,
+     "length": 8,
+     "layer": 14,
+     "row": 352765767,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 94272123296,
+     "length": 256,
+     "layer": 14,
+     "row": 368250479,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101254275096,
+     "length": 8,
+     "layer": 14,
+     "row": 368250479,
+     "kind": "scale"
+    }
+   ],
+   "sha256": "2da563fab24f7cc765830d11afc85d064c4da77b6f5ccb059b3e788d9c57d33f",
+   "bytes": 12672
+  },
+  {
+   "phrase": "the Trojan horse",
+   "token_ids": [
+    270,
+    96623,
+    15000
+   ],
+   "ranges": [
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 559799448,
+     "length": 256,
+     "layer": 1,
+     "row": 2186714,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98323073384,
+     "length": 8,
+     "layer": 1,
+     "row": 2186714,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 6739978136,
+     "length": 256,
+     "layer": 1,
+     "row": 26328037,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98516203968,
+     "length": 8,
+     "layer": 1,
+     "row": 26328037,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 12170671512,
+     "length": 256,
+     "layer": 1,
+     "row": 47541683,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98685913136,
+     "length": 8,
+     "layer": 1,
+     "row": 47541683,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 14824655768,
+     "length": 256,
+     "layer": 1,
+     "row": 57908809,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98768850144,
+     "length": 8,
+     "layer": 1,
+     "row": 57908809,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 19367771288,
+     "length": 256,
+     "layer": 1,
+     "row": 75655354,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98910822504,
+     "length": 8,
+     "layer": 1,
+     "row": 75655354,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 21032046488,
+     "length": 256,
+     "layer": 1,
+     "row": 82156429,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98962831104,
+     "length": 8,
+     "layer": 1,
+     "row": 82156429,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 28036341400,
+     "length": 256,
+     "layer": 1,
+     "row": 109516956,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99181715320,
+     "length": 8,
+     "layer": 1,
+     "row": 109516956,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 29106300568,
+     "length": 256,
+     "layer": 1,
+     "row": 113696484,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99215151544,
+     "length": 8,
+     "layer": 1,
+     "row": 113696484,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 34971907992,
+     "length": 256,
+     "layer": 1,
+     "row": 136609013,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99398451776,
+     "length": 8,
+     "layer": 1,
+     "row": 136609013,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 40361145496,
+     "length": 256,
+     "layer": 1,
+     "row": 157660722,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99566865448,
+     "length": 8,
+     "layer": 1,
+     "row": 157660722,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 44796838808,
+     "length": 256,
+     "layer": 1,
+     "row": 174987649,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99705480864,
+     "length": 8,
+     "layer": 1,
+     "row": 174987649,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 45414440088,
+     "length": 256,
+     "layer": 1,
+     "row": 177400154,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99724780904,
+     "length": 8,
+     "layer": 1,
+     "row": 177400154,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 53144791448,
+     "length": 256,
+     "layer": 1,
+     "row": 207596839,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99966354384,
+     "length": 8,
+     "layer": 1,
+     "row": 207596839,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 55218505112,
+     "length": 256,
+     "layer": 1,
+     "row": 215697283,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100031157936,
+     "length": 8,
+     "layer": 1,
+     "row": 215697283,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 58649787800,
+     "length": 256,
+     "layer": 1,
+     "row": 229100731,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100138385520,
+     "length": 8,
+     "layer": 1,
+     "row": 229100731,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 61584635800,
+     "length": 256,
+     "layer": 1,
+     "row": 240564981,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100230099520,
+     "length": 8,
+     "layer": 1,
+     "row": 240564981,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 69389361304,
+     "length": 256,
+     "layer": 1,
+     "row": 271052190,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100473997192,
+     "length": 8,
+     "layer": 1,
+     "row": 271052190,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 71166257816,
+     "length": 256,
+     "layer": 1,
+     "row": 277993192,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100529525208,
+     "length": 8,
+     "layer": 1,
+     "row": 277993192,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 74984672664,
+     "length": 256,
+     "layer": 1,
+     "row": 292908875,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100648850672,
+     "length": 8,
+     "layer": 1,
+     "row": 292908875,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 79006089112,
+     "length": 256,
+     "layer": 1,
+     "row": 308617533,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100774519936,
+     "length": 8,
+     "layer": 1,
+     "row": 308617533,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 83076163736,
+     "length": 256,
+     "layer": 1,
+     "row": 324516262,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100901709768,
+     "length": 8,
+     "layer": 1,
+     "row": 324516262,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 87168868504,
+     "length": 256,
+     "layer": 1,
+     "row": 340503390,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101029606792,
+     "length": 8,
+     "layer": 1,
+     "row": 340503390,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 92236698264,
+     "length": 256,
+     "layer": 1,
+     "row": 360299600,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101187976472,
+     "length": 8,
+     "layer": 1,
+     "row": 360299600,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 97255217560,
+     "length": 256,
+     "layer": 1,
+     "row": 379903191,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101344805200,
+     "length": 8,
+     "layer": 1,
+     "row": 379903191,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 4036201120,
+     "length": 256,
+     "layer": 14,
+     "row": 15766408,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98434402528,
+     "length": 8,
+     "layer": 14,
+     "row": 15766408,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 5458107808,
+     "length": 256,
+     "layer": 14,
+     "row": 21320731,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98478837112,
+     "length": 8,
+     "layer": 14,
+     "row": 21320731,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 9193094816,
+     "length": 256,
+     "layer": 14,
+     "row": 35910524,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98595555456,
+     "length": 8,
+     "layer": 14,
+     "row": 35910524,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 15146854048,
+     "length": 256,
+     "layer": 14,
+     "row": 59167396,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98781610432,
+     "length": 8,
+     "layer": 14,
+     "row": 59167396,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 18343638688,
+     "length": 256,
+     "layer": 14,
+     "row": 71654836,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98881509952,
+     "length": 8,
+     "layer": 14,
+     "row": 71654836,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 21102428320,
+     "length": 256,
+     "layer": 14,
+     "row": 82431358,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98967722128,
+     "length": 8,
+     "layer": 14,
+     "row": 82431358,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 27767897248,
+     "length": 256,
+     "layer": 14,
+     "row": 108468346,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99176018032,
+     "length": 8,
+     "layer": 14,
+     "row": 108468346,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 31457481120,
+     "length": 256,
+     "layer": 14,
+     "row": 122880783,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99291317528,
+     "length": 8,
+     "layer": 14,
+     "row": 122880783,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 35461974432,
+     "length": 256,
+     "layer": 14,
+     "row": 138523335,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99416457944,
+     "length": 8,
+     "layer": 14,
+     "row": 138523335,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 36911418784,
+     "length": 256,
+     "layer": 14,
+     "row": 144185227,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99461753080,
+     "length": 8,
+     "layer": 14,
+     "row": 144185227,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 44873873056,
+     "length": 256,
+     "layer": 14,
+     "row": 175288564,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99710579776,
+     "length": 8,
+     "layer": 14,
+     "row": 175288564,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 48761946784,
+     "length": 256,
+     "layer": 14,
+     "row": 190476352,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99832082080,
+     "length": 8,
+     "layer": 14,
+     "row": 190476352,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 51235710368,
+     "length": 256,
+     "layer": 14,
+     "row": 200139491,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99909387192,
+     "length": 8,
+     "layer": 14,
+     "row": 200139491,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 56468898208,
+     "length": 256,
+     "layer": 14,
+     "row": 220581631,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100072924312,
+     "length": 8,
+     "layer": 14,
+     "row": 220581631,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 58131408288,
+     "length": 256,
+     "layer": 14,
+     "row": 227075811,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100124877752,
+     "length": 8,
+     "layer": 14,
+     "row": 227075811,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 61882774176,
+     "length": 256,
+     "layer": 14,
+     "row": 241729584,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100242107936,
+     "length": 8,
+     "layer": 14,
+     "row": 241729584,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 68198279840,
+     "length": 256,
+     "layer": 14,
+     "row": 266399528,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100439467488,
+     "length": 8,
+     "layer": 14,
+     "row": 266399528,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 72866414752,
+     "length": 256,
+     "layer": 14,
+     "row": 284634430,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100585346704,
+     "length": 8,
+     "layer": 14,
+     "row": 284634430,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 73997519520,
+     "length": 256,
+     "layer": 14,
+     "row": 289052808,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100620693728,
+     "length": 8,
+     "layer": 14,
+     "row": 289052808,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 79713214112,
+     "length": 256,
+     "layer": 14,
+     "row": 311379740,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100799309184,
+     "length": 8,
+     "layer": 14,
+     "row": 311379740,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 85741565344,
+     "length": 256,
+     "layer": 14,
+     "row": 334927987,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100987695160,
+     "length": 8,
+     "layer": 14,
+     "row": 334927987,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 89155861152,
+     "length": 256,
+     "layer": 14,
+     "row": 348265080,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101094391904,
+     "length": 8,
+     "layer": 14,
+     "row": 348265080,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 93562249632,
+     "length": 256,
+     "layer": 14,
+     "row": 365477535,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101232091544,
+     "length": 8,
+     "layer": 14,
+     "row": 365477535,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 95662616992,
+     "length": 256,
+     "layer": 14,
+     "row": 373682095,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101297728024,
+     "length": 8,
+     "layer": 14,
+     "row": 373682095,
+     "kind": "scale"
+    }
+   ],
+   "sha256": "9b465657bf53cd47f1e9985875ebcae754e40575842399bafb47db91fdc70d4a",
+   "bytes": 12672
+  },
+  {
+   "phrase": "Ki Hajar Dewantara",
+   "token_ids": [
+    19922,
+    437,
+    29054,
+    45460,
+    118660
+   ],
+   "ranges": [
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 2625985944,
+     "length": 256,
+     "layer": 1,
+     "row": 10257755,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98387641712,
+     "length": 8,
+     "layer": 1,
+     "row": 10257755,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 7732357528,
+     "length": 256,
+     "layer": 1,
+     "row": 30204519,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98547215824,
+     "length": 8,
+     "layer": 1,
+     "row": 30204519,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 10567208344,
+     "length": 256,
+     "layer": 1,
+     "row": 41278155,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98635804912,
+     "length": 8,
+     "layer": 1,
+     "row": 41278155,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 13584562328,
+     "length": 256,
+     "layer": 1,
+     "row": 53064694,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98730097224,
+     "length": 8,
+     "layer": 1,
+     "row": 53064694,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 18791413912,
+     "length": 256,
+     "layer": 1,
+     "row": 73403958,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98892811336,
+     "length": 8,
+     "layer": 1,
+     "row": 73403958,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 23985407640,
+     "length": 256,
+     "layer": 1,
+     "row": 93692996,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99055123640,
+     "length": 8,
+     "layer": 1,
+     "row": 93692996,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 26718846360,
+     "length": 256,
+     "layer": 1,
+     "row": 104370491,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99140543600,
+     "length": 8,
+     "layer": 1,
+     "row": 104370491,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 29649284504,
+     "length": 256,
+     "layer": 1,
+     "row": 115817515,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99232119792,
+     "length": 8,
+     "layer": 1,
+     "row": 115817515,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 35740881304,
+     "length": 256,
+     "layer": 1,
+     "row": 139612815,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99422482192,
+     "length": 8,
+     "layer": 1,
+     "row": 139612815,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 38823403416,
+     "length": 256,
+     "layer": 1,
+     "row": 151653917,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99518811008,
+     "length": 8,
+     "layer": 1,
+     "row": 151653917,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 44794255512,
+     "length": 256,
+     "layer": 1,
+     "row": 174977558,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99705400136,
+     "length": 8,
+     "layer": 1,
+     "row": 174977558,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 46040886168,
+     "length": 256,
+     "layer": 1,
+     "row": 179847209,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99744357344,
+     "length": 8,
+     "layer": 1,
+     "row": 179847209,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 49444672408,
+     "length": 256,
+     "layer": 1,
+     "row": 193143249,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99850725664,
+     "length": 8,
+     "layer": 1,
+     "row": 193143249,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 56615009432,
+     "length": 256,
+     "layer": 1,
+     "row": 221152378,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100074798696,
+     "length": 8,
+     "layer": 1,
+     "row": 221152378,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 58845791640,
+     "length": 256,
+     "layer": 1,
+     "row": 229866371,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100144510640,
+     "length": 8,
+     "layer": 1,
+     "row": 229866371,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 62459156376,
+     "length": 256,
+     "layer": 1,
+     "row": 243981077,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100257428288,
+     "length": 8,
+     "layer": 1,
+     "row": 243981077,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 65697426072,
+     "length": 256,
+     "layer": 1,
+     "row": 256630568,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100358624216,
+     "length": 8,
+     "layer": 1,
+     "row": 256630568,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 72354523032,
+     "length": 256,
+     "layer": 1,
+     "row": 282634853,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100566658496,
+     "length": 8,
+     "layer": 1,
+     "row": 282634853,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 75731209880,
+     "length": 256,
+     "layer": 1,
+     "row": 295825036,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100672179960,
+     "length": 8,
+     "layer": 1,
+     "row": 295825036,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 79810905752,
+     "length": 256,
+     "layer": 1,
+     "row": 311761348,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100799670456,
+     "length": 8,
+     "layer": 1,
+     "row": 311761348,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 82657852056,
+     "length": 256,
+     "layer": 1,
+     "row": 322882232,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100888637528,
+     "length": 8,
+     "layer": 1,
+     "row": 322882232,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 87118995096,
+     "length": 256,
+     "layer": 1,
+     "row": 340308572,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101028048248,
+     "length": 8,
+     "layer": 1,
+     "row": 340308572,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 92014963608,
+     "length": 256,
+     "layer": 1,
+     "row": 359433449,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101181047264,
+     "length": 8,
+     "layer": 1,
+     "row": 359433449,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 96607235736,
+     "length": 256,
+     "layer": 1,
+     "row": 377372012,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101324555768,
+     "length": 8,
+     "layer": 1,
+     "row": 377372012,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 3576156832,
+     "length": 256,
+     "layer": 14,
+     "row": 13969360,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98420026144,
+     "length": 8,
+     "layer": 14,
+     "row": 13969360,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 4864641184,
+     "length": 256,
+     "layer": 14,
+     "row": 19002502,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98460291280,
+     "length": 8,
+     "layer": 14,
+     "row": 19002502,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 10789246112,
+     "length": 256,
+     "layer": 14,
+     "row": 42145490,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98645435184,
+     "length": 8,
+     "layer": 14,
+     "row": 42145490,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 14041197472,
+     "length": 256,
+     "layer": 14,
+     "row": 54848425,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98747058664,
+     "length": 8,
+     "layer": 14,
+     "row": 54848425,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 17915515040,
+     "length": 256,
+     "layer": 14,
+     "row": 69982478,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98868131088,
+     "length": 8,
+     "layer": 14,
+     "row": 69982478,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 23358642592,
+     "length": 256,
+     "layer": 14,
+     "row": 91244695,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99038228824,
+     "length": 8,
+     "layer": 14,
+     "row": 91244695,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 25515460256,
+     "length": 256,
+     "layer": 14,
+     "row": 99669764,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99105629376,
+     "length": 8,
+     "layer": 14,
+     "row": 99669764,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 32697498528,
+     "length": 256,
+     "layer": 14,
+     "row": 127724601,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99330068072,
+     "length": 8,
+     "layer": 14,
+     "row": 127724601,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 36217688736,
+     "length": 256,
+     "layer": 14,
+     "row": 141475344,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99440074016,
+     "length": 8,
+     "layer": 14,
+     "row": 141475344,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 38340129696,
+     "length": 256,
+     "layer": 14,
+     "row": 149766129,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99506400296,
+     "length": 8,
+     "layer": 14,
+     "row": 149766129,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 41396801952,
+     "length": 256,
+     "layer": 14,
+     "row": 161706255,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99601921304,
+     "length": 8,
+     "layer": 14,
+     "row": 161706255,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 46390908832,
+     "length": 256,
+     "layer": 14,
+     "row": 181214485,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99757987144,
+     "length": 8,
+     "layer": 14,
+     "row": 181214485,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 52455838624,
+     "length": 256,
+     "layer": 14,
+     "row": 204905617,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99947516200,
+     "length": 8,
+     "layer": 14,
+     "row": 204905617,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 53473981600,
+     "length": 256,
+     "layer": 14,
+     "row": 208882738,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99979333168,
+     "length": 8,
+     "layer": 14,
+     "row": 208882738,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 60165643680,
+     "length": 256,
+     "layer": 14,
+     "row": 235022043,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100188447608,
+     "length": 8,
+     "layer": 14,
+     "row": 235022043,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 65149028768,
+     "length": 256,
+     "layer": 14,
+     "row": 254488391,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100344178392,
+     "length": 8,
+     "layer": 14,
+     "row": 254488391,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 67341065376,
+     "length": 256,
+     "layer": 14,
+     "row": 263051034,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100412679536,
+     "length": 8,
+     "layer": 14,
+     "row": 263051034,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 71764172704,
+     "length": 256,
+     "layer": 14,
+     "row": 280328797,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100550901640,
+     "length": 8,
+     "layer": 14,
+     "row": 280328797,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 75849487520,
+     "length": 256,
+     "layer": 14,
+     "row": 296287058,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100678567728,
+     "length": 8,
+     "layer": 14,
+     "row": 296287058,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 79772476064,
+     "length": 256,
+     "layer": 14,
+     "row": 311611232,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100801161120,
+     "length": 8,
+     "layer": 14,
+     "row": 311611232,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 84006789024,
+     "length": 256,
+     "layer": 14,
+     "row": 328151517,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100933483400,
+     "length": 8,
+     "layer": 14,
+     "row": 328151517,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 89620018336,
+     "length": 256,
+     "layer": 14,
+     "row": 350078194,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101108896816,
+     "length": 8,
+     "layer": 14,
+     "row": 350078194,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 91788698784,
+     "length": 256,
+     "layer": 14,
+     "row": 358549602,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101176668080,
+     "length": 8,
+     "layer": 14,
+     "row": 358549602,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 94856267936,
+     "length": 256,
+     "layer": 14,
+     "row": 370532294,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101272529616,
+     "length": 8,
+     "layer": 14,
+     "row": 370532294,
+     "kind": "scale"
+    }
+   ],
+   "sha256": "10a160839449ad67efd0148becaeadd10e5d048cc059613a8535c38a6096e4d3",
+   "bytes": 12672
+  },
+  {
+   "phrase": "a thunderstorm",
+   "token_ids": [
+    260,
+    41248,
+    36121
+   ],
+   "ranges": [
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 950600088,
+     "length": 256,
+     "layer": 1,
+     "row": 3713279,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98335285904,
+     "length": 8,
+     "layer": 1,
+     "row": 3713279,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 4949340312,
+     "length": 256,
+     "layer": 1,
+     "row": 19333358,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98460246536,
+     "length": 8,
+     "layer": 1,
+     "row": 19333358,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 11692709528,
+     "length": 256,
+     "layer": 1,
+     "row": 45674644,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98670976824,
+     "length": 8,
+     "layer": 1,
+     "row": 45674644,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 12689197464,
+     "length": 256,
+     "layer": 1,
+     "row": 49567175,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98702117072,
+     "length": 8,
+     "layer": 1,
+     "row": 49567175,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 17224609432,
+     "length": 256,
+     "layer": 1,
+     "row": 67283628,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98843848696,
+     "length": 8,
+     "layer": 1,
+     "row": 67283628,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 24462502296,
+     "length": 256,
+     "layer": 1,
+     "row": 95556647,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99070032848,
+     "length": 8,
+     "layer": 1,
+     "row": 95556647,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 26083066520,
+     "length": 256,
+     "layer": 1,
+     "row": 101886976,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99120675480,
+     "length": 8,
+     "layer": 1,
+     "row": 101886976,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 30699825304,
+     "length": 256,
+     "layer": 1,
+     "row": 119921190,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99264949192,
+     "length": 8,
+     "layer": 1,
+     "row": 119921190,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 35978669720,
+     "length": 256,
+     "layer": 1,
+     "row": 140541676,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99429913080,
+     "length": 8,
+     "layer": 1,
+     "row": 140541676,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 37737190552,
+     "length": 256,
+     "layer": 1,
+     "row": 147410898,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99484866856,
+     "length": 8,
+     "layer": 1,
+     "row": 147410898,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 41860007064,
+     "length": 256,
+     "layer": 1,
+     "row": 163515650,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99613704872,
+     "length": 8,
+     "layer": 1,
+     "row": 163515650,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 46189052056,
+     "length": 256,
+     "layer": 1,
+     "row": 180425982,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99748987528,
+     "length": 8,
+     "layer": 1,
+     "row": 180425982,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 53228312472,
+     "length": 256,
+     "layer": 1,
+     "row": 207923093,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99968964416,
+     "length": 8,
+     "layer": 1,
+     "row": 207923093,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 55147113624,
+     "length": 256,
+     "layer": 1,
+     "row": 215418410,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100028926952,
+     "length": 8,
+     "layer": 1,
+     "row": 215418410,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 60632358040,
+     "length": 256,
+     "layer": 1,
+     "row": 236845146,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100200340840,
+     "length": 8,
+     "layer": 1,
+     "row": 236845146,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 61721466520,
+     "length": 256,
+     "layer": 1,
+     "row": 241099476,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100234375480,
+     "length": 8,
+     "layer": 1,
+     "row": 241099476,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 67725363864,
+     "length": 256,
+     "layer": 1,
+     "row": 264552200,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100421997272,
+     "length": 8,
+     "layer": 1,
+     "row": 264552200,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 72313421976,
+     "length": 256,
+     "layer": 1,
+     "row": 282474302,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100565374088,
+     "length": 8,
+     "layer": 1,
+     "row": 282474302,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 75465315992,
+     "length": 256,
+     "layer": 1,
+     "row": 294786388,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100663870776,
+     "length": 8,
+     "layer": 1,
+     "row": 294786388,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 81249149080,
+     "length": 256,
+     "layer": 1,
+     "row": 317379486,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100844615560,
+     "length": 8,
+     "layer": 1,
+     "row": 317379486,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 83781072792,
+     "length": 256,
+     "layer": 1,
+     "row": 327269813,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100923738176,
+     "length": 8,
+     "layer": 1,
+     "row": 327269813,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 89689113496,
+     "length": 256,
+     "layer": 1,
+     "row": 350348097,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101108364448,
+     "length": 8,
+     "layer": 1,
+     "row": 350348097,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 93337712536,
+     "length": 256,
+     "layer": 1,
+     "row": 364600437,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101222383168,
+     "length": 8,
+     "layer": 1,
+     "row": 364600437,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 97061741976,
+     "length": 256,
+     "layer": 1,
+     "row": 379147427,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101338759088,
+     "length": 8,
+     "layer": 1,
+     "row": 379147427,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 1886963872,
+     "length": 256,
+     "layer": 14,
+     "row": 7370950,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98367238864,
+     "length": 8,
+     "layer": 14,
+     "row": 7370950,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 5329133216,
+     "length": 256,
+     "layer": 14,
+     "row": 20816924,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98474806656,
+     "length": 8,
+     "layer": 14,
+     "row": 20816924,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 8389677216,
+     "length": 256,
+     "layer": 14,
+     "row": 32772174,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98570448656,
+     "length": 8,
+     "layer": 14,
+     "row": 32772174,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 13505271456,
+     "length": 256,
+     "layer": 14,
+     "row": 52754964,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98730310976,
+     "length": 8,
+     "layer": 14,
+     "row": 52754964,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 20262543520,
+     "length": 256,
+     "layer": 14,
+     "row": 79150558,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98941475728,
+     "length": 8,
+     "layer": 14,
+     "row": 79150558,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 23214720160,
+     "length": 256,
+     "layer": 14,
+     "row": 90682498,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99033731248,
+     "length": 8,
+     "layer": 14,
+     "row": 90682498,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 27107082656,
+     "length": 256,
+     "layer": 14,
+     "row": 105887039,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99155367576,
+     "length": 8,
+     "layer": 14,
+     "row": 105887039,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 29097863072,
+     "length": 256,
+     "layer": 14,
+     "row": 113663525,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99217579464,
+     "length": 8,
+     "layer": 14,
+     "row": 113663525,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 36457528992,
+     "length": 256,
+     "layer": 14,
+     "row": 142412220,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99447569024,
+     "length": 8,
+     "layer": 14,
+     "row": 142412220,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 37847421856,
+     "length": 256,
+     "layer": 14,
+     "row": 147841489,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99491003176,
+     "length": 8,
+     "layer": 14,
+     "row": 147841489,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 43581284512,
+     "length": 256,
+     "layer": 14,
+     "row": 170239390,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99670186384,
+     "length": 8,
+     "layer": 14,
+     "row": 170239390,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 46826187424,
+     "length": 256,
+     "layer": 14,
+     "row": 182914792,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99771589600,
+     "length": 8,
+     "layer": 14,
+     "row": 182914792,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 50533622688,
+     "length": 256,
+     "layer": 14,
+     "row": 197396961,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99887446952,
+     "length": 8,
+     "layer": 14,
+     "row": 197396961,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 54785117088,
+     "length": 256,
+     "layer": 14,
+     "row": 214004361,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100020306152,
+     "length": 8,
+     "layer": 14,
+     "row": 214004361,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 60875493024,
+     "length": 256,
+     "layer": 14,
+     "row": 237794892,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100210630400,
+     "length": 8,
+     "layer": 14,
+     "row": 237794892,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 63766932896,
+     "length": 256,
+     "layer": 14,
+     "row": 249089579,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100300987896,
+     "length": 8,
+     "layer": 14,
+     "row": 249089579,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 69407849120,
+     "length": 256,
+     "layer": 14,
+     "row": 271124408,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100477266528,
+     "length": 8,
+     "layer": 14,
+     "row": 271124408,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 70886911392,
+     "length": 256,
+     "layer": 14,
+     "row": 276901995,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100523487224,
+     "length": 8,
+     "layer": 14,
+     "row": 276901995,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 74822422688,
+     "length": 256,
+     "layer": 14,
+     "row": 292275086,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100646471952,
+     "length": 8,
+     "layer": 14,
+     "row": 292275086,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 81448826272,
+     "length": 256,
+     "layer": 14,
+     "row": 318159475,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100853547064,
+     "length": 8,
+     "layer": 14,
+     "row": 318159475,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 85225506976,
+     "length": 256,
+     "layer": 14,
+     "row": 332912134,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100971568336,
+     "length": 8,
+     "layer": 14,
+     "row": 332912134,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 86591615904,
+     "length": 256,
+     "layer": 14,
+     "row": 338248497,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101014259240,
+     "length": 8,
+     "layer": 14,
+     "row": 338248497,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 90699802528,
+     "length": 256,
+     "layer": 14,
+     "row": 354296101,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101142640072,
+     "length": 8,
+     "layer": 14,
+     "row": 354296101,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 95114208672,
+     "length": 256,
+     "layer": 14,
+     "row": 371539875,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101280590264,
+     "length": 8,
+     "layer": 14,
+     "row": 371539875,
+     "kind": "scale"
+    }
+   ],
+   "sha256": "515736a2e8cbd0bd6270f8cb90e74e08653489eea5eb1f5b6cead96c65400354",
+   "bytes": 12672
+  },
+  {
+   "phrase": "the Rosetta Stone",
+   "token_ids": [
+    270,
+    12231,
+    28718,
+    22583
+   ],
+   "ranges": [
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 1346437784,
+     "length": 256,
+     "layer": 1,
+     "row": 5259520,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98347655832,
+     "length": 8,
+     "layer": 1,
+     "row": 5259520,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 8036267416,
+     "length": 256,
+     "layer": 1,
+     "row": 31391667,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98556713008,
+     "length": 8,
+     "layer": 1,
+     "row": 31391667,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 9424853656,
+     "length": 256,
+     "layer": 1,
+     "row": 36815832,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98600106328,
+     "length": 8,
+     "layer": 1,
+     "row": 36815832,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 12555632792,
+     "length": 256,
+     "layer": 1,
+     "row": 49045438,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98697943176,
+     "length": 8,
+     "layer": 1,
+     "row": 49045438,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 17965574552,
+     "length": 256,
+     "layer": 1,
+     "row": 70178023,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98867003856,
+     "length": 8,
+     "layer": 1,
+     "row": 70178023,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 24055260568,
+     "length": 256,
+     "layer": 1,
+     "row": 93965859,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99057306544,
+     "length": 8,
+     "layer": 1,
+     "row": 93965859,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 27135793048,
+     "length": 256,
+     "layer": 1,
+     "row": 105999189,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99153573184,
+     "length": 8,
+     "layer": 1,
+     "row": 105999189,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 30785605016,
+     "length": 256,
+     "layer": 1,
+     "row": 120256267,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99267629808,
+     "length": 8,
+     "layer": 1,
+     "row": 120256267,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 34261611416,
+     "length": 256,
+     "layer": 1,
+     "row": 133834417,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99376255008,
+     "length": 8,
+     "layer": 1,
+     "row": 133834417,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 40037258904,
+     "length": 256,
+     "layer": 1,
+     "row": 156395540,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99556743992,
+     "length": 8,
+     "layer": 1,
+     "row": 156395540,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 43216838808,
+     "length": 256,
+     "layer": 1,
+     "row": 168815774,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99656105864,
+     "length": 8,
+     "layer": 1,
+     "row": 168815774,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 45494491544,
+     "length": 256,
+     "layer": 1,
+     "row": 177712855,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99727282512,
+     "length": 8,
+     "layer": 1,
+     "row": 177712855,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 50498015640,
+     "length": 256,
+     "layer": 1,
+     "row": 197257871,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99883642640,
+     "length": 8,
+     "layer": 1,
+     "row": 197257871,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 53371068824,
+     "length": 256,
+     "layer": 1,
+     "row": 208480735,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99973425552,
+     "length": 8,
+     "layer": 1,
+     "row": 208480735,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 58144761752,
+     "length": 256,
+     "layer": 1,
+     "row": 227127973,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100122603456,
+     "length": 8,
+     "layer": 1,
+     "row": 227127973,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 63608037016,
+     "length": 256,
+     "layer": 1,
+     "row": 248468892,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100293330808,
+     "length": 8,
+     "layer": 1,
+     "row": 248468892,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 65811928216,
+     "length": 256,
+     "layer": 1,
+     "row": 257077842,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100362202408,
+     "length": 8,
+     "layer": 1,
+     "row": 257077842,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 72549584024,
+     "length": 256,
+     "layer": 1,
+     "row": 283396810,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100572754152,
+     "length": 8,
+     "layer": 1,
+     "row": 283396810,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 77367487640,
+     "length": 256,
+     "layer": 1,
+     "row": 302216746,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100723313640,
+     "length": 8,
+     "layer": 1,
+     "row": 302216746,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 79868478104,
+     "length": 256,
+     "layer": 1,
+     "row": 311986240,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100801469592,
+     "length": 8,
+     "layer": 1,
+     "row": 311986240,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 85665996184,
+     "length": 256,
+     "layer": 1,
+     "row": 334632795,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100982642032,
+     "length": 8,
+     "layer": 1,
+     "row": 334632795,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 88269251992,
+     "length": 256,
+     "layer": 1,
+     "row": 344801763,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101063993776,
+     "length": 8,
+     "layer": 1,
+     "row": 344801763,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 93893104280,
+     "length": 256,
+     "layer": 1,
+     "row": 366769936,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101239739160,
+     "length": 8,
+     "layer": 1,
+     "row": 366769936,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98075267992,
+     "length": 256,
+     "layer": 1,
+     "row": 383106513,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101370431776,
+     "length": 8,
+     "layer": 1,
+     "row": 383106513,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 3059970464,
+     "length": 256,
+     "layer": 14,
+     "row": 11953007,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98403895320,
+     "length": 8,
+     "layer": 14,
+     "row": 11953007,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 6402726048,
+     "length": 256,
+     "layer": 14,
+     "row": 25010646,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98508356432,
+     "length": 8,
+     "layer": 14,
+     "row": 25010646,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 9276693664,
+     "length": 256,
+     "layer": 14,
+     "row": 36237082,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98598167920,
+     "length": 8,
+     "layer": 14,
+     "row": 36237082,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 14227127968,
+     "length": 256,
+     "layer": 14,
+     "row": 55574716,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98752868992,
+     "length": 8,
+     "layer": 14,
+     "row": 55574716,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 16793456544,
+     "length": 256,
+     "layer": 14,
+     "row": 65599437,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98833066760,
+     "length": 8,
+     "layer": 14,
+     "row": 65599437,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 21329329568,
+     "length": 256,
+     "layer": 14,
+     "row": 83317691,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98974812792,
+     "length": 8,
+     "layer": 14,
+     "row": 83317691,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 26959911328,
+     "length": 256,
+     "layer": 14,
+     "row": 105312151,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99150768472,
+     "length": 8,
+     "layer": 14,
+     "row": 105312151,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 31620176288,
+     "length": 256,
+     "layer": 14,
+     "row": 123516311,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99296401752,
+     "length": 8,
+     "layer": 14,
+     "row": 123516311,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 36281826720,
+     "length": 256,
+     "layer": 14,
+     "row": 141725883,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99442078328,
+     "length": 8,
+     "layer": 14,
+     "row": 141725883,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 38571263904,
+     "length": 256,
+     "layer": 14,
+     "row": 150668997,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99513623240,
+     "length": 8,
+     "layer": 14,
+     "row": 150668997,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 42688682400,
+     "length": 256,
+     "layer": 14,
+     "row": 166752663,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99642292568,
+     "length": 8,
+     "layer": 14,
+     "row": 166752663,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 47690286496,
+     "length": 256,
+     "layer": 14,
+     "row": 186290179,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99798592696,
+     "length": 8,
+     "layer": 14,
+     "row": 186290179,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 49304363424,
+     "length": 256,
+     "layer": 14,
+     "row": 192595167,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99849032600,
+     "length": 8,
+     "layer": 14,
+     "row": 192595167,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 57188215712,
+     "length": 256,
+     "layer": 14,
+     "row": 223391465,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100095402984,
+     "length": 8,
+     "layer": 14,
+     "row": 223391465,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 59492151712,
+     "length": 256,
+     "layer": 14,
+     "row": 232391215,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100167400984,
+     "length": 8,
+     "layer": 14,
+     "row": 232391215,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 62408340640,
+     "length": 256,
+     "layer": 14,
+     "row": 243782578,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100258531888,
+     "length": 8,
+     "layer": 14,
+     "row": 243782578,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 69208240544,
+     "length": 256,
+     "layer": 14,
+     "row": 270344687,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100471028760,
+     "length": 8,
+     "layer": 14,
+     "row": 270344687,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 69856251808,
+     "length": 256,
+     "layer": 14,
+     "row": 272875981,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100491279112,
+     "length": 8,
+     "layer": 14,
+     "row": 272875981,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 77617400224,
+     "length": 256,
+     "layer": 14,
+     "row": 303192967,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100733815000,
+     "length": 8,
+     "layer": 14,
+     "row": 303192967,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 81180732832,
+     "length": 256,
+     "layer": 14,
+     "row": 317112235,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100845169144,
+     "length": 8,
+     "layer": 14,
+     "row": 317112235,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 83174889632,
+     "length": 256,
+     "layer": 14,
+     "row": 324901910,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100907486544,
+     "length": 8,
+     "layer": 14,
+     "row": 324901910,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 86095386272,
+     "length": 256,
+     "layer": 14,
+     "row": 336310100,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100998752064,
+     "length": 8,
+     "layer": 14,
+     "row": 336310100,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 91869446560,
+     "length": 256,
+     "layer": 14,
+     "row": 358865023,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101179191448,
+     "length": 8,
+     "layer": 14,
+     "row": 358865023,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 96399522976,
+     "length": 256,
+     "layer": 14,
+     "row": 376560634,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101320756336,
+     "length": 8,
+     "layer": 14,
+     "row": 376560634,
+     "kind": "scale"
+    }
+   ],
+   "sha256": "49cc57e20c2b1fd96d44d8a8b8828e8c95c8d9f39459b148e9bbfd9eeb7645ea",
+   "bytes": 12672
+  },
+  {
+   "phrase": "Danau Kelimutu",
+   "token_ids": [
+    8177,
+    1751,
+    28052,
+    328,
+    59979
+   ],
+   "ranges": [
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 3400719768,
+     "length": 256,
+     "layer": 1,
+     "row": 13284059,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98411852144,
+     "length": 8,
+     "layer": 1,
+     "row": 13284059,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 7248720280,
+     "length": 256,
+     "layer": 1,
+     "row": 28315311,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98532102160,
+     "length": 8,
+     "layer": 1,
+     "row": 28315311,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 9257658264,
+     "length": 256,
+     "layer": 1,
+     "row": 36162725,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98594881472,
+     "length": 8,
+     "layer": 1,
+     "row": 36162725,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 14059046040,
+     "length": 256,
+     "layer": 1,
+     "row": 54918146,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98744924840,
+     "length": 8,
+     "layer": 1,
+     "row": 54918146,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 18510237336,
+     "length": 256,
+     "layer": 1,
+     "row": 72305612,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98884024568,
+     "length": 8,
+     "layer": 1,
+     "row": 72305612,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 20898804888,
+     "length": 256,
+     "layer": 1,
+     "row": 81635954,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 98958667304,
+     "length": 8,
+     "layer": 1,
+     "row": 81635954,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 26358779032,
+     "length": 256,
+     "layer": 1,
+     "row": 102963978,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99129291496,
+     "length": 8,
+     "layer": 1,
+     "row": 102963978,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 30422998168,
+     "length": 256,
+     "layer": 1,
+     "row": 118839834,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99256298344,
+     "length": 8,
+     "layer": 1,
+     "row": 118839834,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 34750771864,
+     "length": 256,
+     "layer": 1,
+     "row": 135745200,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99391541272,
+     "length": 8,
+     "layer": 1,
+     "row": 135745200,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 39794389400,
+     "length": 256,
+     "layer": 1,
+     "row": 155446831,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99549154320,
+     "length": 8,
+     "layer": 1,
+     "row": 155446831,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 41726966424,
+     "length": 256,
+     "layer": 1,
+     "row": 162995960,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99609547352,
+     "length": 8,
+     "layer": 1,
+     "row": 162995960,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 47320915096,
+     "length": 256,
+     "layer": 1,
+     "row": 184847322,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99784358248,
+     "length": 8,
+     "layer": 1,
+     "row": 184847322,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 49330247064,
+     "length": 256,
+     "layer": 1,
+     "row": 192696275,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99847149872,
+     "length": 8,
+     "layer": 1,
+     "row": 192696275,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 54133788824,
+     "length": 256,
+     "layer": 1,
+     "row": 211460110,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 99997260552,
+     "length": 8,
+     "layer": 1,
+     "row": 211460110,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 57383537048,
+     "length": 256,
+     "layer": 1,
+     "row": 224154439,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100098815184,
+     "length": 8,
+     "layer": 1,
+     "row": 224154439,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 61726798488,
+     "length": 256,
+     "layer": 1,
+     "row": 241120304,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100234542104,
+     "length": 8,
+     "layer": 1,
+     "row": 241120304,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 67378684056,
+     "length": 256,
+     "layer": 1,
+     "row": 263197982,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100411163528,
+     "length": 8,
+     "layer": 1,
+     "row": 263197982,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 70184676504,
+     "length": 256,
+     "layer": 1,
+     "row": 274158890,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100498850792,
+     "length": 8,
+     "layer": 1,
+     "row": 274158890,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 77777502616,
+     "length": 256,
+     "layer": 1,
+     "row": 303818367,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100736126608,
+     "length": 8,
+     "layer": 1,
+     "row": 303818367,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 79975034776,
+     "length": 256,
+     "layer": 1,
+     "row": 312402477,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100804799488,
+     "length": 8,
+     "layer": 1,
+     "row": 312402477,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 85702517400,
+     "length": 256,
+     "layer": 1,
+     "row": 334775456,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 100983783320,
+     "length": 8,
+     "layer": 1,
+     "row": 334775456,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 88399125144,
+     "length": 256,
+     "layer": 1,
+     "row": 345309080,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101068052312,
+     "length": 8,
+     "layer": 1,
+     "row": 345309080,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 91950866840,
+     "length": 256,
+     "layer": 1,
+     "row": 359183071,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101179044240,
+     "length": 8,
+     "layer": 1,
+     "row": 359183071,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 97470829464,
+     "length": 256,
+     "layer": 1,
+     "row": 380745425,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00047-of-00048.safetensors",
+     "start": 101351543072,
+     "length": 8,
+     "layer": 1,
+     "row": 380745425,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 3986415008,
+     "length": 256,
+     "layer": 14,
+     "row": 15571931,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98432846712,
+     "length": 8,
+     "layer": 14,
+     "row": 15571931,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 6452672672,
+     "length": 256,
+     "layer": 14,
+     "row": 25205750,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98509917264,
+     "length": 8,
+     "layer": 14,
+     "row": 25205750,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 8599381152,
+     "length": 256,
+     "layer": 14,
+     "row": 33591330,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98577001904,
+     "length": 8,
+     "layer": 14,
+     "row": 33591330,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 13261665952,
+     "length": 256,
+     "layer": 14,
+     "row": 51803380,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98722698304,
+     "length": 8,
+     "layer": 14,
+     "row": 51803380,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 19839057568,
+     "length": 256,
+     "layer": 14,
+     "row": 77496316,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 98928241792,
+     "length": 8,
+     "layer": 14,
+     "row": 77496316,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 23990593952,
+     "length": 256,
+     "layer": 14,
+     "row": 93713255,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99057977304,
+     "length": 8,
+     "layer": 14,
+     "row": 93713255,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 27921111968,
+     "length": 256,
+     "layer": 14,
+     "row": 109066841,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99180805992,
+     "length": 8,
+     "layer": 14,
+     "row": 109066841,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 28830061984,
+     "length": 256,
+     "layer": 14,
+     "row": 112617427,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99209210680,
+     "length": 8,
+     "layer": 14,
+     "row": 112617427,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 36257563808,
+     "length": 256,
+     "layer": 14,
+     "row": 141631106,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99441320112,
+     "length": 8,
+     "layer": 14,
+     "row": 141631106,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 38543374752,
+     "length": 256,
+     "layer": 14,
+     "row": 150560055,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99512751704,
+     "length": 8,
+     "layer": 14,
+     "row": 150560055,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 43399464864,
+     "length": 256,
+     "layer": 14,
+     "row": 169529157,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99664504520,
+     "length": 8,
+     "layer": 14,
+     "row": 169529157,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 48664573344,
+     "length": 256,
+     "layer": 14,
+     "row": 190095987,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99829039160,
+     "length": 8,
+     "layer": 14,
+     "row": 190095987,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 51516798624,
+     "length": 256,
+     "layer": 14,
+     "row": 201237492,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99918171200,
+     "length": 8,
+     "layer": 14,
+     "row": 201237492,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 53522200992,
+     "length": 256,
+     "layer": 14,
+     "row": 209071095,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 99980840024,
+     "length": 8,
+     "layer": 14,
+     "row": 209071095,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 57391511968,
+     "length": 256,
+     "layer": 14,
+     "row": 224185591,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100101755992,
+     "length": 8,
+     "layer": 14,
+     "row": 224185591,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 62696289696,
+     "length": 256,
+     "layer": 14,
+     "row": 244907379,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100267530296,
+     "length": 8,
+     "layer": 14,
+     "row": 244907379,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 69615745440,
+     "length": 256,
+     "layer": 14,
+     "row": 271936503,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100483763288,
+     "length": 8,
+     "layer": 14,
+     "row": 271936503,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 71316229024,
+     "length": 256,
+     "layer": 14,
+     "row": 278579017,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100536903400,
+     "length": 8,
+     "layer": 14,
+     "row": 278579017,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 75919237024,
+     "length": 256,
+     "layer": 14,
+     "row": 296559517,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100680747400,
+     "length": 8,
+     "layer": 14,
+     "row": 296559517,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 78868165280,
+     "length": 256,
+     "layer": 14,
+     "row": 308078768,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100772901408,
+     "length": 8,
+     "layer": 14,
+     "row": 308078768,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 84861209760,
+     "length": 256,
+     "layer": 14,
+     "row": 331489098,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 100960184048,
+     "length": 8,
+     "layer": 14,
+     "row": 331489098,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 88066230432,
+     "length": 256,
+     "layer": 14,
+     "row": 344008710,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101060340944,
+     "length": 8,
+     "layer": 14,
+     "row": 344008710,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 92588167072,
+     "length": 256,
+     "layer": 14,
+     "row": 361672525,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101201651464,
+     "length": 8,
+     "layer": 14,
+     "row": 361672525,
+     "kind": "scale"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 95107760032,
+     "length": 256,
+     "layer": 14,
+     "row": 371514685,
+     "kind": "row"
+    },
+    {
+     "shard": "model-00048-of-00048.safetensors",
+     "start": 101280388744,
+     "length": 8,
+     "layer": 14,
+     "row": 371514685,
+     "kind": "scale"
+    }
+   ],
+   "sha256": "2d59af728da3f97e76520af34edac8f4f5f09105e0e89e0115e346ca3bae58ce",
+   "bytes": 12672
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "lora_lr": 0.0003,
+ "budget": 20000000,
+ "extra_lora_val_ppl": 8.235378539550451,
+ "mem_val_ppl": 8.868298026265094,
+ "main_lora_val_ppl": 8.949389083364057,
+ "base_val_ppl": 11.128617803315489,
+ "verdict": "the PASS does not survive this check",
+ "lines": [
+  "Exploratory follow-up (not part of the pre-registered outcome, which stays PASS)",
+  "lora at lr 0.0003: 2M val 8.511 memo 8.328, 5M val 8.434 memo 8.329, 10M val 8.338 memo 8.258, 20M val 8.235 memo 8.161; trained 1.09 h",
+  "at 20M: memory 8.868, lora lr 0.001 8.949, lora lr 0.0003 8.235, base 11.129",
+  "RESULT: the PASS does not survive this check"
+ ]
+}

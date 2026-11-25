@@ -1,0 +1,42 @@
+[project]
+name = "engramscope"
+version = "0.1.0"
+description = "Lashley's lesion experiments rerun on DeepSeek-V4.1-Flash's Engram memory, and the instrument that reads it"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = [
+  "numpy>=2.1",
+  "requests>=2.32",
+  "sympy>=1.13",
+  "tokenizers==0.23.3",
+]
+
+[dependency-groups]
+dev = [
+  "hypothesis>=6.100",
+  "ml-dtypes>=0.5",
+  "pytest>=8",
+  "ruff>=0.8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["tools/engramscope"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["spikes"]
+src = ["tools", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501"]  # line length is the formatter's job; long strings stay unsplit
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["network: needs the live model files; runs only with ENGRAMSCOPE_TEST_NETWORK=1"]
