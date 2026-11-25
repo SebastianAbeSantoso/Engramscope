@@ -1,6 +1,6 @@
 # First results: readout benchmark and lesion experiments (2026-11-19)
 
-**For the builder's review (checkpoints 7.3 and 8.4).** The wording below follows the pre-registered rules. None of it goes into the README, app or video until the builder approves it.
+**Approved by the builder on 2026-11-25 (checkpoints 7.3 and 8.4).** The wording below follows the pre-registered rules and may now go into the README, app and video.
 
 Generated reports (all numbers here come from them):
 - [`docs/results/bench-2026-11-19.md`](../results/bench-2026-11-19.md), with `.json`;
