@@ -40,3 +40,9 @@ The earlier milestones are reported for information only.
 ## Change log
 
 - 2026-11-22, before the commit and before any 1.7B run: CPU code tests in the sandbox, with SmolLM2-135M and budgets of a few steps (`SCALE_SMOKE=1`). The full pipeline ran from an empty folder, the gradient check passed (difference 0.0), and the data matched the 135M test. No 1.7B result exists yet.
+- 2026-11-25, before any 1.7B run: the builder chose a rented GPU. `rent.sh` changed in how it runs, not what it runs:
+  - It still runs `scale.py all` with the same library versions, the same driver rule for the torch build, and the same rules.
+  - It now runs in the background, so a closed browser terminal doesn't stop it.
+  - It keeps its files under `/workspace`, which survives a pod restart, and checks the free disk space first.
+  - It packs the results for a one-time-code transfer with runpodctl 3.1.1.
+  - Tested in the sandbox with `SCALE_SMOKE=1` and SmolLM2-135M on CPU. The background run finished, a second start was refused while it ran, and the packed results arrived intact through the transfer. No 1.7B result exists yet.
