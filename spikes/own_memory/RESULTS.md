@@ -114,4 +114,8 @@ Bolting Engram-style memory onto a frozen model is not new. These papers do it, 
 - **NGM** ([arXiv 2605.16893](https://arxiv.org/abs/2605.16893)): a training-free n-gram memory built from a frozen model's own token embeddings (Qwen3, Llama 3.2).
 - **Memory Grafting** ([arXiv 2605.20948](https://arxiv.org/abs/2605.20948)): stores another model's hidden states as n-gram memory, during pretraining.
 
+Working tools also exist, found the same day:
+- **[Engram-PEFT](https://github.com/QingGo/engram-peft)** (`pip install engram-peft`): an unofficial implementation of DeepSeek's Engram with a PEFT-style API for adding it to any Hugging Face model, including stacked **LoRA+Engram** training. Its README reports LoRA+Engram beating LoRA alone by about 2.3% in eval loss on TinyLlama-1.1B.
+- **[TinyEngram](https://github.com/AutoArk/TinyEngram)**: Engram modules inserted into frozen Qwen models, with released Engram-vs-LoRA experiments (forgetting and parameter efficiency).
+
 What this test adds is narrower: the same question asked as a pre-registered, controlled comparison against LoRA (same data, budget, schedule and machine, with pilots for both) at two sizes, reporting both outcomes (KILL at 135M, a narrow PASS at 1.7B), plus a row-shuffle control at 135M.
