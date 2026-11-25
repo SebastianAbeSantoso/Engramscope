@@ -2,6 +2,7 @@
 # Engramscope own-memory test on SmolLM2-1.7B, runner for a rented Linux GPU (instructions: LAPTOP.md, rules: PREREG-1.7B.md).
 #   bash rent.sh start   runs everything in the background and shows progress. Closing the terminal doesn't stop it.
 #                        Run it again after a stop or a machine restart: finished steps are skipped and training resumes.
+#   bash rent.sh start extra   the same for the exploratory follow-up (PREREG-1.7B.md), after the main run
 #   bash rent.sh watch   shows progress again
 #   bash rent.sh send    after the run: packs the results and prints a one-time code to paste into the chat
 #   bash rent.sh check   (or any other scale.py step) runs that step in the foreground
@@ -26,6 +27,7 @@ WORK="$ENGRAMSCOPE_OWNMEM"
 LOG="$WORK/run.log"
 LOCK="$WORK/run.lock"
 PIDFILE="$WORK/run.pid"
+STEPFILE="$WORK/run.step"
 RES="$WORK/scale"
 if [ "${SCALE_SMOKE:-}" = 1 ]; then RES="$WORK/scale-smoke"; fi
 RUNPODCTL_URL=https://github.com/runpod/runpodctl/releases/download/v3.1.1/runpodctl-linux-amd64
@@ -95,7 +97,10 @@ watch_run() {
     tail -n 30 "$LOG"
   fi
   echo
-  if [ -f "$RES/summary.json" ]; then
+  local step=all done_file
+  if [ -f "$STEPFILE" ]; then step=$(cat "$STEPFILE"); fi
+  if [ "$step" = extra ]; then done_file="$RES/extra.json"; else done_file="$RES/summary.json"; fi
+  if [ -f "$done_file" ]; then
     echo "Finished. Next, run: bash $HERE/rent.sh send"
   elif [ ! -f "$LOG" ]; then
     echo "The test hasn't been started here yet. To start it: bash $HERE/rent.sh start"
@@ -105,6 +110,8 @@ watch_run() {
 }
 
 start() {
+  local step="${1:-all}"
+  case "$step" in all | extra) ;; *) echo "start runs 'all' or 'extra', not '$step'" >&2; exit 1 ;; esac
   pick_torch
   check_space
   if ! flock -n "$LOCK" true; then
@@ -112,9 +119,10 @@ start() {
     watch_run
     return
   fi
-  echo "===== start $(date -u '+%Y-%m-%d %H:%M UTC'), code $(git -C "$HERE" describe --always --dirty --abbrev=7 2>/dev/null || echo unknown) =====" >>"$LOG"
+  echo "$step" >"$STEPFILE"
+  echo "===== start $step $(date -u '+%Y-%m-%d %H:%M UTC'), code $(git -C "$HERE" describe --always --dirty --abbrev=7 2>/dev/null || echo unknown) =====" >>"$LOG"
   # setsid puts the run in its own session, so closing the browser terminal doesn't end it; flock stops a second copy.
-  setsid nohup bash -c 'echo $$ >"$1"; exec flock -n "$2" bash ./rent.sh all' _ "$PIDFILE" "$LOCK" >>"$LOG" 2>&1 </dev/null &
+  setsid nohup bash -c 'echo $$ >"$1"; exec flock -n "$2" bash ./rent.sh "$3"' _ "$PIDFILE" "$LOCK" "$step" >>"$LOG" 2>&1 </dev/null &
   sleep 2
   echo "Started in the background. The full log is $LOG"
   echo "To see progress later, open a terminal and run: bash $HERE/rent.sh watch"
@@ -145,7 +153,7 @@ send_results() {
 }
 
 case "${1:-all}" in
-  start) start ;;
+  start) start "${2:-all}" ;;
   watch) watch_run ;;
   send) send_results ;;
   *) run_scale "$@" ;;

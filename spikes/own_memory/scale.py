@@ -521,6 +521,33 @@ def report():
     return summary
 
 
+EXTRA_LORA_LR = 3e-4  # exploratory follow-up, decided after the PASS (PREREG-1.7B.md, "Exploratory follow-up")
+
+
+def extra():
+    """Exploratory: LoRA at a lower learning rate, same budget, data, schedule and evaluations as main-lora."""
+    path = SCALE / "extra.json"
+    if path.exists():
+        return jread(path)
+    info, b, summary = check(), base(), jread(SCALE / "summary.json")
+    budget, d = info["budget"], data()
+    r = train_run("lora", EXTRA_LORA_LR, budget, SCALE / "runs" / f"extra-lora-lr{EXTRA_LORA_LR:g}", info["lora"]["micro"],
+                  milestones=[m for m in MILESTONES if m <= budget], evals={"val": d["val"], "memo": d["memo"]})
+    pe, pm, pb = r["evals"][str(budget)]["val"]["ppl"], summary["mem_val_ppl"], b["val"]["ppl"]
+    verdict = "the PASS survives this check" if pm <= pe else "the PASS does not survive this check"
+    lines = [f"Exploratory follow-up (not part of the pre-registered outcome, which stays {summary['outcome']})",
+             f"lora at lr {EXTRA_LORA_LR:g}: " + ", ".join(f"{int(k) / 1e6:g}M val {v['val']['ppl']:.3f} memo {v['memo']['ppl']:.3f}"
+                                                         for k, v in sorted(r["evals"].items(), key=lambda kv: int(kv[0])))
+             + f"; trained {r['train_seconds'] / 3600:.2f} h",
+             f"at {budget / 1e6:g}M: memory {pm:.3f}, lora lr {jread(SCALE / 'pilot-choice.json')['lora']['chosen']:g} {summary['lora_val_ppl']:.3f}, lora lr {EXTRA_LORA_LR:g} {pe:.3f}, base {pb:.3f}",
+             f"RESULT: {verdict}"]
+    out = {"lora_lr": EXTRA_LORA_LR, "budget": budget, "extra_lora_val_ppl": pe, "mem_val_ppl": pm,
+           "main_lora_val_ppl": summary["lora_val_ppl"], "base_val_ppl": pb, "verdict": verdict, "lines": lines}
+    jwrite(path, out)
+    say("\n".join(["", "===== paste this into the chat =====", *lines, "===================================="]))
+    return out
+
+
 def dataequal():
     """Sandbox check: the 1.7B data starts exactly like the 135M test's data."""
     a, b = data(), dict(np.load(WORK / "data" / "packed.npz"))
@@ -545,7 +572,7 @@ if __name__ == "__main__":
     SCALE.mkdir(parents=True, exist_ok=True)
     cmd, args = (sys.argv[1] if len(sys.argv) > 1 else "all"), sys.argv[2:]
     steps = {"all": run_all, "prep": prep, "check": check, "base": base, "report": report,
-             "gradcheck": gradcheck, "dataequal": dataequal}
+             "gradcheck": gradcheck, "dataequal": dataequal, "extra": extra}
     if cmd in ("pilot", "train"):
         {"pilot": pilot, "train": train}[cmd](args[0])
     elif cmd in steps:

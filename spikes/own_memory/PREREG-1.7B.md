@@ -50,3 +50,17 @@ The earlier milestones are reported for information only.
   - It now ignores the rental image's own Python environment (Vast's activates one with PyTorch installed). The run gets only the pinned packages, on a clean uv-managed Python, with its own package cache under `/workspace`.
   - Each start writes the code version (git commit) to `run.log`.
   - Tested in the sandbox with Vast-like settings: an active environment holding an extra package, and uv's cache turned off. The run's Python couldn't see the extra package, and the `SCALE_SMOKE=1` run on CPU finished. No rules or versions changed. No 1.7B result exists yet.
+
+## Exploratory follow-up (written after the PASS, before running it)
+
+Written on 2026-11-25 (WITA), after the 1.7B outcome above came back as a PASS (memory val PPL 8.868, LoRA 8.949, base 11.129) and **before this run**. It is exploratory: **the pre-registered outcome stays PASS whatever this run shows.**
+
+**Why:** LoRA's validation PPL rose from 9.371 at 2M tokens to 9.972 at 10M, then fell to 8.949 at 20M as the learning rate decayed. That suggests its pilot-chosen rate (1e-3, picked on 300k tokens) was too high for a 20M-token run. 3e-4 came close in the pilot (selection PPL 8.434 vs 8.371). The obvious objection to the PASS is that LoRA was mistuned.
+
+**Run:** LoRA at learning rate 3e-4. Everything else is as `main-lora`: the same budget (20M tokens), data, schedule shape, micro-batch, milestones and evaluations, on the same machine (`scale.py extra`, through `rent.sh start extra`).
+
+**Reading (decided now):** compare its validation PPL at 20M tokens with the memory's 8.868.
+- At or above 8.868: "the PASS survives this check".
+- Below 8.868: "the PASS does not survive this check". The write-up then reports that a better-tuned LoRA beats the memory.
+
+**Known asymmetry:** only LoRA is re-tuned. The memory's chosen rate (1e-2) was also at the edge of its grid and might be undertuned. That isn't tested here, and the write-up will say so.
