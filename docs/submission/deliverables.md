@@ -17,7 +17,7 @@ Status: `done`, `in progress`, `not started`, `blocked`, `optional`. Owner: **B*
 | D4 | All source, assets and instructions in the repo | Rules §4 | K | in progress | Python reference, benchmark, lesions and side test are in; web app and asset build not started |
 | D5 | URL to the working app | Rules §4 | K | done | https://sebastianabesantoso.github.io/Engramscope/ (deployed 2026-11-25 by `pages.yml` from `main`) |
 | D6 | App stays available until Jan 29, 2027, 1:00 PM PT | Rules §4, Testing | B | not started | Pages + pinned model revision |
-| D7 | Disclosure of pre-existing work, with licenses | Rules §4 | K drafts, B checks | not started | model + reference code (MIT), tokenizer, libraries, MaltOE kill test, cited papers; side test: SmolLM2-135M and 1.7B (Apache-2.0), WikiText-103 (CC BY-SA), runpodctl (transfer tool), Engram Adapter / TF-Engram / NGM / Memory Grafting as related work |
+| D7 | Disclosure of pre-existing work, with licenses | Rules §4 | K drafts, B checks | in progress | drafted in the README ("Pre-existing work used"); B to check |
 | D8 | Text description | Rules §4 | K drafts, B approves | not started | |
 | D9 | Demo video < 3 min, on the device it was built for, no copyrighted music or logos | Rules §4 | B records, K scripts | not started | model named generically in the video (D17) |
 | D10 | Video public on YouTube, link in the form | Rules §4 | B | not started | |
