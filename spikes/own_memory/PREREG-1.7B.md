@@ -46,3 +46,7 @@ The earlier milestones are reported for information only.
   - It keeps its files under `/workspace`, which survives a pod restart, and checks the free disk space first.
   - It packs the results for a one-time-code transfer with runpodctl 3.1.1.
   - Tested in the sandbox with `SCALE_SMOKE=1` and SmolLM2-135M on CPU. The background run finished, a second start was refused while it ran, and the packed results arrived intact through the transfer. No 1.7B result exists yet.
+- 2026-11-25, later, before any 1.7B run: the builder chose an A100 on Vast.ai. `rent.sh` again changed in how it runs, not what it runs:
+  - It now ignores the rental image's own Python environment (Vast's activates one with PyTorch installed). The run gets only the pinned packages, on a clean uv-managed Python, with its own package cache under `/workspace`.
+  - Each start writes the code version (git commit) to `run.log`.
+  - Tested in the sandbox with Vast-like settings: an active environment holding an extra package, and uv's cache turned off. The run's Python couldn't see the extra package, and the `SCALE_SMOKE=1` run on CPU finished. No rules or versions changed. No 1.7B result exists yet.

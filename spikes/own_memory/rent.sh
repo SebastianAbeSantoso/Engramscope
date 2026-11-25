@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Engramscope own-memory test on SmolLM2-1.7B, runner for a rented Linux GPU (instructions: LAPTOP.md, rules: PREREG-1.7B.md).
 #   bash rent.sh start   runs everything in the background and shows progress. Closing the terminal doesn't stop it.
-#                        Run it again after a stop or a pod restart: finished steps are skipped and training resumes.
+#                        Run it again after a stop or a machine restart: finished steps are skipped and training resumes.
 #   bash rent.sh watch   shows progress again
 #   bash rent.sh send    after the run: packs the results and prints a one-time code to paste into the chat
 #   bash rent.sh check   (or any other scale.py step) runs that step in the foreground
@@ -9,13 +9,19 @@ set -euo pipefail
 cd "$(dirname "$0")"
 HERE="$PWD"
 
-# Keep everything under /workspace when it exists: RunPod keeps it when a pod restarts but wipes the container disk.
+# Keep everything under /workspace when it exists. Vast keeps the whole disk while the instance exists;
+# RunPod keeps /workspace when a pod restarts but wipes the rest.
 ROOT="${RENT_ROOT:-/workspace}"
 if [ ! -d "$ROOT" ] || [ ! -w "$ROOT" ]; then ROOT="$HOME"; fi
 export ENGRAMSCOPE_OWNMEM="${ENGRAMSCOPE_OWNMEM:-$ROOT/engramscope-ownmem}"
-export HF_HOME="${HF_HOME:-$ROOT/hf}"
-export UV_CACHE_DIR="${UV_CACHE_DIR:-$ROOT/uv-cache}"
-export UV_PYTHON_INSTALL_DIR="${UV_PYTHON_INSTALL_DIR:-$ROOT/uv-python}"
+export HF_HOME="$ROOT/hf"
+# Only the pinned packages, on a clean uv-managed Python. Rental images activate their own Python
+# environment (Vast: /venv/main, with PyTorch installed), and uv would otherwise expose its packages
+# to the run. Vast's image also turns uv's cache off, which would mean downloading PyTorch on every start.
+unset VIRTUAL_ENV CONDA_PREFIX PYTHONPATH PYTHONHOME UV_PYTHON UV_NO_MANAGED_PYTHON UV_SYSTEM_PYTHON UV_NO_CACHE UV_LINK_MODE
+export UV_PYTHON_PREFERENCE=only-managed
+export UV_CACHE_DIR="$ROOT/uv-cache"
+export UV_PYTHON_INSTALL_DIR="$ROOT/uv-python"
 WORK="$ENGRAMSCOPE_OWNMEM"
 LOG="$WORK/run.log"
 LOCK="$WORK/run.lock"
@@ -61,7 +67,7 @@ check_space() {  # about 20 GB in total: PyTorch, the 3.4 GB model, the data and
   done
   free_kb=$(df -Pk "$ROOT" | awk 'NR == 2 {print $4}')
   if [ $((free_kb + used_kb)) -lt "$need_kb" ]; then
-    echo "Only $((free_kb / 1048576)) GB is free in $ROOT, and the test needs about 25 GB. Give the pod a 40 GB volume disk." >&2
+    echo "Only $((free_kb / 1048576)) GB is free in $ROOT, and the test needs about 25 GB. Rent a machine with a 50 GB disk." >&2
     exit 1
   fi
 }
@@ -81,7 +87,8 @@ run_scale() {
 watch_run() {
   local pid=""
   if [ -f "$PIDFILE" ]; then pid=$(cat "$PIDFILE"); fi
-  if [ -n "$pid" ] && kill -0 "$pid" 2>/dev/null; then
+  # The lock tells whether a run is alive; the PID alone could belong to another process after a restart.
+  if [ -n "$pid" ] && ! flock -n "$LOCK" true && kill -0 "$pid" 2>/dev/null; then
     echo "(Progress appears about once a minute. You can close this terminal at any time; the test keeps running.)"
     tail -n 30 --pid="$pid" -F "$LOG"
   elif [ -f "$LOG" ]; then
@@ -105,7 +112,7 @@ start() {
     watch_run
     return
   fi
-  echo "===== start $(date -u '+%Y-%m-%d %H:%M UTC') =====" >>"$LOG"
+  echo "===== start $(date -u '+%Y-%m-%d %H:%M UTC'), code $(git -C "$HERE" describe --always --dirty --abbrev=7 2>/dev/null || echo unknown) =====" >>"$LOG"
   # setsid puts the run in its own session, so closing the browser terminal doesn't end it; flock stops a second copy.
   setsid nohup bash -c 'echo $$ >"$1"; exec flock -n "$2" bash ./rent.sh all' _ "$PIDFILE" "$LOCK" >>"$LOG" 2>&1 </dev/null &
   sleep 2
