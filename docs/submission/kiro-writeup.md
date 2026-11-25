@@ -65,7 +65,7 @@ With the laptop out of reach, Kiro built `rent.sh` so the builder could start th
 - **Kiro tested the whole loop in the sandbox on CPU before any money was spent.** That included start, a refused second start, watch, send and receive, and the published start line from a fresh clone.
 - **A catch before renting:** reading Vast's image source, Kiro found it activates its own Python environment (with PyTorch) and turns off uv's cache. A sandbox test showed such an environment leaks its packages into the run. `rent.sh` now runs only the pinned packages on a clean Python, with its own cache.
 - **Picking the machine:** the builder sent offer screenshots, and Kiro checked each against the job. It turned down an A100 because its 24.7 GB free disk was too small, and a China-hosted 5090 because the test downloads from Hugging Face. It also explained that Vast's DLPerf score and the cards' FP32 TFLOPS don't measure this workload.
-- **Outcome:** one PyPI timeout on the first start, fixed by a rerun. Then about 2 hours for the whole test (**check:** final cost from Vast's billing page). The extra LoRA run reused the machine's downloads, and Kiro tested its update line against a copy of the machine's state, which caught a `git pull` that would have failed.
+- **Outcome:** one PyPI timeout on the first start, fixed by a rerun. The whole rental, including the follow-up run, cost $2.20 of the $5 credit. The extra LoRA run reused the machine's downloads, and Kiro tested its update line against a copy of the machine's state, which caught a `git pull` that would have failed.
 
 ## A sandbox restore (Nov 25)
 

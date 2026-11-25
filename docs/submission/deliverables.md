@@ -42,6 +42,6 @@ Status: `done`, `in progress`, `not started`, `blocked`, `optional`. Owner: **B*
 | # | Item | Owner | Status |
 | --- | --- | --- | --- |
 | A1 | Kiro credits requested | B | done |
-| A4 | Rented GPU for the 1.7B side test (Vast.ai, $5 credit) | B | done; instance to be destroyed after the follow-up run |
+| A4 | Rented GPU for the 1.7B side test (Vast.ai, $5 credit) | B | done; instance destroyed; total $2.20 |
 | A2 | Rules re-checked | K, B | done (see `docs/kiroween-rules.md`) |
 | A3 | Entrant eligibility | B | B to confirm |
