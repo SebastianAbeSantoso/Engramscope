@@ -1,0 +1,69 @@
+{
+ "meta": {
+  "date": "2026-11-25",
+  "commit": "cfdcff5",
+  "revision": "314113f8a7dadb388215396ba5fbee2c610a04d6",
+  "d": 1024,
+  "chunks": 4
+ },
+ "dev_phrases": 50,
+ "bench_phrases": 123,
+ "layers": {
+  "1": {
+   "dev_positions": 144,
+   "dev": {
+    "256": {
+     "top10_overlap": 0.27,
+     "exact_top1_in_top10": 0.493
+    },
+    "512": {
+     "top10_overlap": 0.412,
+     "exact_top1_in_top10": 0.806
+    },
+    "768": {
+     "top10_overlap": 0.471,
+     "exact_top1_in_top10": 0.681
+    },
+    "1024": {
+     "top10_overlap": 0.568,
+     "exact_top1_in_top10": 0.896
+    }
+   },
+   "bench_hit10": {
+    "exact": 0.618,
+    "256": 0.496,
+    "512": 0.618,
+    "768": 0.618,
+    "1024": 0.618
+   }
+  },
+  "14": {
+   "dev_positions": 144,
+   "dev": {
+    "256": {
+     "top10_overlap": 0.042,
+     "exact_top1_in_top10": 0.097
+    },
+    "512": {
+     "top10_overlap": 0.068,
+     "exact_top1_in_top10": 0.153
+    },
+    "768": {
+     "top10_overlap": 0.087,
+     "exact_top1_in_top10": 0.208
+    },
+    "1024": {
+     "top10_overlap": 0.109,
+     "exact_top1_in_top10": 0.236
+    }
+   },
+   "bench_hit10": {
+    "exact": 0.024,
+    "256": 0.033,
+    "512": 0.049,
+    "768": 0.049,
+    "1024": 0.057
+   }
+  }
+ }
+}

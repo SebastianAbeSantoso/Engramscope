@@ -27,8 +27,8 @@ Schedule (proposed): Task 1 by Nov 21; Python reference, benchmark and lesion ru
 
 - [ ] 2. Scaffolding
   - [x] 2.1 Python project with `uv`: `tools/engramscope/` package, `pyproject.toml` with ruff and pytest config, Python 3.12.
-  - [ ] 2.2 Web app with Vite, React, TypeScript, vitest, eslint; GitHub Pages build.
-  - [ ] 2.3 GitHub Actions CI: Python lint and tests; web lint, tests and build.
+  - [x] 2.2 Web app with Vite, React, TypeScript, vitest, oxlint; GitHub Pages build.
+  - [x] 2.3 GitHub Actions CI: Python lint and tests; web lint, tests and build (`ci.yml`); Pages deploy with the asset build (`pages.yml`).
   - _Requirements: 11_
 
 - [x] 3. Reference implementation
@@ -38,21 +38,21 @@ Schedule (proposed): Task 1 by Nov 21; Python reference, benchmark and lesion ru
   - _Requirements: 1, 3.2, 11.1_
 
 - [ ] 4. Asset build
-  - [ ] 4.1 `build_assets.py`: constants JSON, token map, decode index (format from G1), test vectors, all under `web/public/assets/<revision>/`.
-  - [ ] 4.2 Record the decode index's agreement numbers in `docs/results/`.
+  - [x] 4.1 `build_assets.py`: constants JSON, token map, decode index (format from G1), test vectors, all under `web/public/assets/<revision>/`. One projection fitted on layer 1 and shared by both layers, so the index stays at about 92 MB.
+  - [x] 4.2 Record the decode index's agreement numbers in `docs/results/` (`decode-index-2026-11-25.md`: layer 1 top-10 overlap 0.568; benchmark hit@10 0.618, equal to exact, from 512 dimensions on).
   - _Requirements: 1.4, 5_
 
 - [ ] 5. Browser core
-  - [ ] 5.1 Tokenizer (format from G2), BigInt hash, test-vector checks in vitest.
-  - [ ] 5.2 Fetcher: CDN resolution once per shard, concurrency limit, 429 back-off, session cache.
-  - [ ] 5.3 FP8 decode, projection, decoding against the index; per-row and per-n-gram contributions; control readout.
+  - [x] 5.1 Tokenizer (format from G2), BigInt hash, test-vector checks in vitest (58 phrases: ids and every address exact).
+  - [x] 5.2 Fetcher: CDN resolution once per shard, concurrency limit, 429 back-off, session cache.
+  - [x] 5.3 FP8 decode, projection, decoding against the index (in a Web Worker); per-row and per-n-gram contributions; control readout. Matches the Python compressed readout on the test vectors.
   - _Requirements: 1.3, 2, 3, 4.1_
 
 - [ ] 6. Interface
-  - [ ] 6.1 Landing and result views; bytes and timing shown.
-  - [ ] 6.2 Inside view: pipeline and 24 row cards; position picker.
-  - [ ] 6.3 `?generic` URL flag that replaces the model name with "an open-weight frontier model" (Req 12.3).
-  - [ ] 6.4 About page, framed around Lashley's question; the read views are the instrument: history, attribution, benchmark, limitations, sources.
+  - [x] 6.1 Landing and result views; bytes and timing shown.
+  - [x] 6.2 Inside view: pipeline and 24 row cards; position picker.
+  - [x] 6.3 `?generic` URL flag that replaces the model name with "an open-weight frontier model" (Req 12.3).
+  - [x] 6.4 About page, framed around Lashley's question; the read views are the instrument: history, attribution, benchmark, limitations, sources.
   - [ ] 6.5 Visual design pass (Req 7.3), accessibility pass (Req 7.5), phone layout.
   - [ ] 6.6 **Checkpoint [HW]:** the builder uses the app in their browser and reviews.
   - _Requirements: 2, 3, 4, 7, 8_
@@ -66,7 +66,7 @@ Schedule (proposed): Task 1 by Nov 21; Python reference, benchmark and lesion ru
 - [ ] 8. Lesion experiments (core; after Task 7, which supplies the chance level)
   - [x] 8.1 `lesion.py` per the approved protocol, with a test that its conditions match the protocol table, and the git-hash guard.
   - [x] 8.2 Run on layers 1 and 14; write `docs/results/lesion-<date>.{json,md}` from the output only, with the rule outcomes applied mechanically. **Done:** `docs/results/lesion-2026-11-19.md`; summary for review in `docs/findings/experiments-2026-11-19.md`.
-  - [ ] 8.3 Experiments view in the app (reads the recorded results) and live lesion view (3 × 8 trace grid, presets for the protocol's conditions, labelled as exploration).
+  - [x] 8.3 Experiments view in the app (reads the recorded results) and live lesion view (3 × 8 trace grid, presets for the protocol's conditions, labelled as exploration).
   - [x] 8.4 **Checkpoint:** the builder reviews the results and the wording that follows from the rules before it goes into the README, app or video. **Approved by the builder 2026-11-25**, including the draft README paragraph (section 4 of the summary).
   - _Requirements: 8, 9_
 

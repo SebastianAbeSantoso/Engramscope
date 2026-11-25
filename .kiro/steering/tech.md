@@ -12,7 +12,7 @@ inclusion: always
 | Web app | React, Vite, TypeScript; static site on GitHub Pages; no Engramscope server |
 | Browser tokenizer | `@huggingface/tokenizers` 0.2.0 on the model's `tokenizer.json` (Gate G2: 0 mismatches in 1,000 strings) |
 | Tests | `pytest` + `hypothesis` (Python); `vitest` (web); Playwright smoke test on a recorded fixture |
-| Lint and format | `ruff check`, `ruff format` (Python); `eslint`, `prettier` (web) |
+| Lint and format | `ruff check`, `ruff format` (Python); `oxlint` (web, the Vite template's default) |
 | CI | GitHub Actions: Python lint and tests; web lint, tests, build |
 
 ## Model pin
@@ -30,7 +30,7 @@ ENGRAMSCOPE_TEST_NETWORK=1 uv run pytest -q         # also tests against the liv
 uv run python -m engramscope.build_assets           # writes web/public/assets/<revision>/
 uv run python -m engramscope.bench                  # readout benchmark -> docs/results/bench-<date>.*
 uv run python -m engramscope.lesion                 # lesion experiments (after bench, same commit) -> docs/results/lesion-<date>.*
-cd web && npm ci && npm run lint && npx vitest --run && npm run build
+cd web && npm ci && npm run lint && npm test && npm run build   # npm test = vitest --run
 ```
 
 Never run watch modes (`vitest` without `--run`, `npm run dev`) in the Kiro sandbox.

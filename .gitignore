@@ -19,3 +19,6 @@ web/dist/
 # OS
 .DS_Store
 Thumbs.db
+
+# Built by tools/engramscope/build_assets.py (in CI for deploys); never committed
+web/public/assets/
