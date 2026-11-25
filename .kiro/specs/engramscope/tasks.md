@@ -80,7 +80,7 @@ Schedule (proposed): Task 1 by Nov 21; Python reference, benchmark and lesion ru
   - [x] 8c.2 Bigger-table test, pre-registered (4f59d1e): H1 and H2 fail. Row-shuffle diagnostic (exploratory): the gain is in the rows.
   - [x] 8c.3 1.7B kit: pre-register (cd4f870); `scale.py`, `laptop.ps1`, `rent.sh` (background run, one-time-code transfer, isolation from the rental image's Python), with CPU smoke tests.
   - [x] 8c.4 1.7B run **[HW]** on a rented RTX 5090 (Vast.ai), started from the builder's phone: PASS, 8.868 vs 8.949 (0a68d14).
-  - [ ] 8c.5 Exploratory LoRA run at 3e-4 **[HW]** (rule written in f48d794 before the run): running.
+  - [x] 8c.5 Exploratory LoRA run at 3e-4 **[HW]** (rule written in f48d794 before the run): 8.235, below the memory's 8.868, so the PASS does not survive this check. The pre-registered outcome stays PASS.
   - [ ] 8c.6 Write the follow-up result into `RESULTS.md`; side-test section in the README and About page (Req 13.5).
 
 - [ ] 9. Write-up and submission

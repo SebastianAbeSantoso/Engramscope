@@ -18,7 +18,7 @@ Engramscope's contribution is limited to (1) Lashley's lesion experiments and Se
 
 ## Side test (Req 13)
 
-The own-memory test asks whether DeepSeek's memory design helps a frozen model it wasn't trained with, against LoRA, under pre-registered rules: KILL at 135M, a narrow PASS at 1.7B. It comes after the lesion experiments in every presentation. It is not part of the claim: adding Engram-style memory to a frozen model is prior work (Engram Adapter, TF-Engram, NGM) with working tools (Engram-PEFT, which also stacks LoRA+Engram; TinyEngram), so never call it new or first. Its value is the controlled comparison and reporting both outcomes.
+The own-memory test asks whether DeepSeek's memory design helps a frozen model it wasn't trained with, against LoRA, under pre-registered rules: KILL at 135M, and a narrow pre-registered PASS at 1.7B that does not survive a better-tuned LoRA (exploratory follow-up: LoRA 8.235 vs memory 8.868). Present it that way, never as a win. It comes after the lesion experiments in every presentation. It is not part of the claim: adding Engram-style memory to a frozen model is prior work (Engram Adapter, TF-Engram, NGM) with working tools (Engram-PEFT, which also stacks LoRA+Engram; TinyEngram), so never call it new or first. Its value is the controlled comparison and reporting both outcomes.
 
 ## Vocabulary
 

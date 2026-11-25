@@ -220,3 +220,86 @@ lora: 2M val 9.371 memo 8.854, 5M val 9.488 memo 9.240, 10M val 9.972 memo 10.02
 r_mem 20.31%, r_lora 19.58%; PASS needs r_mem >= 3% and mem PPL <= LoRA PPL
 OUTCOME: PASS
 ====================================
+===== start extra 2026-11-25 08:06 UTC, code f48d794 =====
+GPU: NVIDIA GeForce RTX 5090, 32607 MiB, 580.173.02; CUDA 13.0, so torch==2.14.1+cu130
+files under /workspace
+Loading weights:   0%|          | 0/218 [00:00<?, ?it/s]Loading weights: 100%|██████████| 218/218 [00:00<00:00, 3732.97it/s]
+/workspace/uv-cache/archive-v0/6-9NUiQUVYGp2XWk/lib/python3.12/site-packages/transformers/modeling_utils.py:3204: FutureWarning: `gradient_checkpointing_enable` is deprecated and will be removed in v6. Use `activation_checkpointing_enable` instead.
+  warnings.warn(
+extra-lora-lr0.0003: step 75/4883, 0.31M tokens, 5089 tok/s, about 1.1 h left
+extra-lora-lr0.0003: step 151/4883, 0.62M tokens, 5119 tok/s, about 1.1 h left
+extra-lora-lr0.0003: step 226/4883, 0.93M tokens, 5111 tok/s, about 1.0 h left
+extra-lora-lr0.0003: step 302/4883, 1.24M tokens, 5116 tok/s, about 1.0 h left
+extra-lora-lr0.0003: step 377/4883, 1.54M tokens, 5115 tok/s, about 1.0 h left
+extra-lora-lr0.0003: step 453/4883, 1.86M tokens, 5127 tok/s, about 1.0 h left
+extra-lora-lr0.0003 at 2M tokens: val PPL 8.511, memo PPL 8.328
+extra-lora-lr0.0003: step 502/4883, 2.06M tokens, 5114 tok/s, about 1.0 h left
+extra-lora-lr0.0003: step 577/4883, 2.36M tokens, 5115 tok/s, about 1.0 h left
+extra-lora-lr0.0003: step 653/4883, 2.67M tokens, 5121 tok/s, about 0.9 h left
+extra-lora-lr0.0003: step 729/4883, 2.99M tokens, 5126 tok/s, about 0.9 h left
+extra-lora-lr0.0003: step 804/4883, 3.29M tokens, 5125 tok/s, about 0.9 h left
+extra-lora-lr0.0003: step 880/4883, 3.60M tokens, 5126 tok/s, about 0.9 h left
+extra-lora-lr0.0003: step 956/4883, 3.92M tokens, 5128 tok/s, about 0.9 h left
+extra-lora-lr0.0003: step 1031/4883, 4.22M tokens, 5127 tok/s, about 0.9 h left
+extra-lora-lr0.0003: step 1105/4883, 4.53M tokens, 5126 tok/s, about 0.8 h left
+extra-lora-lr0.0003: step 1180/4883, 4.83M tokens, 5126 tok/s, about 0.8 h left
+extra-lora-lr0.0003 at 5M tokens: val PPL 8.434, memo PPL 8.329
+extra-lora-lr0.0003: step 1232/4883, 5.05M tokens, 5130 tok/s, about 0.8 h left
+extra-lora-lr0.0003: step 1309/4883, 5.36M tokens, 5134 tok/s, about 0.8 h left
+extra-lora-lr0.0003: step 1387/4883, 5.68M tokens, 5142 tok/s, about 0.8 h left
+extra-lora-lr0.0003: step 1464/4883, 6.00M tokens, 5147 tok/s, about 0.8 h left
+extra-lora-lr0.0003: step 1537/4883, 6.30M tokens, 5138 tok/s, about 0.7 h left
+extra-lora-lr0.0003: step 1612/4883, 6.60M tokens, 5135 tok/s, about 0.7 h left
+extra-lora-lr0.0003: step 1688/4883, 6.91M tokens, 5135 tok/s, about 0.7 h left
+extra-lora-lr0.0003: step 1764/4883, 7.23M tokens, 5135 tok/s, about 0.7 h left
+extra-lora-lr0.0003: step 1840/4883, 7.54M tokens, 5135 tok/s, about 0.7 h left
+extra-lora-lr0.0003: step 1915/4883, 7.84M tokens, 5133 tok/s, about 0.7 h left
+extra-lora-lr0.0003: step 1990/4883, 8.15M tokens, 5132 tok/s, about 0.6 h left
+extra-lora-lr0.0003: step 2065/4883, 8.46M tokens, 5130 tok/s, about 0.6 h left
+extra-lora-lr0.0003: step 2139/4883, 8.76M tokens, 5127 tok/s, about 0.6 h left
+extra-lora-lr0.0003: step 2213/4883, 9.06M tokens, 5125 tok/s, about 0.6 h left
+extra-lora-lr0.0003: step 2288/4883, 9.37M tokens, 5123 tok/s, about 0.6 h left
+extra-lora-lr0.0003: step 2362/4883, 9.67M tokens, 5120 tok/s, about 0.6 h left
+extra-lora-lr0.0003: step 2437/4883, 9.98M tokens, 5119 tok/s, about 0.5 h left
+extra-lora-lr0.0003 at 10M tokens: val PPL 8.338, memo PPL 8.258
+extra-lora-lr0.0003: step 2486/4883, 10.18M tokens, 5118 tok/s, about 0.5 h left
+extra-lora-lr0.0003: step 2561/4883, 10.49M tokens, 5117 tok/s, about 0.5 h left
+extra-lora-lr0.0003: step 2637/4883, 10.80M tokens, 5119 tok/s, about 0.5 h left
+extra-lora-lr0.0003: step 2712/4883, 11.11M tokens, 5118 tok/s, about 0.5 h left
+extra-lora-lr0.0003: step 2786/4883, 11.41M tokens, 5115 tok/s, about 0.5 h left
+extra-lora-lr0.0003: step 2861/4883, 11.72M tokens, 5114 tok/s, about 0.4 h left
+extra-lora-lr0.0003: step 2936/4883, 12.03M tokens, 5114 tok/s, about 0.4 h left
+extra-lora-lr0.0003: step 3011/4883, 12.33M tokens, 5114 tok/s, about 0.4 h left
+extra-lora-lr0.0003: step 3085/4883, 12.64M tokens, 5112 tok/s, about 0.4 h left
+extra-lora-lr0.0003: step 3160/4883, 12.94M tokens, 5112 tok/s, about 0.4 h left
+extra-lora-lr0.0003: step 3235/4883, 13.25M tokens, 5112 tok/s, about 0.4 h left
+extra-lora-lr0.0003: step 3309/4883, 13.55M tokens, 5112 tok/s, about 0.4 h left
+extra-lora-lr0.0003: step 3384/4883, 13.86M tokens, 5111 tok/s, about 0.3 h left
+extra-lora-lr0.0003: step 3460/4883, 14.17M tokens, 5111 tok/s, about 0.3 h left
+extra-lora-lr0.0003: step 3535/4883, 14.48M tokens, 5111 tok/s, about 0.3 h left
+extra-lora-lr0.0003: step 3610/4883, 14.79M tokens, 5110 tok/s, about 0.3 h left
+extra-lora-lr0.0003: step 3684/4883, 15.09M tokens, 5109 tok/s, about 0.3 h left
+extra-lora-lr0.0003: step 3759/4883, 15.40M tokens, 5108 tok/s, about 0.3 h left
+extra-lora-lr0.0003: step 3834/4883, 15.70M tokens, 5107 tok/s, about 0.2 h left
+extra-lora-lr0.0003: step 3908/4883, 16.01M tokens, 5106 tok/s, about 0.2 h left
+extra-lora-lr0.0003: step 3983/4883, 16.31M tokens, 5105 tok/s, about 0.2 h left
+extra-lora-lr0.0003: step 4058/4883, 16.62M tokens, 5105 tok/s, about 0.2 h left
+extra-lora-lr0.0003: step 4133/4883, 16.93M tokens, 5105 tok/s, about 0.2 h left
+extra-lora-lr0.0003: step 4207/4883, 17.23M tokens, 5104 tok/s, about 0.2 h left
+extra-lora-lr0.0003: step 4282/4883, 17.54M tokens, 5103 tok/s, about 0.1 h left
+extra-lora-lr0.0003: step 4357/4883, 17.85M tokens, 5103 tok/s, about 0.1 h left
+extra-lora-lr0.0003: step 4431/4883, 18.15M tokens, 5103 tok/s, about 0.1 h left
+extra-lora-lr0.0003: step 4505/4883, 18.45M tokens, 5102 tok/s, about 0.1 h left
+extra-lora-lr0.0003: step 4580/4883, 18.76M tokens, 5102 tok/s, about 0.1 h left
+extra-lora-lr0.0003: step 4655/4883, 19.07M tokens, 5102 tok/s, about 0.1 h left
+extra-lora-lr0.0003: step 4730/4883, 19.37M tokens, 5101 tok/s, about 0.0 h left
+extra-lora-lr0.0003: step 4804/4883, 19.68M tokens, 5099 tok/s, about 0.0 h left
+extra-lora-lr0.0003: step 4879/4883, 19.98M tokens, 5099 tok/s, about 0.0 h left
+extra-lora-lr0.0003 at 20M tokens: val PPL 8.235, memo PPL 8.161
+
+===== paste this into the chat =====
+Exploratory follow-up (not part of the pre-registered outcome, which stays PASS)
+lora at lr 0.0003: 2M val 8.511 memo 8.328, 5M val 8.434 memo 8.329, 10M val 8.338 memo 8.258, 20M val 8.235 memo 8.161; trained 1.09 h
+at 20M: memory 8.868, lora lr 0.001 8.949, lora lr 0.0003 8.235, base 11.129
+RESULT: the PASS does not survive this check
+====================================

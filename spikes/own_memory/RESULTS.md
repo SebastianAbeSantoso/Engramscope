@@ -104,7 +104,21 @@ Backbone: SmolLM2-1.7B, frozen, bf16. Run on a rented RTX 5090 (Vast.ai, driver 
 
 ### Exploratory follow-up: LoRA at learning rate 3e-4
 
-**Pending** (running on the same machine, code f48d794). Reading, decided before the run: at or above 8.868 at 20M, "the PASS survives this check"; below, "the PASS does not survive this check". The pre-registered outcome stays PASS either way.
+Same machine, code f48d794, rule written before the run (`PREREG-1.7B.md`). Raw files: `results/scale/extra.json` and `extra-lora-lr0.0003.json`.
+
+| Tokens | Memory (lr 1e-2) val | LoRA lr 1e-3 val | **LoRA lr 3e-4 val** | LoRA lr 3e-4 memo | LoRA lr 3e-4 training time |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 2M | 9.238 | 9.371 | 8.511 | 8.328 | 392 s |
+| 5M | 9.117 | 9.488 | 8.434 | 8.329 | 975 s |
+| 10M | 8.988 | 9.972 | 8.338 | 8.258 | 1954 s |
+| 20M | 8.868 | 8.949 | **8.235** | 8.161 | 3922 s |
+
+- **Reading, as decided before the run: "the PASS does not survive this check."** LoRA at 3e-4 reaches 8.235 at 20M, 7.1% below the memory's 8.868.
+- **The pre-registered outcome stays PASS**, as the rules say. But the honest summary of the 1.7B test is that the memory beat a mistuned LoRA. A LoRA with a lower learning rate beats it at every milestone.
+- **It also wins at matched training time.** After about 1,000 s, LoRA at 3e-4 was at 8.434 (5M tokens), against the memory's 8.988 (10M tokens). After 392 s it was already below the memory's final value.
+- **It trained smoothly** (8.511 to 8.235, falling at every milestone), unlike LoRA at 1e-3. That supports the explanation that 1e-3 was too high for a 20M-token run.
+- **The re-tuning was one-sided.** Only LoRA got a second learning rate. The memory's 1e-2 was at the edge of its grid and might do better higher; that isn't tested. The gap is large, though: the memory would need to improve by 7% to draw level.
+- **Bottom line across both sizes:** a bolted-on Engram-style memory improves a frozen model (18–20% lower perplexity than base), but a reasonably tuned LoRA does better at 135M and at 1.7B.
 
 ## Related work (found 2026-11-25, after the runs)
 
