@@ -15,7 +15,7 @@ Status: `done`, `in progress`, `not started`, `blocked`, `optional`. Owner: **B*
 | D2 | Open-source license shown in the About section | Rules §4 | K adds, B checks | in progress | MIT on `main` since PR #1; B to confirm GitHub shows it (P2) |
 | D3 | `/.kiro` at the root of `main`, not ignored | Rules §4 | K | done | on `main` since PR #1 |
 | D4 | All source, assets and instructions in the repo | Rules §4 | K | in progress | Python reference, benchmark, lesions and side test are in; web app and asset build not started |
-| D5 | URL to the working app | Rules §4 | K | not started | GitHub Pages (Req 11.5) |
+| D5 | URL to the working app | Rules §4 | K | blocked | app built and tested (web-app branch, PR #4); GitHub Pages must be switched on by B (Settings → Pages → Source: GitHub Actions) |
 | D6 | App stays available until Jan 29, 2027, 1:00 PM PT | Rules §4, Testing | B | not started | Pages + pinned model revision |
 | D7 | Disclosure of pre-existing work, with licenses | Rules §4 | K drafts, B checks | not started | model + reference code (MIT), tokenizer, libraries, MaltOE kill test, cited papers; side test: SmolLM2-135M and 1.7B (Apache-2.0), WikiText-103 (CC BY-SA), runpodctl (transfer tool), Engram Adapter / TF-Engram / NGM / Memory Grafting as related work |
 | D8 | Text description | Rules §4 | K drafts, B approves | not started | |

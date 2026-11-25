@@ -67,6 +67,12 @@ With the laptop out of reach, Kiro built `rent.sh` so the builder could start th
 - **Picking the machine:** the builder sent offer screenshots, and Kiro checked each against the job. It turned down an A100 because its 24.7 GB free disk was too small, and a China-hosted 5090 because the test downloads from Hugging Face. It also explained that Vast's DLPerf score and the cards' FP32 TFLOPS don't measure this workload.
 - **Outcome:** one PyPI timeout on the first start, fixed by a rerun. The whole rental, including the follow-up run, cost $2.20 of the $5 credit. The extra LoRA run reused the machine's downloads, and Kiro tested its update line against a copy of the machine's state, which caught a `git pull` that would have failed.
 
+## The app (Nov 25)
+
+- **Asset build first, measured.** `build_assets.py` fits the decode index chosen at G1 and writes the browser assets, then measures them against the exact readout at every loading stage (`docs/results/decode-index-2026-11-25.md`). One change from the plan, recorded in the code and tasks: one projection is shared by both layers, so the download stays at about 92 MB instead of doubling.
+- **Exactness checked by tests, not by eye.** Python writes test vectors; vitest checks the browser tokenizer and hash against them (58 phrases, every id and address exact) and the browser readout against Python's compressed readout.
+- **Checked in a real browser.** Kiro served the built app to a headless browser and ran lookups and lesions against the live model files: "the Kremlin" decoded to Kremlin, Moscow, Putin; removing the 2-word traces of "the Eiffel Tower" erased Paris, as the recorded results predict. The phone-width layout has no horizontal overflow.
+
 ## A sandbox restore (Nov 25)
 
 At the start of one session, Kiro checked `git status` and found that a sandbox restore had dropped 8 result files, 2 git objects and a script's executable bit. It restored them from GitHub (`git fetch --refetch`, then `git restore`) and confirmed with `git fsck` before doing anything else.
