@@ -1,0 +1,137 @@
+2026-11-25 06:06:25 downloading train-00000-of-00002.parquet
+2026-11-25 06:06:32 downloading validation-00000-of-00001.parquet
+2026-11-25 06:07:27 data: {'sel': '200 sequences', 'stream': '40239 sequences', 'val': '519 sequences', 'memo': '390 sequences'}
+2026-11-25 06:07:27 checking speed and memory (about 10 minutes)
+2026-11-25 06:08:52 gradcheck: {"relative_difference": {"wk.weight": 0.012470529414713383, "wv.weight": 0.016194872558116913, "qn.weight": 0.012053444981575012, "kn.weight": 0.012053510174155235, "table": 0.015572711825370789}, "grad_norms": {"wk.weight": 0.0036882127169519663, "wv.weight": 0.010874406434595585, "qn.weight": 9.704656986286864e-05, "kn.weight": 9.704656258691102e-05, "table": 0.011922995559871197}, "ok": true}
+2026-11-25 06:09:01 mem: micro-batch 4, 10026 tok/s peak VRAM 4.72 GB
+2026-11-25 06:09:14 lora: micro-batch 4, 5078 tok/s peak VRAM 5.66 GB
+2026-11-25 06:09:14 budget: 20M tokens per method; pilot about 0.08 h, memory run about 0.6 h, LoRA run about 1.1 h
+2026-11-25 06:09:28 base model: val PPL 11.129, memo PPL 11.361, sel PPL 10.633
+2026-11-25 06:10:06 pilot mem lr 0.001: selection PPL 10.347
+2026-11-25 06:10:42 pilot mem lr 0.003: selection PPL 9.718
+2026-11-25 06:11:21 pilot mem lr 0.01: selection PPL 9.374
+2026-11-25 06:11:21 pilot mem: chosen lr 0.01
+2026-11-25 06:12:29 pilot-lora-lr0.0003: step 74/74, 0.30M tokens, 5002 tok/s, about 0.0 h left
+2026-11-25 06:12:34 pilot lora lr 0.0003: selection PPL 8.434
+2026-11-25 06:13:36 pilot-lora-lr0.001: step 73/74, 0.30M tokens, 4962 tok/s, about 0.0 h left
+2026-11-25 06:13:43 pilot lora lr 0.001: selection PPL 8.371
+2026-11-25 06:14:46 pilot-lora-lr0.003: step 74/74, 0.30M tokens, 4989 tok/s, about 0.0 h left
+2026-11-25 06:14:51 pilot lora lr 0.003: selection PPL 9.451
+2026-11-25 06:14:51 pilot lora: chosen lr 0.001
+2026-11-25 06:15:55 main-mem: step 139/4883, 0.57M tokens, 9459 tok/s, about 0.6 h left
+2026-11-25 06:16:55 main-mem: step 278/4883, 1.14M tokens, 9470 tok/s, about 0.6 h left
+2026-11-25 06:17:55 main-mem: step 417/4883, 1.71M tokens, 9457 tok/s, about 0.5 h left
+2026-11-25 06:18:38 main-mem at 2M tokens: val PPL 9.238, memo PPL 9.307
+2026-11-25 06:18:55 main-mem: step 530/4883, 2.17M tokens, 9462 tok/s, about 0.5 h left
+2026-11-25 06:19:56 main-mem: step 673/4883, 2.76M tokens, 9510 tok/s, about 0.5 h left
+2026-11-25 06:20:56 main-mem: step 813/4883, 3.33M tokens, 9511 tok/s, about 0.5 h left
+2026-11-25 06:21:56 main-mem: step 953/4883, 3.90M tokens, 9515 tok/s, about 0.5 h left
+2026-11-25 06:22:56 main-mem: step 1094/4883, 4.48M tokens, 9524 tok/s, about 0.5 h left
+2026-11-25 06:24:02 main-mem at 5M tokens: val PPL 9.117, memo PPL 9.256
+2026-11-25 06:24:02 main-mem: step 1221/4883, 5.00M tokens, 9526 tok/s, about 0.4 h left
+2026-11-25 06:25:02 main-mem: step 1362/4883, 5.58M tokens, 9532 tok/s, about 0.4 h left
+2026-11-25 06:26:03 main-mem: step 1502/4883, 6.15M tokens, 9531 tok/s, about 0.4 h left
+2026-11-25 06:27:03 main-mem: step 1643/4883, 6.73M tokens, 9533 tok/s, about 0.4 h left
+2026-11-25 06:28:03 main-mem: step 1783/4883, 7.30M tokens, 9533 tok/s, about 0.4 h left
+2026-11-25 06:29:04 main-mem: step 1922/4883, 7.87M tokens, 9525 tok/s, about 0.4 h left
+2026-11-25 06:30:04 main-mem: step 2059/4883, 8.43M tokens, 9522 tok/s, about 0.3 h left
+2026-11-25 06:31:04 main-mem: step 2199/4883, 9.01M tokens, 9523 tok/s, about 0.3 h left
+2026-11-25 06:32:04 main-mem: step 2339/4883, 9.58M tokens, 9522 tok/s, about 0.3 h left
+2026-11-25 06:33:00 main-mem at 10M tokens: val PPL 8.988, memo PPL 9.209
+2026-11-25 06:33:04 main-mem: step 2452/4883, 10.04M tokens, 9521 tok/s, about 0.3 h left
+2026-11-25 06:34:04 main-mem: step 2592/4883, 10.62M tokens, 9521 tok/s, about 0.3 h left
+2026-11-25 06:35:05 main-mem: step 2731/4883, 11.19M tokens, 9516 tok/s, about 0.3 h left
+2026-11-25 06:36:05 main-mem: step 2870/4883, 11.76M tokens, 9514 tok/s, about 0.2 h left
+2026-11-25 06:37:05 main-mem: step 3006/4883, 12.31M tokens, 9502 tok/s, about 0.2 h left
+2026-11-25 06:38:05 main-mem: step 3144/4883, 12.88M tokens, 9498 tok/s, about 0.2 h left
+2026-11-25 06:39:05 main-mem: step 3282/4883, 13.44M tokens, 9493 tok/s, about 0.2 h left
+2026-11-25 06:40:06 main-mem: step 3422/4883, 14.02M tokens, 9493 tok/s, about 0.2 h left
+2026-11-25 06:41:06 main-mem: step 3562/4883, 14.59M tokens, 9494 tok/s, about 0.2 h left
+2026-11-25 06:42:06 main-mem: step 3703/4883, 15.17M tokens, 9497 tok/s, about 0.1 h left
+2026-11-25 06:43:07 main-mem: step 3842/4883, 15.74M tokens, 9496 tok/s, about 0.1 h left
+2026-11-25 06:44:07 main-mem: step 3982/4883, 16.31M tokens, 9496 tok/s, about 0.1 h left
+2026-11-25 06:45:07 main-mem: step 4119/4883, 16.87M tokens, 9495 tok/s, about 0.1 h left
+2026-11-25 06:46:07 main-mem: step 4259/4883, 17.44M tokens, 9496 tok/s, about 0.1 h left
+2026-11-25 06:47:08 main-mem: step 4399/4883, 18.02M tokens, 9496 tok/s, about 0.1 h left
+2026-11-25 06:48:08 main-mem: step 4541/4883, 18.60M tokens, 9500 tok/s, about 0.0 h left
+2026-11-25 06:49:08 main-mem: step 4682/4883, 19.18M tokens, 9503 tok/s, about 0.0 h left
+2026-11-25 06:50:09 main-mem: step 4824/4883, 19.76M tokens, 9507 tok/s, about 0.0 h left
+2026-11-25 06:50:45 main-mem at 20M tokens: val PPL 8.868, memo PPL 9.096
+2026-11-25 06:51:49 main-lora: step 76/4883, 0.31M tokens, 5145 tok/s, about 1.1 h left
+2026-11-25 06:52:49 main-lora: step 153/4883, 0.63M tokens, 5173 tok/s, about 1.0 h left
+2026-11-25 06:53:50 main-lora: step 230/4883, 0.94M tokens, 5191 tok/s, about 1.0 h left
+2026-11-25 06:54:50 main-lora: step 307/4883, 1.26M tokens, 5194 tok/s, about 1.0 h left
+2026-11-25 06:55:51 main-lora: step 382/4883, 1.56M tokens, 5171 tok/s, about 1.0 h left
+2026-11-25 06:56:51 main-lora: step 458/4883, 1.88M tokens, 5170 tok/s, about 1.0 h left
+2026-11-25 06:57:36 main-lora at 2M tokens: val PPL 9.371, memo PPL 8.854
+2026-11-25 06:57:51 main-lora: step 508/4883, 2.08M tokens, 5168 tok/s, about 1.0 h left
+2026-11-25 06:58:52 main-lora: step 583/4883, 2.39M tokens, 5161 tok/s, about 0.9 h left
+2026-11-25 06:59:52 main-lora: step 659/4883, 2.70M tokens, 5157 tok/s, about 0.9 h left
+2026-11-25 07:00:52 main-lora: step 735/4883, 3.01M tokens, 5158 tok/s, about 0.9 h left
+2026-11-25 07:01:53 main-lora: step 810/4883, 3.32M tokens, 5154 tok/s, about 0.9 h left
+2026-11-25 07:02:53 main-lora: step 885/4883, 3.62M tokens, 5151 tok/s, about 0.9 h left
+2026-11-25 07:03:53 main-lora: step 961/4883, 3.94M tokens, 5154 tok/s, about 0.9 h left
+2026-11-25 07:04:53 main-lora: step 1037/4883, 4.25M tokens, 5153 tok/s, about 0.8 h left
+2026-11-25 07:05:53 main-lora: step 1111/4883, 4.55M tokens, 5149 tok/s, about 0.8 h left
+2026-11-25 07:06:54 main-lora: step 1186/4883, 4.86M tokens, 5147 tok/s, about 0.8 h left
+2026-11-25 07:07:42 main-lora at 5M tokens: val PPL 9.488, memo PPL 9.240
+2026-11-25 07:07:54 main-lora: step 1236/4883, 5.06M tokens, 5145 tok/s, about 0.8 h left
+2026-11-25 07:08:55 main-lora: step 1311/4883, 5.37M tokens, 5142 tok/s, about 0.8 h left
+2026-11-25 07:09:55 main-lora: step 1387/4883, 5.68M tokens, 5143 tok/s, about 0.8 h left
+2026-11-25 07:10:55 main-lora: step 1463/4883, 5.99M tokens, 5144 tok/s, about 0.8 h left
+2026-11-25 07:11:56 main-lora: step 1539/4883, 6.30M tokens, 5143 tok/s, about 0.7 h left
+2026-11-25 07:12:56 main-lora: step 1614/4883, 6.61M tokens, 5141 tok/s, about 0.7 h left
+2026-11-25 07:13:56 main-lora: step 1690/4883, 6.92M tokens, 5142 tok/s, about 0.7 h left
+2026-11-25 07:14:57 main-lora: step 1766/4883, 7.23M tokens, 5143 tok/s, about 0.7 h left
+2026-11-25 07:15:58 main-lora: step 1842/4883, 7.54M tokens, 5142 tok/s, about 0.7 h left
+2026-11-25 07:16:58 main-lora: step 1917/4883, 7.85M tokens, 5140 tok/s, about 0.7 h left
+2026-11-25 07:17:58 main-lora: step 1993/4883, 8.16M tokens, 5141 tok/s, about 0.6 h left
+2026-11-25 07:18:59 main-lora: step 2069/4883, 8.47M tokens, 5141 tok/s, about 0.6 h left
+2026-11-25 07:20:00 main-lora: step 2145/4883, 8.79M tokens, 5140 tok/s, about 0.6 h left
+2026-11-25 07:21:00 main-lora: step 2219/4883, 9.09M tokens, 5139 tok/s, about 0.6 h left
+2026-11-25 07:22:00 main-lora: step 2295/4883, 9.40M tokens, 5140 tok/s, about 0.6 h left
+2026-11-25 07:23:01 main-lora: step 2370/4883, 9.71M tokens, 5138 tok/s, about 0.6 h left
+2026-11-25 07:24:19 main-lora at 10M tokens: val PPL 9.972, memo PPL 10.023
+2026-11-25 07:24:19 main-lora: step 2442/4883, 10.00M tokens, 5136 tok/s, about 0.5 h left
+2026-11-25 07:25:19 main-lora: step 2515/4883, 10.30M tokens, 5131 tok/s, about 0.5 h left
+2026-11-25 07:26:20 main-lora: step 2590/4883, 10.61M tokens, 5130 tok/s, about 0.5 h left
+2026-11-25 07:27:20 main-lora: step 2665/4883, 10.92M tokens, 5129 tok/s, about 0.5 h left
+2026-11-25 07:28:20 main-lora: step 2740/4883, 11.22M tokens, 5128 tok/s, about 0.5 h left
+2026-11-25 07:29:21 main-lora: step 2814/4883, 11.53M tokens, 5125 tok/s, about 0.5 h left
+2026-11-25 07:30:21 main-lora: step 2889/4883, 11.83M tokens, 5125 tok/s, about 0.4 h left
+2026-11-25 07:31:21 main-lora: step 2964/4883, 12.14M tokens, 5125 tok/s, about 0.4 h left
+2026-11-25 07:32:21 main-lora: step 3040/4883, 12.45M tokens, 5125 tok/s, about 0.4 h left
+2026-11-25 07:33:22 main-lora: step 3116/4883, 12.76M tokens, 5126 tok/s, about 0.4 h left
+2026-11-25 07:34:22 main-lora: step 3191/4883, 13.07M tokens, 5125 tok/s, about 0.4 h left
+2026-11-25 07:35:22 main-lora: step 3266/4883, 13.38M tokens, 5125 tok/s, about 0.4 h left
+2026-11-25 07:36:22 main-lora: step 3340/4883, 13.68M tokens, 5124 tok/s, about 0.3 h left
+2026-11-25 07:37:23 main-lora: step 3414/4883, 13.98M tokens, 5122 tok/s, about 0.3 h left
+2026-11-25 07:38:23 main-lora: step 3490/4883, 14.30M tokens, 5122 tok/s, about 0.3 h left
+2026-11-25 07:39:24 main-lora: step 3566/4883, 14.61M tokens, 5123 tok/s, about 0.3 h left
+2026-11-25 07:40:24 main-lora: step 3641/4883, 14.91M tokens, 5122 tok/s, about 0.3 h left
+2026-11-25 07:41:24 main-lora: step 3716/4883, 15.22M tokens, 5122 tok/s, about 0.3 h left
+2026-11-25 07:42:25 main-lora: step 3792/4883, 15.53M tokens, 5122 tok/s, about 0.2 h left
+2026-11-25 07:43:25 main-lora: step 3868/4883, 15.84M tokens, 5123 tok/s, about 0.2 h left
+2026-11-25 07:44:25 main-lora: step 3943/4883, 16.15M tokens, 5123 tok/s, about 0.2 h left
+2026-11-25 07:45:26 main-lora: step 4018/4883, 16.46M tokens, 5122 tok/s, about 0.2 h left
+2026-11-25 07:46:27 main-lora: step 4095/4883, 16.77M tokens, 5123 tok/s, about 0.2 h left
+2026-11-25 07:47:27 main-lora: step 4172/4883, 17.09M tokens, 5125 tok/s, about 0.2 h left
+2026-11-25 07:48:27 main-lora: step 4248/4883, 17.40M tokens, 5126 tok/s, about 0.1 h left
+2026-11-25 07:49:27 main-lora: step 4324/4883, 17.71M tokens, 5127 tok/s, about 0.1 h left
+2026-11-25 07:50:28 main-lora: step 4401/4883, 18.03M tokens, 5128 tok/s, about 0.1 h left
+2026-11-25 07:51:28 main-lora: step 4476/4883, 18.33M tokens, 5129 tok/s, about 0.1 h left
+2026-11-25 07:52:28 main-lora: step 4551/4883, 18.64M tokens, 5129 tok/s, about 0.1 h left
+2026-11-25 07:53:29 main-lora: step 4628/4883, 18.96M tokens, 5130 tok/s, about 0.1 h left
+2026-11-25 07:54:29 main-lora: step 4704/4883, 19.27M tokens, 5130 tok/s, about 0.0 h left
+2026-11-25 07:55:29 main-lora: step 4779/4883, 19.57M tokens, 5130 tok/s, about 0.0 h left
+2026-11-25 07:56:30 main-lora: step 4854/4883, 19.88M tokens, 5129 tok/s, about 0.0 h left
+2026-11-25 07:57:13 main-lora at 20M tokens: val PPL 8.949, memo PPL 8.967
+2026-11-25 07:57:14 
+===== paste this into the chat =====
+1.7B test (NVIDIA GeForce RTX 5090, torch 2.14.1+cu130): budget 20M tokens per method
+base val PPL 11.129
+mem: 2M val 9.238 memo 9.307, 5M val 9.117 memo 9.256, 10M val 8.988 memo 9.209, 20M val 8.868 memo 9.096; trained 0.58 h at lr 0.01
+lora: 2M val 9.371 memo 8.854, 5M val 9.488 memo 9.240, 10M val 9.972 memo 10.023, 20M val 8.949 memo 8.967; trained 1.08 h at lr 0.001
+r_mem 20.31%, r_lora 19.58%; PASS needs r_mem >= 3% and mem PPL <= LoRA PPL
+OUTCOME: PASS
+====================================
