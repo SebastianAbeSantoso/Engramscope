@@ -1,8 +1,6 @@
 # How Kiro was used (running draft)
 
-Running draft of the Kiro write-up (Req 12.6, deliverable D11). Kiro adds to it at every checkpoint; the builder edits it into the final version (Task 9.2). Only things that happened go here. Plans are marked **planned**, unverified items **check**.
-
-Last updated: 2026-11-25.
+Last updated: 2026-11-26.
 
 ## How the project got here (the spec gate that killed the first idea)
 
@@ -10,14 +8,14 @@ Engramscope is the second project of this Kiroween. The first, MaltOE ([repo](ht
 - narrower experts lose to lower-bit model files at the same size (width 75%: 1.16× perplexity; a Q3_K_M file with the same expert bytes: 1.006×);
 - the space is crowded with fast engines.
 
-The project stopped before building the engine.
+This showed a negative result, i could've stopped there and built the app, but it felt unsatisfying to me. The project stopped before building the engine.
 
 Kiro then ran several idea searches with research sub-agents (about 150 candidates checked against prior art), and the builder steered towards model internals. One question from the builder ("can you run a model via HTTP range requests?") led to DeepSeek-V4.1-Flash's Engram tables. Kiro wrote a kill test in the sandbox:
 - reproduced the model's hashing from its reference code, with two exact checks;
 - fetched rows from Hugging Face by range request;
 - tested two hypotheses. The first, "the rows predict the next token", failed. The second, "the rows encode related concepts", passed: 22/30 against 0/30 for random rows.
 
-That became Engramscope. *(Builder: add how this compared with vibe coding.)*
+That became Engramscope. It's similar to vibecoding, but it isn't coding so it's just vibing haha. Anyway, the agent here failed to confirm prior products for LoRA x n-gram hash and it dissapointed me.
 
 ## Kiro clients
 
