@@ -12,30 +12,46 @@ Lashley's lesion experiments rerun on a language model's memory, in your browser
 
 ## Inspiration
 
-In 1950 Karl Lashley ended about 30 years of removing parts of rats' cortex without finding where a learned habit was stored. Richard Semon had coined *engram* in 1904. I wanted to rerun Lashley's questions on a memory where every trace has an address, which no brain offers.
+In 1950 Karl Lashley ended about 30 years of removing parts of rats' cortex without finding where a learned habit was stored. Richard Semon had coined *engram* in 1904 for the lasting change a stimulus leaves behind. I wanted to rerun Lashley's questions on a memory where every trace has an address, which no brain offers.
 
-An open-weight frontier model has such a memory. Its *Engram* tables hold 24 traces per phrase, and each trace's address is a hash of the last few words. So the traces can be found, read and removed exactly.
+An open-weight frontier model has such a memory. Its *Engram* tables hold 24 traces per phrase, and each trace's address is a hash of the last few words, so the traces can be found, read and removed exactly. This project started from a kill test in an earlier project of mine, MaltOE, which stopped on its own negative results. The Engram kill test showed the traces carry readable concepts, and that is what Engramscope was built on.
 
-## What it does
+## How we built it
 
-- **Reads a memory in the browser.** It computes the model's addresses, fetches about 12 KB of rows from the public model files with HTTP range requests, and decodes them into words, next to a random-rows control. It needs no server and no GPU.
-- **Runs the lesion experiments.** Mass action, equipotentiality and Semon's partial cue, pre-registered before any run.
-- **Lets you remove traces yourself** in a live 3 × 8 grid, labelled as exploration.
+Built in Kiro, spec first. The spec's feasibility gates measured the browser decode index, tokenizer parity, browser fetch time and prior art before any app code.
 
-## Findings (layer 1, 76 phrases with a readable concept)
+- **Python reference:** the model's addressing, FP8 decoding and readout, checked by property-based tests against the model's reference code.
+- **Pre-registration:** the 123 benchmark phrases and the lesion protocol were committed before any run. Code refuses to run on any other version.
+- **Browser instrument:** a BigInt port of the hash, the model's own tokenizer, HTTP range requests for the rows, FP8 decoding, and a compressed readout in a Web Worker. Vitest checks it against Python test vectors: 58 phrases, every token id and address exact.
+- **App:** React, Vite and TypeScript, deployed to GitHub Pages by a GitHub Actions workflow that builds the browser assets from the pinned model revision.
 
-- **Mass action:** half the concepts are gone only after 19.0 of 24 traces are removed [18.0, 19.8].
-- **Equipotentiality:** removing any one hash head costs the same as removing 3 random traces. Removing the 8 two-word traces leaves **10.5%** of concepts, against 87.8% for 8 random traces.
-- **Semon's partial cue:** the two-word traces alone retrieve the concept in 94.7% of phrases.
-- **The instrument:** on 123 pre-registered phrases, layer 1 gives a related word in the top 10 for 61.8% (95% interval 53.7–69.9). Random rows score 0%.
+## Challenges we ran into
 
-Both predictions written before the run held. The rules produce the parallel with Lashley's 1950 conclusion: some regions are essential, and within a region the parts are interchangeable.
+- **The planned decode index failed.** A 33 MB projection kept only 20% of the exact top-10 words. We fitted the projection to the readout instead and shipped a 92 MB index, which the browser downloads once.
+- **Layer 14 reads as noise** with this decoding, so the app labels it unclear.
+- **The browser decoding is approximate**, and the app says so next to every decoded word.
+- **A side test went against our expectation.** A small Engram-style memory lost to LoRA at 135M, and at 1.7B it narrowly passed its rule while a better-tuned LoRA beat it. We report both results.
+- **Limited compute.** The side test ran on a rented GPU that I started from my phone. It cost $2.20.
 
-## What this does not show
+## Accomplishments that we're proud of
 
-- These are **trace lesions**. They show how a concept is spread across traces. They do not show what the running model forgets, and they say nothing about brains.
-- The browser's decoding is an approximation, which is labelled in the app.
-- **A side test went against our expectation.** We added the same kind of memory to frozen small models and compared it with LoRA. At 135M, LoRA won. At 1.7B the memory narrowly passed its pre-registered rule, but a LoRA with a lower learning rate, run afterwards, did better. Adding such a memory to a frozen model is already done by other groups. We report it as a controlled comparison, not a new method.
+- The lesion predictions, written before the run, held: no head is special, and some n-gram size is.
+- The instrument is checked, not eyeballed. Addresses match the model's reference code exactly, and layer 1 beats every control on 123 pre-registered phrases: 61.8% against 0% for random rows.
+- The app runs with no server and no GPU, and the experiment figures come straight from the raw result files.
+- We kept the negative side-test result in the write-up and in the app.
+
+## What we learned
+
+- Pre-registration is worth its cost: the rules decided the labels, including the ones we did not want.
+- A negative result is still a result when the rules were fixed in advance. It shaped what the project claims.
+- Trace lesions show how a concept is spread across traces. They do not show what the running model forgets, and the difference matters.
+- Spec-first with gates in Kiro caught a failed plan early, before it reached the app.
+
+## What's next for Engramscope: where is a memory stored?
+
+- Run the behavioural lesion: zero the traces in the running model on rented hardware and check what it can no longer recall. This is the stretch goal in the spec, and it needs a pre-registered addendum first.
+- Investigate layer 14, and single words, which currently have no readable trace.
+- Extend the benchmark beyond 123 phrases, and add a second, independent decoding check.
 
 ## Built with
 
