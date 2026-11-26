@@ -4,7 +4,7 @@ Target length: 2:40. Narration is about 330 words at a calm pace.
 
 ## Before recording (checklist)
 
-- **Use `?generic` in every app URL**, for example `https://sebastianabesantoso.github.io/Engramscope/?generic#/read?p=the%20Eiffel%20Tower`. It replaces the model's name on screen with "an open-weight frontier model". Check each page for the name before you hit record: the Experiments and About pages are the ones to look at.
+- **Add `?generic` to the end of every app address you record**, for example `https://sebastianabesantoso.github.io/Engramscope/?generic#/read?p=the%20Eiffel%20Tower`. The app then shows "an open-weight frontier model" in place of the model's name. Without it, the name appears on the pages. Before recording, open the Experiments and About pages and check the name doesn't appear.
 - **No copyrighted music and no third-party logos.** Hide browser bookmarks and tabs, and don't show the Kiro logo or the GitHub avatar.
 - **Device:** the rules want the device the project was built for. Record the phone (the app is a web app) and, if you get the laptop back, one desktop shot too.
 - **Length:** keep it under 3:00 with a margin. The narration below is about 2:40 with pauses.
@@ -24,7 +24,7 @@ Target length: 2:40. Narration is about 330 words at a calm pace.
 Show: the token list, the bytes line ("Fetched … of 189 GiB"), the two word panels.
 
 **1:05–1:35 · Live lesion: "the Eiffel Tower"**
-> Now the experiment. I'll remove the two-word traces. Paris goes. Remove the same number of random traces, and the concept mostly survives.
+> Now the experiment. I'll remove the two-word traces. Paris goes. Remove 8 random traces instead, and the concept mostly survives.
 
 Show: tap **Remove the 2-word traces**, then read the recorded-result line aloud.
 
@@ -39,9 +39,9 @@ Show: the mass-action curve, then the head bars, then the n-gram bars. Scroll sl
 Show: the About page, the side-test section.
 
 **2:25–2:40 · Built with Kiro, close**
-> The whole project was built in Kiro, spec first. Feasibility gates ran before any app code. Steering held the research rules. Hooks ran the tests. Everything is open source. Try it at the link below.
+> The whole project was built in Kiro, spec first. Feasibility gates ran before any app code. Steering held the research rules. Hooks are set up to run the tests. Everything is open source. Try it at the link below.
 
-Show: the `.kiro` folder on GitHub, then the app URL on screen with the end card.
+Show: only the `.kiro` folder's file list on GitHub, then the app URL on screen with the end card. The repository page's description and README name the model, so don't show them.
 
 ## End card (last 5 seconds)
 
