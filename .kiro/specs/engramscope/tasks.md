@@ -84,7 +84,7 @@ Schedule (proposed): Task 1 by Nov 21; Python reference, benchmark and lesion ru
   - [ ] 8c.6 Write the follow-up result into `RESULTS.md`; side-test section in the README and About page (Req 13.5).
 
 - [ ] 9. Write-up and submission
-  - [ ] 9.1 README final: problem, how it works, claims boundary, results, limitations, disclosures, how to run.
+  - [x] 9.1 README final: problem, how it works, claims boundary, results, limitations, disclosures, how to run. (2026-11-25; revisit after the video.)
   - [ ] 9.2 Finish the Kiro write-up from the running draft.
   - [ ] 9.3 Video script and recording **[HW]**: under 3 minutes, on the builder's machine, no copyrighted music, no logos, model named generically (record with `?generic`); YouTube public.
   - [ ] 9.4 Text description for the form.
