@@ -97,10 +97,10 @@ These carried over from MaltOE, where the research-integrity rule caught seven c
 ## Property-based testing
 
 - Done for Python: 26 tests, including `hypothesis` property tests for hash parity against a transcription of DeepSeek's reference code, address ranges, bucket sums, FP8 decoding against `ml_dtypes`, and lesion additivity (the per-row decomposition sums back to the full vector).
-- **planned:** shared test vectors to check the browser implementation against Python.
+- Done: shared test vectors (58 phrases) check the browser tokenizer, hash and readout against Python.
 
 ## Sub-agents, powers, MCP
 
 - Research sub-agents: idea and prior-art searches (MaltOE phase).
-- **check:** github-cli power usage.
+- The GitHub CLI power was not used; `gh` was run from the sandbox shell.
 - MCP: none so far.
