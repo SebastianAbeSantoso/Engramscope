@@ -12,9 +12,9 @@ Status: `done`, `in progress`, `not started`, `blocked`, `optional`. Owner: **B*
 | # | Deliverable | Rule | Owner | Status | Notes |
 | --- | --- | --- | --- | --- | --- |
 | D1 | Public GitHub repo | Rules §4 | B | done | `SebastianAbeSantoso/Engramscope` |
-| D2 | Open-source license shown in the About section | Rules §4 | K adds, B checks | in progress | MIT on `main` since PR #1; B to confirm GitHub shows it (P2) |
+| D2 | Open-source license shown in the About section | Rules §4 | K adds, B checks | done | MIT detected by GitHub; repository description set |
 | D3 | `/.kiro` at the root of `main`, not ignored | Rules §4 | K | done | on `main` since PR #1 |
-| D4 | All source, assets and instructions in the repo | Rules §4 | K | in progress | Python reference, benchmark, lesions and side test are in; web app and asset build not started |
+| D4 | All source, assets and instructions in the repo | Rules §4 | K | done | Python reference, benchmark, lesions, side test, web app, asset build and CI are in `main` |
 | D5 | URL to the working app | Rules §4 | K | done | https://sebastianabesantoso.github.io/Engramscope/ (deployed 2026-11-25 by `pages.yml` from `main`) |
 | D6 | App stays available until Jan 29, 2027, 1:00 PM PT | Rules §4, Testing | B | not started | Pages + pinned model revision |
 | D7 | Disclosure of pre-existing work, with licenses | Rules §4 | K drafts, B checks | in progress | drafted in the README ("Pre-existing work used"); B to check |
@@ -24,9 +24,9 @@ Status: `done`, `in progress`, `not started`, `blocked`, `optional`. Owner: **B*
 | D11 | Kiro write-up | Rules §4 | K drafts, B edits | in progress | running draft: [`kiro-writeup.md`](kiro-writeup.md), updated 2026-11-25 |
 | D12 | Category and bonus prizes selected | Rules §4 | B | not started | Resurrection + Best Student Project: Resurrection |
 | D13 | Student details: LinkedIn, student email, year and degree, school | Rules §4 | B | not started | |
-| D14 | Everything in English | Rules §4 | K | in progress | |
+| D14 | Everything in English | Rules §4 | K | done | code, docs, app text checked; B to read the Devpost text |
 | D15 | Submit before the deadline | Rules §1 | B | not started | aim for Dec 3 |
-| D18 | Latest work merged into `main` (the default branch judges see first) | - | B asks, K merges | done | PRs #2, #3 and #4 merged on 2026-11-25 |
+| D18 | Latest work merged into `main` (the default branch judges see first) | - | B asks, K merges | done | PRs #2–#5 merged on 2026-11-25 |
 | D16 | Tag the submitted commit | Req 11.5 | K | not started | |
 | D17 | Trademark approach for the video | Rules §4 | B decided | done | no email; generic name in the video, `?generic` flag (Decision 6) |
 
